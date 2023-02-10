@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Userinputs</h1>
+
+<div id="userinputs">
+  <% @userinputs.each do |userinput| %>
+    <%= render userinput %>
+    <p>
+      <%= link_to "Show this userinput", userinput %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New userinput", new_userinput_path %>

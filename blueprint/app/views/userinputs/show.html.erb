@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @userinput %>
+
+<div>
+  <%= link_to "Edit this userinput", edit_userinput_path(@userinput) %> |
+  <%= link_to "Back to userinputs", userinputs_path %>
+
+  <%= button_to "Destroy this userinput", @userinput, method: :delete %>
+</div>

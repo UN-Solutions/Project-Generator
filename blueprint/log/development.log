@@ -5,3 +5,45 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 15ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 7980)
 
 
+  [1m[35m (12.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (12.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUserinputs (20230210010540)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "userinputs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "subject" varchar, "subtopics" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230210010540"]]
+  [1m[36mTRANSACTION (13.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-02-10 01:06:20.345319"], ["updated_at", "2023-02-10 01:06:20.345319"]]
+  [1m[36mTRANSACTION (10.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2023-02-09 18:06:35 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/wavy/.rbenv/versions/3.0.4/lib/ruby/gems/3.0.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/wavy/.rbenv/versions/3.0.4/lib/ruby/gems/3.0.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.2ms | Allocations: 826)
+Completed 200 OK in 28ms (Views: 11.9ms | ActiveRecord: 0.0ms | Allocations: 6718)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-02-09 18:06:44 -0700
+Processing by UserinputsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.6ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:6
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 24.5ms | Allocations: 1411)
+  Rendered layout layouts/application.html.erb (Duration: 791.1ms | Allocations: 97457)
+Completed 200 OK in 807ms (Views: 795.2ms | ActiveRecord: 0.6ms | Allocations: 99565)
+
+
+Started GET "/userinputs/new" for 127.0.0.1 at 2023-02-09 18:06:46 -0700
+Processing by UserinputsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/new.html.erb within layouts/application
+  Rendered userinputs/_form.html.erb (Duration: 47.9ms | Allocations: 5818)
+  Rendered userinputs/new.html.erb within layouts/application (Duration: 50.9ms | Allocations: 6202)
+  Rendered layout layouts/application.html.erb (Duration: 58.8ms | Allocations: 8516)
+Completed 200 OK in 123ms (Views: 60.6ms | ActiveRecord: 2.8ms | Allocations: 25400)
+
+
