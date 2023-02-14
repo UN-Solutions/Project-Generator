@@ -4,6 +4,9 @@ class UserinputsController < ApplicationController
   # GET /userinputs or /userinputs.json
   def index
     @userinputs = Userinput.all
+    @our_input = Userinput.order("id DESC").first
+    @output = `python3 openai.py "#{@our_input.inspect}"`
+
   end
 
   # GET /userinputs/1 or /userinputs/1.json
@@ -66,5 +69,6 @@ class UserinputsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def userinput_params
       params.require(:userinput).permit(:title, :subject, :subtopics)
+
     end
 end

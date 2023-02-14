@@ -47,3 +47,19 @@ Processing by UserinputsController#new as HTML
 Completed 200 OK in 123ms (Views: 60.6ms | ActiveRecord: 2.8ms | Allocations: 25400)
 
 
+Started GET "/" for 127.0.0.1 at 2023-02-13 12:02:56 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/wavy/.rbenv/versions/3.0.4/lib/ruby/gems/3.0.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/wavy/.rbenv/versions/3.0.4/lib/ruby/gems/3.0.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.3ms | Allocations: 826)
+Completed 200 OK in 19ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 6717)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-13 17:00:56 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/wavy/.rbenv/versions/3.0.4/lib/ruby/gems/3.0.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/wavy/.rbenv/versions/3.0.4/lib/ruby/gems/3.0.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.3ms | Allocations: 826)
+Completed 200 OK in 10ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 6732)
+
+
