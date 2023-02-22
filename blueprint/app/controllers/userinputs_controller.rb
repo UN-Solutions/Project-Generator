@@ -1,11 +1,14 @@
 class UserinputsController < ApplicationController
   before_action :set_userinput, only: %i[ show edit update destroy ]
-
   # GET /userinputs or /userinputs.json
+  def download_pdf
+    send_file "#{Rails.root}/example.pdf", type: "application/pdf", x_sendfile: true
+  end
+
   def index
     @userinputs = Userinput.all
     @our_input = Userinput.order("id DESC").first
-    @output = `python3 openai.py "#{@our_input.inspect}"`
+    @output = `python3 thisai.py "#{@our_input.inspect}"`
 
   end
 
