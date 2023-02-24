@@ -5,4 +5,4 @@ seaborn==0.12.2
 jupyter
 torch
 matplotlib
-tqdm
+transformers == 4.24.0
