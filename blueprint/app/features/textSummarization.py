@@ -12,7 +12,7 @@ happy_tt = HappyTextToText("BART", "lidiya/bart-large-xsum-samsum")
 with open ('data/sampleTexts/MSalvador_FinalPromptAssesment.txt') as f:
     sampleText = f.read()
 
-# print(sampleText)
+print(sampleText)
 # output results from summarization including summarized text
 transformerSampletext = happy_tt.generate_text(sampleText)
 print(transformerSampletext)
