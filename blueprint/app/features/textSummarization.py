@@ -2,6 +2,7 @@
 #THEN RETURN THE SUMMARIZED TEXT
 from transformers import pipeline
 
+summarizer = pipeline("summarization", model="lidiya/bart-large-xsum-samsum")
 #Class that will summarize the text
 class SummarizeText:
     """API generated data info"""
@@ -13,7 +14,6 @@ class SummarizeText:
         with open(self.genText) as f:
             sampleText = f.read()
             f.close
-        #print ('\n',sampleText)
         print(summarizer(sampleText))
 
 
@@ -21,7 +21,7 @@ class SummarizeText:
 ##minor testing
 if __name__ == "__main__":
     #initialize the model
-    summarizer = pipeline("summarization", model="lidiya/bart-large-xsum-samsum")
+    #summarizer = pipeline("summarization", model="lidiya/bart-large-xsum-samsum")
 
     #ask user for input
     path = input('File path: ')
