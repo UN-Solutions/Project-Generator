@@ -1,20 +1,29 @@
-from happytransformer import HappyTextToText
+#TODO: CREATE A PROGRAM THAT TAKES IN A STRING PARAMETER, PARSE AND SUMMARIZE THE TEXT
+#THEN RETURN THE SUMMARIZED TEXT
+from transformers import pipeline
 
-# import from happytransfomers
-from happytransformer import HappyTextToText
+#Class that will summarize the text
+class SummarizeText:
+    """API generated data info"""
+    def __init__(self, genText):
+        self.genText = genText
 
-# load in huggingface model
-# only uncomment if model has not downloaded
+    """open up txt file w/ generated text, parse and summarize"""
+    def summarizeText(self):
+        with open(self.genText) as f:
+            sampleText = f.read()
+            f.close
+        #print ('\n',sampleText)
+        print(summarizer(sampleText))
 
-happy_tt = HappyTextToText("BART", "lidiya/bart-large-xsum-samsum")
 
-# TODO: get text object to process the text summarization
-with open ('data/sampleTexts/MSalvador_FinalPromptAssesment.txt') as f:
-    sampleText = f.read()
+    
+##minor testing
+if __name__ == "__main__":
+    #initialize the model
+    summarizer = pipeline("summarization", model="lidiya/bart-large-xsum-samsum")
 
-print(sampleText)
-# output results from summarization including summarized text
-transformerSampletext = happy_tt.generate_text(sampleText)
-print(transformerSampletext)
-print("\nThe summarized text of the sampled text is:\n",transformerSampletext.text)
-
+    #ask user for input
+    path = input('File path: ')
+    result = SummarizeText(path)
+    result.summarizeText()
