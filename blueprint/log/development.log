@@ -2114,3 +2114,653 @@ Processing by UserinputsController#index as HTML
 Completed 200 OK in 6609ms (Views: 8.9ms | ActiveRecord: 0.6ms | Allocations: 6607)
 
 
+Started GET "/" for ::1 at 2023-02-27 16:50:30 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 15.8ms | Allocations: 956)
+Completed 200 OK in 74ms (Views: 42.5ms | ActiveRecord: 0.0ms | Allocations: 8295)
+
+
+Started GET "/userinputs" for ::1 at 2023-02-27 16:50:36 -0700
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:11
+  Rendered userinputs/_userinput.html.erb (Duration: 0.7ms | Allocations: 323)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 10.4ms | Allocations: 2839)
+  Rendered layout layouts/application.html.erb (Duration: 271.2ms | Allocations: 94842)
+Completed 500 Internal Server Error in 873ms (ActiveRecord: 1.1ms | Allocations: 115230)
+
+
+  
+ActionView::Template::Error (Permission denied @ rb_file_s_rename - (C:/Users/mulle/Documents/GitHub/Project-Generator/blueprint/tmp/cache/assets/sprockets/v4.0.0/6K/6KBaPl2DDbttB88On9lXZgBXYSN-QQtUKsh8j7Rpuys.cache.23240.39308.641292, C:/Users/mulle/Documents/GitHub/Project-Generator/blueprint/tmp/cache/assets/sprockets/v4.0.0/6K/6KBaPl2DDbttB88On9lXZgBXYSN-QQtUKsh8j7Rpuys.cache)):
+  
+sprockets (4.2.0) lib/sprockets/path_utils.rb:362:in `rename'
+sprockets (4.2.0) lib/sprockets/path_utils.rb:362:in `atomic_write'
+sprockets (4.2.0) lib/sprockets/cache/file_store.rb:112:in `set'
+sprockets (4.2.0) lib/sprockets/cache.rb:227:in `set'
+sprockets (4.2.0) lib/sprockets/cache.rb:143:in `set'
+sprockets (4.2.0) lib/sprockets/loader.rb:263:in `store_asset'
+sprockets (4.2.0) lib/sprockets/loader.rb:226:in `load_from_unloaded'
+sprockets (4.2.0) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.2.0) lib/sprockets/loader.rb:337:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.0) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/map.rb:204:in `block in fetch_or_store'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/map.rb:184:in `fetch'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/map.rb:203:in `fetch_or_store'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.0) lib/sprockets/bundle.rb:32:in `block in call'
+C:/Ruby30-x64/lib/ruby/3.0.0/set.rb:344:in `each_key'
+C:/Ruby30-x64/lib/ruby/3.0.0/set.rb:344:in `each'
+sprockets (4.2.0) lib/sprockets/bundle.rb:31:in `call'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:84:in `call_processor'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:66:in `block in call_processors'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:65:in `reverse_each'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:65:in `call_processors'
+sprockets (4.2.0) lib/sprockets/loader.rb:182:in `load_from_unloaded'
+sprockets (4.2.0) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.2.0) lib/sprockets/loader.rb:337:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.0) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/map.rb:204:in `block in fetch_or_store'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/map.rb:184:in `fetch'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/map.rb:203:in `fetch_or_store'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.0) lib/sprockets/base.rb:81:in `find_asset'
+sprockets (4.2.0) lib/sprockets/base.rb:88:in `find_all_linked_assets'
+sprockets (4.2.0) lib/sprockets/manifest.rb:125:in `each'
+sprockets (4.2.0) lib/sprockets/manifest.rb:125:in `to_a'
+sprockets (4.2.0) lib/sprockets/manifest.rb:125:in `block (2 levels) in find'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `block in synchronize'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:22:in `execute'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/promise.rb:564:in `block in realize'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `run_task'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:343:in `block (3 levels) in create_worker'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `loop'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block (2 levels) in create_worker'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `catch'
+concurrent-ruby (1.2.0) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `block in create_worker'
+Started GET "/" for 127.0.0.1 at 2023-02-27 16:53:40 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.5ms | Allocations: 830)
+Completed 200 OK in 16ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 6782)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-02-27 16:53:49 -0700
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:11
+  Rendered userinputs/_userinput.html.erb (Duration: 0.6ms | Allocations: 323)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 2583)
+  Rendered layout layouts/application.html.erb (Duration: 176.8ms | Allocations: 43643)
+Completed 200 OK in 5604ms (Views: 181.4ms | ActiveRecord: 1.1ms | Allocations: 63816)
+
+
+Started GET "/download_pdf" for 127.0.0.1 at 2023-02-27 16:54:07 -0700
+Processing by UserinputsController#download_pdf as HTML
+Sent file C:/Users/mulle/Documents/GitHub/Project-Generator/blueprint/example.pdf (21.7ms)
+Completed 200 OK in 24ms (ActiveRecord: 0.0ms | Allocations: 2462)
+
+
+Started GET "/download_pdf" for 127.0.0.1 at 2023-02-27 16:54:07 -0700
+Processing by UserinputsController#download_pdf as HTML
+Sent file C:/Users/mulle/Documents/GitHub/Project-Generator/blueprint/example.pdf (0.3ms)
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/" for ::1 at 2023-02-28 10:15:09 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 21.0ms | Allocations: 830)
+Completed 200 OK in 102ms (Views: 44.5ms | ActiveRecord: 0.0ms | Allocations: 6782)
+
+
+Started GET "/userinputs" for ::1 at 2023-02-28 10:15:13 -0700
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+Started GET "/userinputs" for ::1 at 2023-02-28 10:15:17 -0700
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.1ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:11
+  Rendered userinputs/_userinput.html.erb (Duration: 4.7ms | Allocations: 323)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 21.2ms | Allocations: 2749)
+  Rendered layout layouts/application.html.erb (Duration: 294.2ms | Allocations: 40178)
+Completed 200 OK in 8164ms (Views: 299.0ms | ActiveRecord: 1.0ms | Allocations: 62852)
+
+
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.3ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:11
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1333)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 3630)
+Completed 200 OK in 5810ms (Views: 18.1ms | ActiveRecord: 0.7ms | Allocations: 47160)
+
+
+Started GET "/userinputs/1" for ::1 at 2023-02-28 10:15:29 -0700
+Processing by UserinputsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" WHERE "userinputs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:69:in `set_userinput'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/show.html.erb within layouts/application
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered userinputs/show.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1002)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 3394)
+Completed 200 OK in 107ms (Views: 12.0ms | ActiveRecord: 0.2ms | Allocations: 11453)
+
+
+Started DELETE "/userinputs/1" for ::1 at 2023-02-28 10:22:37 -0700
+Processing by UserinputsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUserinput Load (0.1ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" WHERE "userinputs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:69:in `set_userinput'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/userinputs_controller.rb:58:in `destroy'
+  [1m[36mUserinput Destroy (0.6ms)[0m  [1m[31mDELETE FROM "userinputs" WHERE "userinputs"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/userinputs_controller.rb:58:in `destroy'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/userinputs_controller.rb:58:in `destroy'
+Redirected to http://[::1]:3000/userinputs
+Completed 302 Found in 10ms (ActiveRecord: 2.9ms | Allocations: 3130)
+
+
+Started GET "/userinputs" for ::1 at 2023-02-28 10:22:37 -0700
+Processing by UserinputsController#index as TURBO_STREAM
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.3ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:11
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1200)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 3617)
+Completed 200 OK in 6835ms (Views: 10.5ms | ActiveRecord: 0.5ms | Allocations: 4855)
+
+
+Started GET "/download_pdf" for ::1 at 2023-02-28 10:22:49 -0700
+Processing by UserinputsController#download_pdf as HTML
+Sent file C:/Users/mulle/Documents/GitHub/Project-Generator/blueprint/example.pdf (53.2ms)
+Completed 200 OK in 56ms (ActiveRecord: 0.0ms | Allocations: 1179)
+
+
+Started GET "/download_pdf" for ::1 at 2023-02-28 10:22:49 -0700
+Processing by UserinputsController#download_pdf as HTML
+Sent file C:/Users/mulle/Documents/GitHub/Project-Generator/blueprint/example.pdf (0.3ms)
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/" for ::1 at 2023-02-28 15:19:32 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.4ms | Allocations: 830)
+Completed 200 OK in 26ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 6782)
+
+
+Started GET "/userinputs" for ::1 at 2023-02-28 15:19:51 -0700
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.3ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.3ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:11
+  Rendered userinputs/_userinput.html.erb (Duration: 0.8ms | Allocations: 323)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 100.2ms | Allocations: 8324)
+  Rendered layout layouts/application.html.erb (Duration: 184.0ms | Allocations: 45909)
+Completed 200 OK in 7193ms (Views: 189.0ms | ActiveRecord: 1.4ms | Allocations: 66089)
+
+
+Started GET "/download_pdf" for ::1 at 2023-02-28 15:20:07 -0700
+Processing by UserinputsController#download_pdf as HTML
+Sent file C:/Users/mulle/Documents/GitHub/Project-Generator/blueprint/example.pdf (41.1ms)
+Completed 200 OK in 44ms (ActiveRecord: 0.0ms | Allocations: 1174)
+
+
+Started GET "/download_pdf" for ::1 at 2023-02-28 15:20:07 -0700
+Processing by UserinputsController#download_pdf as HTML
+Sent file C:/Users/mulle/Documents/GitHub/Project-Generator/blueprint/example.pdf (0.3ms)
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/userinputs/5" for ::1 at 2023-02-28 15:20:18 -0700
+Processing by UserinputsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUserinput Load (0.3ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" WHERE "userinputs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:69:in `set_userinput'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/show.html.erb within layouts/application
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered userinputs/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1000)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 3406)
+Completed 200 OK in 19ms (Views: 10.7ms | ActiveRecord: 0.3ms | Allocations: 6142)
+
+
+Started DELETE "/userinputs/5" for ::1 at 2023-02-28 15:20:20 -0700
+Processing by UserinputsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"5"}
+  [1m[36mUserinput Load (0.3ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" WHERE "userinputs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:69:in `set_userinput'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/userinputs_controller.rb:58:in `destroy'
+  [1m[36mUserinput Destroy (0.6ms)[0m  [1m[31mDELETE FROM "userinputs" WHERE "userinputs"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/userinputs_controller.rb:58:in `destroy'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/userinputs_controller.rb:58:in `destroy'
+Redirected to http://[::1]:3000/userinputs
+Completed 302 Found in 11ms (ActiveRecord: 3.2ms | Allocations: 2923)
+
+
+Started GET "/userinputs" for ::1 at 2023-02-28 15:20:20 -0700
+Processing by UserinputsController#index as TURBO_STREAM
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.3ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:11
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1050)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 3461)
+Completed 200 OK in 7469ms (Views: 10.1ms | ActiveRecord: 0.5ms | Allocations: 4698)
+
+
+Started GET "/download_pdf" for ::1 at 2023-02-28 15:20:31 -0700
+Processing by UserinputsController#download_pdf as HTML
+Sent file C:/Users/mulle/Documents/GitHub/Project-Generator/blueprint/example.pdf (0.3ms)
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 199)
+
+
+Started GET "/download_pdf" for ::1 at 2023-02-28 15:20:31 -0700
+Processing by UserinputsController#download_pdf as HTML
+Sent file C:/Users/mulle/Documents/GitHub/Project-Generator/blueprint/example.pdf (0.5ms)
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/download_pdf" for ::1 at 2023-02-28 15:21:53 -0700
+Processing by UserinputsController#download_pdf as HTML
+Sent file C:/Users/mulle/Documents/GitHub/Project-Generator/blueprint/example.pdf (0.5ms)
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms | Allocations: 187)
+
+
+Started GET "/download_pdf" for ::1 at 2023-02-28 15:21:53 -0700
+Processing by UserinputsController#download_pdf as HTML
+Sent file C:/Users/mulle/Documents/GitHub/Project-Generator/blueprint/example.pdf (0.4ms)
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/" for ::1 at 2023-02-28 15:24:35 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.9ms | Allocations: 830)
+Completed 200 OK in 20ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 6782)
+
+
+Started GET "/userinputs" for ::1 at 2023-02-28 15:24:51 -0700
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.3ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.3ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:11
+  Rendered userinputs/_userinput.html.erb (Duration: 0.9ms | Allocations: 323)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 96.3ms | Allocations: 8201)
+  Rendered layout layouts/application.html.erb (Duration: 174.7ms | Allocations: 45802)
+Completed 200 OK in 6710ms (Views: 181.5ms | ActiveRecord: 1.2ms | Allocations: 65975)
+
+
+Started GET "/download_pdf" for ::1 at 2023-02-28 15:25:04 -0700
+Processing by UserinputsController#download_pdf as HTML
+Sent file C:/Users/mulle/Documents/GitHub/Project-Generator/blueprint/example.pdf (8.3ms)
+Completed 200 OK in 11ms (ActiveRecord: 0.0ms | Allocations: 1175)
+
+
+Started GET "/download_pdf" for ::1 at 2023-02-28 15:25:04 -0700
+Processing by UserinputsController#download_pdf as HTML
+Sent file C:/Users/mulle/Documents/GitHub/Project-Generator/blueprint/example.pdf (0.4ms)
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/download_pdf" for ::1 at 2023-02-28 15:39:24 -0700
+Processing by UserinputsController#download_pdf as HTML
+Sent file C:/Users/mulle/Documents/GitHub/Project-Generator/blueprint/example.pdf (0.5ms)
+Completed 200 OK in 4ms (Allocations: 184)
+
+
+Started GET "/download_pdf" for ::1 at 2023-02-28 15:39:24 -0700
+Processing by UserinputsController#download_pdf as HTML
+Sent file C:/Users/mulle/Documents/GitHub/Project-Generator/blueprint/example.pdf (0.3ms)
+Completed 200 OK in 3ms (Allocations: 183)
+
+
+Started GET "/userinputs/6" for ::1 at 2023-02-28 15:55:20 -0700
+Processing by UserinputsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" WHERE "userinputs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:69:in `set_userinput'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/show.html.erb within layouts/application
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered userinputs/show.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1027)
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 3431)
+Completed 200 OK in 115ms (Views: 22.0ms | ActiveRecord: 0.6ms | Allocations: 11087)
+
+
+Started GET "/userinputs/6/edit" for ::1 at 2023-02-28 15:55:22 -0700
+Processing by UserinputsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" WHERE "userinputs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:69:in `set_userinput'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/edit.html.erb within layouts/application
+  Rendered userinputs/_form.html.erb (Duration: 49.2ms | Allocations: 3904)
+  Rendered userinputs/edit.html.erb within layouts/application (Duration: 63.6ms | Allocations: 4313)
+  Rendered layout layouts/application.html.erb (Duration: 69.1ms | Allocations: 6707)
+Completed 200 OK in 74ms (Views: 69.6ms | ActiveRecord: 0.2ms | Allocations: 7619)
+
+
+Started PATCH "/userinputs/6" for ::1 at 2023-02-28 15:55:46 -0700
+Processing by UserinputsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "userinput"=>{"title"=>"cars ", "subject"=>"car emissions", "subtopics"=>"CO2 \nGHG"}, "commit"=>"Update Userinput", "id"=>"6"}
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" WHERE "userinputs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:69:in `set_userinput'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/userinputs_controller.rb:46:in `block in update'
+  [1m[36mUserinput Update (1.0ms)[0m  [1m[33mUPDATE "userinputs" SET "subject" = ?, "subtopics" = ?, "updated_at" = ? WHERE "userinputs"."id" = ?[0m  [["subject", "car emissions"], ["subtopics", "CO2 \nGHG"], ["updated_at", "2023-02-28 22:55:46.728880"], ["id", 6]]
+  ↳ app/controllers/userinputs_controller.rb:46:in `block in update'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/userinputs_controller.rb:46:in `block in update'
+Redirected to http://[::1]:3000/userinputs/6
+Completed 302 Found in 11ms (ActiveRecord: 3.1ms | Allocations: 4376)
+
+
+Started GET "/userinputs/6" for ::1 at 2023-02-28 15:55:46 -0700
+Processing by UserinputsController#show as TURBO_STREAM
+  Parameters: {"id"=>"6"}
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" WHERE "userinputs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:69:in `set_userinput'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/show.html.erb within layouts/application
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered userinputs/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 718)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 3118)
+Completed 200 OK in 12ms (Views: 8.1ms | ActiveRecord: 0.2ms | Allocations: 4010)
+
+
+Started GET "/userinputs" for ::1 at 2023-02-28 15:55:52 -0700
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:11
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 943)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3239)
+Completed 200 OK in 17777ms (Views: 9.1ms | ActiveRecord: 0.5ms | Allocations: 4394)
+
+
+Started GET "/download_pdf" for ::1 at 2023-02-28 15:56:13 -0700
+Processing by UserinputsController#download_pdf as HTML
+Sent file C:/Users/mulle/Documents/GitHub/Project-Generator/blueprint/example.pdf (0.3ms)
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 199)
+
+
+Started GET "/download_pdf" for ::1 at 2023-02-28 15:56:13 -0700
+Processing by UserinputsController#download_pdf as HTML
+Sent file C:/Users/mulle/Documents/GitHub/Project-Generator/blueprint/example.pdf (0.3ms)
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/userinputs/6" for ::1 at 2023-02-28 16:22:28 -0700
+Processing by UserinputsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUserinput Load (0.1ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" WHERE "userinputs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:69:in `set_userinput'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/show.html.erb within layouts/application
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered userinputs/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 586)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 2859)
+Completed 200 OK in 15ms (Views: 10.9ms | ActiveRecord: 0.4ms | Allocations: 3839)
+
+
+Started GET "/userinputs" for ::1 at 2023-02-28 16:22:30 -0700
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+Started GET "/download_pdf" for ::1 at 2023-02-28 16:22:35 -0700
+Processing by UserinputsController#download_pdf as HTML
+Sent file C:/Users/mulle/Documents/GitHub/Project-Generator/blueprint/example.pdf (0.3ms)
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/download_pdf" for ::1 at 2023-02-28 16:22:35 -0700
+Processing by UserinputsController#download_pdf as HTML
+Sent file C:/Users/mulle/Documents/GitHub/Project-Generator/blueprint/example.pdf (0.3ms)
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.3ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:11
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 13.2ms | Allocations: 939)
+  Rendered layout layouts/application.html.erb (Duration: 52.8ms | Allocations: 3233)
+Completed 200 OK in 16456ms (Views: 53.7ms | ActiveRecord: 0.5ms | Allocations: 7477)
+
+
+Started GET "/userinputs/6" for ::1 at 2023-02-28 16:58:50 -0700
+Processing by UserinputsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" WHERE "userinputs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:69:in `set_userinput'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/show.html.erb within layouts/application
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered userinputs/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 577)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 2858)
+Completed 200 OK in 14ms (Views: 8.6ms | ActiveRecord: 0.5ms | Allocations: 3824)
+
+
+Started GET "/userinputs/6/edit" for ::1 at 2023-02-28 16:58:52 -0700
+Processing by UserinputsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" WHERE "userinputs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:69:in `set_userinput'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/edit.html.erb within layouts/application
+  Rendered userinputs/_form.html.erb (Duration: 1.8ms | Allocations: 1388)
+  Rendered userinputs/edit.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1512)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3785)
+Completed 200 OK in 12ms (Views: 8.2ms | ActiveRecord: 0.2ms | Allocations: 4591)
+
+
+Started PATCH "/userinputs/6" for ::1 at 2023-02-28 16:59:02 -0700
+Processing by UserinputsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "userinput"=>{"title"=>"cars ", "subject"=>"car emissions", "subtopics"=>"CO2 \nGHG"}, "commit"=>"Update Userinput", "id"=>"6"}
+  [1m[36mUserinput Load (0.3ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" WHERE "userinputs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:69:in `set_userinput'
+Redirected to http://[::1]:3000/userinputs/6
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms | Allocations: 1186)
+
+
+Started GET "/userinputs/6" for ::1 at 2023-02-28 16:59:02 -0700
+Processing by UserinputsController#show as TURBO_STREAM
+  Parameters: {"id"=>"6"}
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" WHERE "userinputs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:69:in `set_userinput'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/show.html.erb within layouts/application
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered userinputs/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 624)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 2906)
+Completed 200 OK in 12ms (Views: 8.5ms | ActiveRecord: 0.2ms | Allocations: 3716)
+
+
+Started GET "/userinputs" for ::1 at 2023-02-28 16:59:05 -0700
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.4ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:11
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 949)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 3249)
+Completed 200 OK in 12548ms (Views: 10.0ms | ActiveRecord: 0.6ms | Allocations: 4342)
+
+
+Started GET "/download_pdf" for ::1 at 2023-02-28 16:59:32 -0700
+Processing by UserinputsController#download_pdf as HTML
+Sent file C:/Users/mulle/Documents/GitHub/Project-Generator/blueprint/example.pdf (0.3ms)
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/download_pdf" for ::1 at 2023-02-28 16:59:32 -0700
+Processing by UserinputsController#download_pdf as HTML
+Sent file C:/Users/mulle/Documents/GitHub/Project-Generator/blueprint/example.pdf (0.3ms)
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/userinputs/6" for ::1 at 2023-02-28 17:00:24 -0700
+Processing by UserinputsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" WHERE "userinputs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:69:in `set_userinput'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/show.html.erb within layouts/application
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered userinputs/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 595)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 2868)
+Completed 200 OK in 13ms (Views: 8.5ms | ActiveRecord: 0.2ms | Allocations: 3674)
+
+
+Started DELETE "/userinputs/6" for ::1 at 2023-02-28 17:00:26 -0700
+Processing by UserinputsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"6"}
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" WHERE "userinputs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:69:in `set_userinput'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/userinputs_controller.rb:58:in `destroy'
+  [1m[36mUserinput Destroy (0.8ms)[0m  [1m[31mDELETE FROM "userinputs" WHERE "userinputs"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/userinputs_controller.rb:58:in `destroy'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/userinputs_controller.rb:58:in `destroy'
+Redirected to http://[::1]:3000/userinputs
+Completed 302 Found in 9ms (ActiveRecord: 3.0ms | Allocations: 2469)
+
+
+Started GET "/userinputs" for ::1 at 2023-02-28 17:00:26 -0700
+Processing by UserinputsController#index as TURBO_STREAM
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:11
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 791)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 3087)
+Completed 200 OK in 16562ms (Views: 9.9ms | ActiveRecord: 0.4ms | Allocations: 4079)
+
+
+Started GET "/userinputs/new" for ::1 at 2023-02-28 17:00:45 -0700
+Processing by UserinputsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/new.html.erb within layouts/application
+  Rendered userinputs/_form.html.erb (Duration: 1.6ms | Allocations: 1287)
+  Rendered userinputs/new.html.erb within layouts/application (Duration: 11.7ms | Allocations: 1583)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 3868)
+Completed 200 OK in 22ms (Views: 17.9ms | ActiveRecord: 0.0ms | Allocations: 4324)
+
+
+Started POST "/userinputs" for ::1 at 2023-02-28 17:02:45 -0700
+Processing by UserinputsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "userinput"=>{"title"=>"Nuclear Waste", "subject"=>"Harm of Nuclear waste", "subtopics"=>"air\nwater"}, "commit"=>"Create Userinput"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/userinputs_controller.rb:33:in `block in create'
+  [1m[36mUserinput Create (1.0ms)[0m  [1m[32mINSERT INTO "userinputs" ("title", "subject", "subtopics", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Nuclear Waste"], ["subject", "Harm of Nuclear waste"], ["subtopics", "air\nwater"], ["created_at", "2023-03-01 00:02:46.001076"], ["updated_at", "2023-03-01 00:02:46.001076"]]
+  ↳ app/controllers/userinputs_controller.rb:33:in `block in create'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/userinputs_controller.rb:33:in `block in create'
+Redirected to http://[::1]:3000/userinputs/7
+Completed 302 Found in 11ms (ActiveRecord: 3.1ms | Allocations: 2450)
+
+
+Started GET "/userinputs/7" for ::1 at 2023-02-28 17:02:46 -0700
+Processing by UserinputsController#show as TURBO_STREAM
+  Parameters: {"id"=>"7"}
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" WHERE "userinputs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:69:in `set_userinput'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/show.html.erb within layouts/application
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered userinputs/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 618)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 2891)
+Completed 200 OK in 10ms (Views: 6.8ms | ActiveRecord: 0.2ms | Allocations: 3698)
+
+
+Started GET "/userinputs" for ::1 at 2023-02-28 17:02:50 -0700
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:11
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 916)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 3210)
+Completed 200 OK in 14557ms (Views: 9.0ms | ActiveRecord: 0.4ms | Allocations: 4308)
+
+
+Started GET "/download_pdf" for ::1 at 2023-02-28 17:03:17 -0700
+Processing by UserinputsController#download_pdf as HTML
+Sent file C:/Users/mulle/Documents/GitHub/Project-Generator/blueprint/example.pdf (0.3ms)
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/download_pdf" for ::1 at 2023-02-28 17:03:17 -0700
+Processing by UserinputsController#download_pdf as HTML
+Sent file C:/Users/mulle/Documents/GitHub/Project-Generator/blueprint/example.pdf (0.3ms)
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
