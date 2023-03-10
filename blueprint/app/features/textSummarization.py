@@ -14,7 +14,7 @@ class SummarizeText:
         with open(self.genText) as f:
             sampleText = f.read()
             f.close
-        print(summarizer(sampleText))
+        return(summarizer(sampleText))
 
 
     
