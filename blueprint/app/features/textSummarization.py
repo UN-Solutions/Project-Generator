@@ -26,4 +26,4 @@ if __name__ == "__main__":
     #ask user for input
     path = input('File path: ')
     result = SummarizeText(path)
-    result.summarizeText()
+    print(result.summarizeText())
