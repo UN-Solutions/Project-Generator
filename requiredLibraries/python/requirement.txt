@@ -1,0 +1,9 @@
+#training model libraries
+pandas==1.5.2
+matplotlib==3.6.2
+seaborn==0.12.2
+jupyter
+torch
+matplotlib
+transformers == 4.24.0
+happytransformer
