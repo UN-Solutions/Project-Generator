@@ -1,0 +1,24 @@
+from textProcessing import TextProcessing
+
+# TODO: A test that intakes hard coded text and returns a summarized version
+
+# A test that is able to take in a body of text and returns a txt file that is summarized
+def fileSummarization(fpath):
+    with open(fpath) as f:
+        text = f.read()
+        f.close 
+    summ = TextProcessing(text)
+    summ = summ.summarizeText()
+    return(summ)
+    
+# TODO: A test that intakes hard coded text and returns a listed version
+
+# TODO: A test that is able to take in a body of text and returns a txt file that is a listed version
+
+if __name__ == "__main__":
+
+    #2nd test
+    path_romeo = '/home/migui/school/spring23/seniorXp/project/Project-Generator/data/sampleTexts/MSalvador_FinalPromptAssesment.txt'
+    path_zuni = '/home/migui/school/spring23/seniorXp/project/Project-Generator/data/sampleTexts/the-zuni-miguelA.txt'
+
+    print("text summary of romeo and Juliet essay:\n",fileSummarization(path_romeo))
