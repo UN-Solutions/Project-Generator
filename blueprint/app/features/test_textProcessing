@@ -21,4 +21,6 @@ if __name__ == "__main__":
     path_romeo = '/home/migui/school/spring23/seniorXp/project/Project-Generator/data/sampleTexts/MSalvador_FinalPromptAssesment.txt'
     path_zuni = '/home/migui/school/spring23/seniorXp/project/Project-Generator/data/sampleTexts/the-zuni-miguelA.txt'
 
-    print("text summary of romeo and Juliet essay:\n",fileSummarization(path_romeo))
+    #print("text summary of romeo and Juliet essay:\n",fileSummarization(path_romeo))
+    
+    #offside work
