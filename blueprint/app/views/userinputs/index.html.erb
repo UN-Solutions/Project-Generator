@@ -1,19 +1,18 @@
-<p style="color: green"><%= notice %></p>
+<p class="text-green-500 font-bold"><%= notice %></p>
 
-<h1>Userinputs</h1>
-
-<%= link_to "download", download_pdf_path %>
-
-
-<div id="userinputs">
-
-
-  <% @userinputs.each do |userinput| %>
-    <%= render userinput %>
-    <p>
-      <%= link_to "Show this userinput", userinput %>
-    </p>
-  <% end %>
+<div class="flex justify-between items-center mb-4">
+  <h1 class="text-3xl font-bold">User Inputs</h1>
+  <div>
+    <a href="<%= download_pdf_path %>" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4">Download</a>
+    <%= link_to "New User Input", new_userinput_path, class: "bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" %>
+  </div>
 </div>
 
-<%= link_to "New userinput", new_userinput_path %>
+<div id="userinputs" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  <% @userinputs.each do |userinput| %>
+    <%= render userinput %>
+    <div class="text-center">
+      <%= link_to "Show", userinput, class: "bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded" %>
+    </div>
+  <% end %>
+</div>

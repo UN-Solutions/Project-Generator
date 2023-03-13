@@ -1,0 +1,2 @@
+class Mluserinput < ApplicationRecord
+end

@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_10_010540) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_10_202058) do
+  create_table "mluserinputs", force: :cascade do |t|
+    t.string "title"
+    t.string "subject"
+    t.text "subtopics"
+    t.text "mlinput"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "userinputs", force: :cascade do |t|
     t.string "title"
     t.string "subject"
