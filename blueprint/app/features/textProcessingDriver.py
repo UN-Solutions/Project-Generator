@@ -8,3 +8,9 @@ with open(path) as f:
     f.close()
  
 print(len(fullText))
+
+#TODO: create diff arrays or strings to make partitions
+
+#TODO: process text w/ textProcessing tools
+
+#TODO: create arrays to store text objs
