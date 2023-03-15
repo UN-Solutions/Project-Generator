@@ -7,3 +7,4 @@ torch
 matplotlib
 transformers == 4.24.0
 happytransformer
+nltk 
