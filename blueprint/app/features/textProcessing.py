@@ -17,8 +17,13 @@ class TextProcessing:
             return(result['summary_text'])
 
     # TODO: function to list text
-    """function to generate topic of a given text"""
+    
+    """function to generate topic question of a given text"""
     def topicizeText(self):
         result = topicizer(self.genText)
-        return(result)
+        for result in result:
+            return(result['summary_text'])
+    
+if __name__=="__main__":
+    print("hello world")
 
