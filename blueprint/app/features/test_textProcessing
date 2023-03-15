@@ -25,7 +25,7 @@ def fileTopicizer(fpath):
 
 if __name__ == "__main__":
 
-    path_romeo = '/home/migui/school/spring23/seniorXp/project/Project-Generator/data/sampleTexts/MSalvador_FinalPromptAssesment.txt'
+    path_romeo = '/home/msalvador45/school/spring23/seniorXP/project/Project-Generator/data/sampleTexts/MSalvador_FinalPromptAssesment.txt'
     #path_zuni = '/home/migui/school/spring23/seniorXp/project/Project-Generator/data/sampleTexts/the-zuni-miguelA.txt'
 
     ## 2nd test
