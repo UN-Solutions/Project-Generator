@@ -18,11 +18,11 @@ class TextProcessing:
 
     # TODO: function to list text
     
-    """function to generate topic question of a given text"""
+    """function to generate topic question of a given"""
     def topicizeText(self):
         result = topicizer(self.genText)
         for result in result:
-            return(result['summary_text'])
+            return(result['summary_text']) #limited to tokens (1024>512)
     
 if __name__=="__main__":
     print("hello world")

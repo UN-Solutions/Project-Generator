@@ -9,6 +9,8 @@ with open(path) as f:
  
 print(len(fullText))
 
+#TODO: create throw exceptions for insufficient word lenght or too much word length
+
 #TODO: create diff arrays or strings to make partitions
 
 #TODO: process text w/ textProcessing tools
