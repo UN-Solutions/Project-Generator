@@ -4,14 +4,24 @@
 # read in file 
 path = '/home/msalvador45/school/spring23/seniorXP/project/Project-Generator/data/sampleTexts/MSalvador_FinalPromptAssesment.txt'
 with open(path) as f:
-    fullText = f.read()
+    ogText = f.read()
     f.close()
- 
-print(len(fullText))
 
-#TODO: create throw exceptions for insufficient word lenght or too much word length
+ogText = ogText.split() #create a list out of the text
+print(ogText)
+print(len(ogText))
 
-#TODO: create diff arrays or strings to make partitions
+# Throw exceptions for insufficient word lenght or too much word length
+
+if len(ogText) < 100 :
+    raise Exception('text document is less than 100 words, need text document (100<length<2400)')
+elif len(ogText) > 2400:
+    raise Exception('text document is more than 2400 words, need text document (100<length<2400)')
+else:
+    print('text document is between 100 and 2400 words')
+    fullText = ' '.join(ogText)
+    
+#TODO: create diff arrays oAr strings to make partitions
 
 #TODO: process text w/ textProcessing tools
 
