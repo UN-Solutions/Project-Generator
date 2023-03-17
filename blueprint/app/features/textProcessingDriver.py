@@ -2,14 +2,16 @@
 #from textProcessing import TextProcessing
 
 # read in file 
-path = '/home/msalvador45/school/spring23/seniorXP/project/Project-Generator/data/sampleTexts/MSalvador_FinalPromptAssesment.txt'
+pathCorrect = '/home/msalvador45/school/spring23/seniorXP/project/Project-Generator/data/sampleTexts/MSalvador_FinalPromptAssesment.txt'
+pathLess = ''
+pathMore = ''
+
 with open(path) as f:
     ogText = f.read()
     f.close()
 
 ogText = ogText.split() #create a list out of the text
-print(ogText)
-print(len(ogText))
+print('the text has a lenght of: ', len(ogText),'words\n')
 
 # Throw exceptions for insufficient word lenght or too much word length
 
@@ -20,7 +22,6 @@ elif len(ogText) > 2400:
 else:
     print('text document is between 100 and 2400 words')
     fullText = ' '.join(ogText)
-    print(fullText)
     
 #TODO: create diff arrays oAr strings to make partitions
 
