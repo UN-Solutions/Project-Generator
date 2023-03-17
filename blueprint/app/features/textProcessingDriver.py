@@ -20,6 +20,7 @@ elif len(ogText) > 2400:
 else:
     print('text document is between 100 and 2400 words')
     fullText = ' '.join(ogText)
+    print(fullText)
     
 #TODO: create diff arrays oAr strings to make partitions
 
