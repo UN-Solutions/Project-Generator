@@ -1,10 +1,12 @@
+import re
 #TODO: Driver module that takes in text and outputs the various objects into a file
 #from textProcessing import TextProcessing
 
 # read in file 
 pathCorrect = '/home/msalvador45/school/spring23/seniorXP/project/Project-Generator/data/sampleTexts/MSalvador_FinalPromptAssesment.txt'
-pathLess = ''
-pathMore = ''
+pathMore = '/home/msalvador45/school/spring23/seniorXP/project/Project-Generator/data/sampleTexts/longSumm.txt'
+pathLess = '/home/msalvador45/school/spring23/seniorXP/project/Project-Generator/data/sampleTexts/shortSumm.txt'
+path = pathCorrect
 
 with open(path) as f:
     ogText = f.read()
@@ -23,7 +25,24 @@ else:
     print('text document is between 100 and 2400 words')
     fullText = ' '.join(ogText)
     
-#TODO: create diff arrays oAr strings to make partitions
+# create a list to store diff. sections of a text cut into fourths 
+senList = re.split(r'[.!?]+',fullText)      #make a list out of all sentences in text doc
+print('the number of sentences in text document is: ',len(senList),'sentences\n')   #number of sentences in doc
+
+# code by user Adam Smith on https://stackoverflow.com/questions/22571259/split-a-string-into-n-equal-parts
+# function makes number of sections of a string
+def chunk(in_string,num_chunks):
+    chunk_size = len(in_string)//num_chunks
+    if len(in_string) % num_chunks: chunk_size += 1
+    iterator = iter(in_string)
+    for _ in range(num_chunks):
+        accumulator = list()
+        for _ in range(chunk_size):
+            try: accumulator.append(next(iterator))
+            except StopIteration: break
+        yield ''.join(accumulator)
+
+textSects = list(chunk(fullText,4))    #creates the number of sections we want, stored in a list item
 
 #TODO: process text w/ textProcessing tools
 
