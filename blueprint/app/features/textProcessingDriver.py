@@ -45,10 +45,16 @@ def chunk(in_string,num_chunks):
 textSects = list(chunk(fullText,4))    #creates the number of sections we want, stored in a list item
 
 #TODO: process text w/ textProcessing tools to diff. lists using diff. functions
-#TODO: Awareness profile
 txtProcessor = TextProcessing()
-def Awareness 
+txtProcessor = txtProcessor.topicizeText(textSects[1])
+print(txtProcessor)
+
+#TODO: Awareness profile
+#def awarenessPf (input_text):
+
+    
 
 #TODO: Professional profile
 #TODO: Future Planning Profile
+
 #TODO: create arrays to store text objs

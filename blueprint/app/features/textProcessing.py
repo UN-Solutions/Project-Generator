@@ -7,22 +7,22 @@ topicizer = pipeline('summarization', model='tennessejoyce/titlewave-t5-base')  
 # TODO: create classes to process text by summarizing and listing
 class TextProcessing:
     """text input"""
-    def __init__(self, genText):
-        self.genText = genText
-
+    def __init__(self):
+        pass
+    
     """function to summarize text"""
-    def summarizeText(self):
-        result = summarizer(self.genText)
+    def summarizeText(self, genText):
+        result = summarizer(genText)
         for result in result:
             return(result['summary_text'])
 
     # TODO: function to list text
     
     """function to generate topic question of a given"""
-    def topicizeText(self):
-        result = topicizer(self.genText)
+    def topicizeText(self, genText):
+        result = topicizer(genText)
         for result in result:
-            return(result['summary_text']) #limited to tokens (1024>512)
+            return(result['summary_text']) #limited to tokens (1024>512) and >40 words
     
 if __name__=="__main__":
     print("hello world")
