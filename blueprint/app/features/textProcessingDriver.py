@@ -46,13 +46,19 @@ textSects = list(chunk(fullText,4))    #creates the number of sections we want, 
 
 #TODO: process text w/ textProcessing tools to diff. lists using diff. functions
 txtProcessor = TextProcessing()
-txtProcessor = txtProcessor.topicizeText(textSects[1])
-print(txtProcessor)
 
 #TODO: Awareness profile
-#def awarenessPf (input_text):
-
+def awarenessProfile (input_text):
+    awarenessList = []
+    fullTxtSumm = txtProcessor.summarizeText(fullText)  #summarizes full text
+    awarenessList.append(fullTxtSumm)
+    #topicizize the rest of the text
+    for i in input_text:
+        awarenessList.append(txtProcessor.topicizeText(i))
     
+    return awarenessList
+
+print(awarenessProfile(textSects),'function is done')
 
 #TODO: Professional profile
 #TODO: Future Planning Profile
