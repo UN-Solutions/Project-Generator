@@ -24,6 +24,8 @@ class TextProcessing:
         for result in result:
             return(result['summary_text']) #limited to tokens (1024>512) and >40 words
     
+#TODO: profile class, returns proccessed text needed for specific profiles
+
 if __name__=="__main__":
     print("hello world")
 

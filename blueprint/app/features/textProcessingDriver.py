@@ -4,8 +4,8 @@ import re
 
 # read in file 
 pathCorrect = '/home/msalvador45/school/spring23/seniorXP/project/Project-Generator/data/sampleTexts/MSalvador_FinalPromptAssesment.txt'
-pathMore = '/home/msalvador45/school/spring23/seniorXP/project/Project-Generator/data/sampleTexts/longSumm.txt'
-pathLess = '/home/msalvador45/school/spring23/seniorXP/project/Project-Generator/data/sampleTexts/shortSumm.txt'
+##pathMore = '/home/msalvador45/school/spring23/seniorXP/project/Project-Generator/data/sampleTexts/longSumm.txt'
+##pathLess = '/home/msalvador45/school/spring23/seniorXP/project/Project-Generator/data/sampleTexts/shortSumm.txt'
 path = pathCorrect
 
 with open(path) as f:
@@ -58,9 +58,14 @@ def awarenessProfile (input_text):
     
     return awarenessList
 
-print(awarenessProfile(textSects),'function is done')
+result = awarenessProfile(textSects)
+counter = 0
+for i in result:
+    print(result[counter],'\n')
 
-#TODO: Professional profile
+    counter += 1
+
+##TODO: Professional profile
 #TODO: Future Planning Profile
 
 #TODO: create arrays to store text objs
