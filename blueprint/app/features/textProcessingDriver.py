@@ -1,6 +1,6 @@
-import re
 #TODO: Driver module that takes in text and outputs the various objects into a file
-#from textProcessing import TextProcessing
+from textProcessing import TextProcessing
+import re
 
 # read in file 
 pathCorrect = '/home/msalvador45/school/spring23/seniorXP/project/Project-Generator/data/sampleTexts/MSalvador_FinalPromptAssesment.txt'
@@ -13,7 +13,7 @@ with open(path) as f:
     f.close()
 
 ogText = ogText.split() #create a list out of the text
-print('the text has a lenght of: ', len(ogText),'words\n')
+print('the text has a lenght of: ', len(ogText),'words')
 
 # Throw exceptions for insufficient word lenght or too much word length
 
@@ -44,6 +44,11 @@ def chunk(in_string,num_chunks):
 
 textSects = list(chunk(fullText,4))    #creates the number of sections we want, stored in a list item
 
-#TODO: process text w/ textProcessing tools
+#TODO: process text w/ textProcessing tools to diff. lists using diff. functions
+#TODO: Awareness profile
+txtProcessor = TextProcessing()
+def Awareness 
 
+#TODO: Professional profile
+#TODO: Future Planning Profile
 #TODO: create arrays to store text objs
