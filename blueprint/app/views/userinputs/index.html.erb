@@ -1,19 +1,17 @@
-<p style="color: green"><%= notice %></p>
+<p class="text-green-600"><%= notice %></p>
 
-<h1>Userinputs</h1>
+<h1 class="text-3xl font-bold mb-4">Userinputs</h1>
 
-<%= link_to "download", download_pdf_path %>
-
+<%= link_to "Download", download_pdf_path, class: "px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg shadow-md mb-4 inline-block" %>
 
 <div id="userinputs">
-
-
   <% @userinputs.each do |userinput| %>
     <%= render userinput %>
     <p>
-      <%= link_to "Show this userinput", userinput %>
+      <%= link_to "Show this userinput", userinput, class: "text-blue-500 hover:text-blue-600" %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New userinput", new_userinput_path %>
+<%= link_to "New userinput", new_userinput_path, class: "px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg shadow-md inline-block" %>
+
