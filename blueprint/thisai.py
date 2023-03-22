@@ -2,7 +2,7 @@ import sys
 import openai
 from fpdf import FPDF
 
-openai.api_key = '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'
+openai.api_key = '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'
 
 input_string = ''
 

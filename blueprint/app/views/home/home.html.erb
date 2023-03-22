@@ -1,3 +1,58 @@
-<h1>Home#home</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blueprint.ai</title>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@latest/dist/tailwind.min.css">
+  </head>
+  <body>
+    <!-- Navigation section -->
+    <nav class="bg-white shadow-lg">
+      <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a class="text-gray-800 font-bold text-xl" href="#">Blueprint.ai</a>
+        <div class="flex">
+          <a class="text-gray-800 hover:text-gray-600 mx-3 font-medium" href="#">Home</a>
+          <a class="text-gray-800 hover:text-gray-600 mx-3 font-medium" href="/aboutus">About Us</a>
+          <a class="text-gray-800 hover:text-gray-600 mx-3 font-medium" href="/howto">How To</a>
+          <a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" href="#">Sign In</a>
+        </div>
+      </div>
+    </nav>
 
-<p>It's where the <%= @heart %> </p>
+    <!-- Main content section -->
+    <main class="container mx-auto px-4 py-8">
+      <h2 class="text-3xl font-bold mb-6">What We Do</h2>
+      <table border>
+        <thead>
+          <tr>
+          <%= link_to "Fututre Planning", userinputs_path, class: "py-2 px-4 bg-red-500 hover:bg-grey-600 text-white font-semibold rounded-lg shadow-md" %>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="bg-gray-100 px-6 py-8 rounded-md">
+                <h3 class="text-xl font-bold mb-4">Data Analysis</h3>
+                <p class="text-gray-700">Leverage the power of AI and machine learning algorithms to extract valuable insights from your business data.</p>
+              </div>
+            </td>
+            <td>
+              <div class="bg-gray-100 px-6 py-8 rounded-md">
+                <h3 class="text-xl font-bold mb-4">Process Automation</h3>
+                <p class="text-gray-700">Streamline your business processes and reduce operational costs with our AI-powered automation solutions.</p>
+              </div>
+            </td>
+            <td>
+              <div class="bg-gray-100 px-6 py-8 rounded-md">
+                <h3 class="text-xl font-bold mb-4">Predictive Modeling</h3>
+                <p class="text-gray-700">Use predictive analytics to forecast future trends and make data-driven decisions for your business.</p>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+  </body>
+</html>

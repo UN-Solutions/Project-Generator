@@ -2114,3 +2114,938 @@ Processing by UserinputsController#index as HTML
 Completed 200 OK in 6609ms (Views: 8.9ms | ActiveRecord: 0.6ms | Allocations: 6607)
 
 
+Started GET "/" for 127.0.0.1 at 2023-03-22 09:50:09 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/wavy/.rbenv/versions/3.0.4/lib/ruby/gems/3.0.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/wavy/.rbenv/versions/3.0.4/lib/ruby/gems/3.0.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.1ms | Allocations: 826)
+Completed 200 OK in 26ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 6731)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-03-22 09:52:49 -0600
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.6ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.4ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:11
+  Rendered userinputs/_userinput.html.erb (Duration: 0.6ms | Allocations: 311)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 9.1ms | Allocations: 2559)
+  Rendered layout layouts/application.html.erb (Duration: 115.0ms | Allocations: 38501)
+Completed 200 OK in 1046ms (Views: 116.3ms | ActiveRecord: 2.3ms | Allocations: 58595)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-22 10:04:07 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/wavy/.rbenv/versions/3.0.4/lib/ruby/gems/3.0.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/wavy/.rbenv/versions/3.0.4/lib/ruby/gems/3.0.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.4ms | Allocations: 826)
+Completed 200 OK in 10ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 6730)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-22 10:04:09 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/wavy/.rbenv/versions/3.0.4/lib/ruby/gems/3.0.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/wavy/.rbenv/versions/3.0.4/lib/ruby/gems/3.0.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.8ms | Allocations: 487)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 1486)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-22 10:04:15 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/wavy/.rbenv/versions/3.0.4/lib/ruby/gems/3.0.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/wavy/.rbenv/versions/3.0.4/lib/ruby/gems/3.0.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 16)
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 306)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-22 10:04:33 -0600
+Processing by HomeController#index as HTML
+Completed 406 Not Acceptable in 2ms (Allocations: 865)
+
+
+  
+ActionController::MissingExactTemplate (HomeController#index is missing a template for request formats: text/html):
+  
+actionpack (7.0.4.2) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (7.0.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+<internal:kernel>:90:in `tap'
+actionpack (7.0.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.4.2) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.4.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2023-03-22 10:04:35 -0600
+Processing by HomeController#index as HTML
+Completed 406 Not Acceptable in 1ms (Allocations: 573)
+
+
+  
+ActionController::MissingExactTemplate (HomeController#index is missing a template for request formats: text/html):
+  
+actionpack (7.0.4.2) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (7.0.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+<internal:kernel>:90:in `tap'
+actionpack (7.0.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.4.2) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.4.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2023-03-22 10:04:55 -0600
+Processing by HomeController#index as HTML
+Completed 406 Not Acceptable in 2ms (Allocations: 760)
+
+
+  
+ActionController::MissingExactTemplate (HomeController#index is missing a template for request formats: text/html):
+  
+actionpack (7.0.4.2) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (7.0.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+<internal:kernel>:90:in `tap'
+actionpack (7.0.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.4.2) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.4.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2023-03-22 10:04:56 -0600
+Processing by HomeController#index as HTML
+Completed 406 Not Acceptable in 1ms (Allocations: 547)
+
+
+  
+ActionController::MissingExactTemplate (HomeController#index is missing a template for request formats: text/html):
+  
+actionpack (7.0.4.2) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (7.0.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+<internal:kernel>:90:in `tap'
+actionpack (7.0.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.4.2) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.4.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2023-03-22 10:05:03 -0600
+Processing by HomeController#index as HTML
+Completed 406 Not Acceptable in 2ms (Allocations: 761)
+
+
+  
+ActionController::MissingExactTemplate (HomeController#index is missing a template for request formats: text/html):
+  
+actionpack (7.0.4.2) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (7.0.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+<internal:kernel>:90:in `tap'
+actionpack (7.0.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.4.2) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.4.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2023-03-22 10:05:27 -0600
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 138)
+  Rendered layout layouts/application.html.erb (Duration: 108.1ms | Allocations: 35324)
+Completed 200 OK in 113ms (Views: 111.1ms | Allocations: 36474)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-22 10:09:06 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 451)
+  Rendered layout layouts/application.html.erb (Duration: 747.7ms | Allocations: 151163)
+Completed 200 OK in 762ms (Views: 751.4ms | ActiveRecord: 0.0ms | Allocations: 157225)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-03-22 10:09:13 -0600
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.8ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:11
+  Rendered userinputs/_userinput.html.erb (Duration: 0.9ms | Allocations: 311)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 10.7ms | Allocations: 2565)
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 9374)
+Completed 200 OK in 868ms (Views: 25.5ms | ActiveRecord: 2.7ms | Allocations: 29251)
+
+
+Started GET "/userinputs/new" for 127.0.0.1 at 2023-03-22 10:09:17 -0600
+Processing by UserinputsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/new.html.erb within layouts/application
+  Rendered userinputs/_form.html.erb (Duration: 21.1ms | Allocations: 4128)
+  Rendered userinputs/new.html.erb within layouts/application (Duration: 23.6ms | Allocations: 4468)
+  Rendered layout layouts/application.html.erb (Duration: 35.0ms | Allocations: 11166)
+Completed 200 OK in 38ms (Views: 36.2ms | ActiveRecord: 0.0ms | Allocations: 11659)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-03-22 10:10:02 -0600
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.6ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.1ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:11
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1214)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 7803)
+Completed 200 OK in 5783ms (Views: 13.1ms | ActiveRecord: 0.8ms | Allocations: 9038)
+
+
+Started GET "/download_pdf" for 127.0.0.1 at 2023-03-22 10:10:12 -0600
+Processing by UserinputsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/example.pdf (0.7ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 271)
+
+
+Started GET "/download_pdf" for 127.0.0.1 at 2023-03-22 10:10:12 -0600
+Processing by UserinputsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/example.pdf (0.3ms)
+Completed 200 OK in 9ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/userinputs/new" for 127.0.0.1 at 2023-03-22 10:10:15 -0600
+Processing by UserinputsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/new.html.erb within layouts/application
+  Rendered userinputs/_form.html.erb (Duration: 17.5ms | Allocations: 1270)
+  Rendered userinputs/new.html.erb within layouts/application (Duration: 18.2ms | Allocations: 1358)
+  Rendered layout layouts/application.html.erb (Duration: 85.1ms | Allocations: 7932)
+Completed 200 OK in 87ms (Views: 86.1ms | ActiveRecord: 0.0ms | Allocations: 8270)
+
+
+Started POST "/userinputs" for 127.0.0.1 at 2023-03-22 10:10:46 -0600
+Processing by UserinputsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "userinput"=>{"title"=>"bert kreischer", "subject"=>"comic", "subtopics"=>"the machine"}, "commit"=>"Create Userinput"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/userinputs_controller.rb:33:in `block in create'
+  [1m[36mUserinput Create (0.4ms)[0m  [1m[32mINSERT INTO "userinputs" ("title", "subject", "subtopics", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "bert kreischer"], ["subject", "comic"], ["subtopics", "the machine"], ["created_at", "2023-03-22 16:10:46.149787"], ["updated_at", "2023-03-22 16:10:46.149787"]]
+  ↳ app/controllers/userinputs_controller.rb:33:in `block in create'
+  [1m[36mTRANSACTION (9.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/userinputs_controller.rb:33:in `block in create'
+Redirected to http://127.0.0.1:3000/userinputs/7
+Completed 302 Found in 17ms (ActiveRecord: 9.7ms | Allocations: 3689)
+
+
+Started GET "/userinputs/7" for 127.0.0.1 at 2023-03-22 10:10:46 -0600
+Processing by UserinputsController#show as TURBO_STREAM
+  Parameters: {"id"=>"7"}
+  [1m[36mUserinput Load (0.3ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" WHERE "userinputs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:69:in `set_userinput'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/show.html.erb within layouts/application
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered userinputs/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1059)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 7755)
+Completed 200 OK in 19ms (Views: 13.4ms | ActiveRecord: 0.3ms | Allocations: 10487)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-03-22 10:10:47 -0600
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.8ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:11
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1310)
+  Rendered layout layouts/application.html.erb (Duration: 20.6ms | Allocations: 7899)
+Completed 200 OK in 6139ms (Views: 21.5ms | ActiveRecord: 1.1ms | Allocations: 8980)
+
+
+Started GET "/download_pdf" for 127.0.0.1 at 2023-03-22 10:10:55 -0600
+Processing by UserinputsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/example.pdf (0.3ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 199)
+
+
+Started GET "/download_pdf" for 127.0.0.1 at 2023-03-22 10:10:55 -0600
+Processing by UserinputsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/example.pdf (0.2ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/userinputs/7" for 127.0.0.1 at 2023-03-22 10:11:11 -0600
+Processing by UserinputsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" WHERE "userinputs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:69:in `set_userinput'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/show.html.erb within layouts/application
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered userinputs/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 583)
+  Rendered layout layouts/application.html.erb (Duration: 22.5ms | Allocations: 7150)
+Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 0.2ms | Allocations: 7956)
+
+
+Started DELETE "/userinputs/7" for 127.0.0.1 at 2023-03-22 10:11:12 -0600
+Processing by UserinputsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"7"}
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" WHERE "userinputs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:69:in `set_userinput'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/userinputs_controller.rb:58:in `destroy'
+  [1m[36mUserinput Destroy (0.4ms)[0m  [1m[31mDELETE FROM "userinputs" WHERE "userinputs"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/userinputs_controller.rb:58:in `destroy'
+  [1m[36mTRANSACTION (9.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/userinputs_controller.rb:58:in `destroy'
+Redirected to http://127.0.0.1:3000/userinputs
+Completed 302 Found in 19ms (ActiveRecord: 9.7ms | Allocations: 2527)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-03-22 10:11:12 -0600
+Processing by UserinputsController#index as TURBO_STREAM
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:11
+  Rendered userinputs/_userinput.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.2ms | Allocations: 20)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.2ms | Allocations: 20)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1206)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 7793)
+Completed 200 OK in 5832ms (Views: 20.9ms | ActiveRecord: 0.4ms | Allocations: 8853)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-22 10:13:00 -0600
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 56.7ms | Allocations: 7291)
+  Rendered layout layouts/application.html.erb (Duration: 57.1ms | Allocations: 7384)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 0.0ms | Allocations: 8470)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `mluserinputs_path' for #<ActionView::Base:0x0000000000c0a8>
+Did you mean?  userinputs_path
+               userinput_path):
+    27:         <thead>
+    28:           <tr>
+    29:             <th><%= link_to "Userinputs", userinputs_path %></th>
+    30:             <th><%= link_to "MlUserinputs", mluserinputs_path %></th>
+    31:           </tr>
+    32:         </thead>
+    33:         <tbody>
+  
+app/views/home/home.html.erb:30
+Started GET "/" for 127.0.0.1 at 2023-03-22 10:13:25 -0600
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 2.1ms | Allocations: 418)
+  Rendered layout layouts/application.html.erb (Duration: 41.3ms | Allocations: 9059)
+Completed 200 OK in 47ms (Views: 45.1ms | ActiveRecord: 0.0ms | Allocations: 10179)
+
+
+Started GET "/aboutus" for 127.0.0.1 at 2023-03-22 10:13:27 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/aboutus"):
+  
+Started GET "/" for 127.0.0.1 at 2023-03-22 10:14:37 -0600
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 63)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 7037)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.0ms | Allocations: 7388)
+
+
+Started GET "/howto" for 127.0.0.1 at 2023-03-22 10:14:41 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/howto"):
+  
+Started GET "/" for 127.0.0.1 at 2023-03-22 10:14:48 -0600
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 27.8ms | Allocations: 6804)
+Completed 200 OK in 31ms (Views: 30.2ms | ActiveRecord: 0.0ms | Allocations: 7118)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-03-22 10:14:50 -0600
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (5.8ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:11
+  Rendered userinputs/_userinput.html.erb (Duration: 0.7ms | Allocations: 244)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 2024)
+  Rendered layout layouts/application.html.erb (Duration: 26.3ms | Allocations: 8820)
+Completed 200 OK in 5484ms (Views: 28.7ms | ActiveRecord: 6.0ms | Allocations: 10577)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-22 10:27:24 -0600
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 3.8ms | Allocations: 437)
+  Rendered layout layouts/application.html.erb (Duration: 50.5ms | Allocations: 8985)
+Completed 200 OK in 56ms (Views: 54.4ms | Allocations: 10096)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-22 10:27:44 -0600
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 435)
+  Rendered layout layouts/application.html.erb (Duration: 27.5ms | Allocations: 7710)
+Completed 200 OK in 33ms (Views: 31.1ms | Allocations: 8822)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-22 10:27:45 -0600
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 60)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 6806)
+Completed 200 OK in 21ms (Views: 20.4ms | Allocations: 7133)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-22 10:27:49 -0600
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 1.6ms | Allocations: 434)
+  Rendered layout layouts/application.html.erb (Duration: 31.6ms | Allocations: 7712)
+Completed 200 OK in 38ms (Views: 36.1ms | Allocations: 8812)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-22 10:28:04 -0600
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 1.9ms | Allocations: 435)
+  Rendered layout layouts/application.html.erb (Duration: 44.6ms | Allocations: 7707)
+Completed 200 OK in 50ms (Views: 48.1ms | Allocations: 8819)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-03-22 10:28:13 -0600
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+Started GET "/" for 127.0.0.1 at 2023-03-22 10:28:17 -0600
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 1.7ms | Allocations: 435)
+  Rendered layout layouts/application.html.erb (Duration: 33.4ms | Allocations: 8967)
+Completed 200 OK in 39ms (Views: 36.9ms | ActiveRecord: 0.0ms | Allocations: 10087)
+
+
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.4ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:11
+  Rendered userinputs/_userinput.html.erb (Duration: 1.1ms | Allocations: 244)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 2054)
+  Rendered layout layouts/application.html.erb (Duration: 22.5ms | Allocations: 8849)
+Completed 200 OK in 5005ms (Views: 25.2ms | ActiveRecord: 1.3ms | Allocations: 24098)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-22 10:29:14 -0600
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 2.1ms | Allocations: 435)
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | Allocations: 7728)
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.0ms | Allocations: 8850)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-22 10:30:49 -0600
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 1.7ms | Allocations: 435)
+  Rendered layout layouts/application.html.erb (Duration: 45.9ms | Allocations: 7751)
+Completed 200 OK in 50ms (Views: 48.5ms | ActiveRecord: 0.0ms | Allocations: 8873)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-03-22 10:30:53 -0600
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.4ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:11
+  Rendered userinputs/_userinput.html.erb (Duration: 1.2ms | Allocations: 244)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 2026)
+  Rendered layout layouts/application.html.erb (Duration: 28.0ms | Allocations: 8828)
+Completed 200 OK in 5059ms (Views: 29.8ms | ActiveRecord: 0.6ms | Allocations: 10629)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-03-22 10:33:48 -0600
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.3ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:8
+  Rendered userinputs/_userinput.html.erb (Duration: 0.8ms | Allocations: 244)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.4ms | Allocations: 20)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 2080)
+  Rendered layout layouts/application.html.erb (Duration: 40.0ms | Allocations: 10503)
+Completed 200 OK in 7207ms (Views: 42.7ms | ActiveRecord: 0.4ms | Allocations: 12450)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-03-22 10:33:55 -0600
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.5ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:8
+  Rendered userinputs/_userinput.html.erb (Duration: 7.0ms | Allocations: 244)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.6ms | Allocations: 20)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.4ms | Allocations: 20)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 25.1ms | Allocations: 2051)
+  Rendered layout layouts/application.html.erb (Duration: 74.5ms | Allocations: 9131)
+Completed 200 OK in 7040ms (Views: 77.8ms | ActiveRecord: 0.7ms | Allocations: 11490)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-22 10:34:02 -0600
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 1.6ms | Allocations: 434)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 7691)
+Completed 200 OK in 30ms (Views: 27.9ms | ActiveRecord: 0.0ms | Allocations: 8813)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-03-22 10:34:04 -0600
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.4ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.3ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:8
+  Rendered userinputs/_userinput.html.erb (Duration: 1.3ms | Allocations: 244)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 2088)
+  Rendered layout layouts/application.html.erb (Duration: 27.5ms | Allocations: 8883)
+Completed 200 OK in 6341ms (Views: 31.7ms | ActiveRecord: 0.6ms | Allocations: 10750)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-22 12:38:33 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 2.0ms | Allocations: 835)
+  Rendered layout layouts/application.html.erb (Duration: 233.9ms | Allocations: 61001)
+Completed 200 OK in 249ms (Views: 238.3ms | ActiveRecord: 0.0ms | Allocations: 67062)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-03-22 12:38:39 -0600
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.6ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:8
+  Rendered userinputs/_userinput.html.erb (Duration: 1.1ms | Allocations: 311)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 10.3ms | Allocations: 2579)
+  Rendered layout layouts/application.html.erb (Duration: 28.9ms | Allocations: 9460)
+Completed 200 OK in 5268ms (Views: 31.4ms | ActiveRecord: 1.8ms | Allocations: 29467)
+
+
+Started GET "/download_pdf" for 127.0.0.1 at 2023-03-22 12:38:50 -0600
+Processing by UserinputsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/example.pdf (8.6ms)
+Completed 200 OK in 10ms (ActiveRecord: 0.0ms | Allocations: 1049)
+
+
+Started GET "/download_pdf" for 127.0.0.1 at 2023-03-22 12:38:50 -0600
+Processing by UserinputsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/example.pdf (0.3ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
