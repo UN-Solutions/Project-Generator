@@ -4469,3 +4469,338 @@ Sent file /home/wavy/Projecttest/Project-Generator/blueprint/example.pdf (0.3ms)
 Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
 
 
+Started GET "/" for 127.0.0.1 at 2023-03-23 09:23:32 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 3.6ms | Allocations: 835)
+  Rendered layout layouts/application.html.erb (Duration: 197.7ms | Allocations: 53413)
+Completed 200 OK in 222ms (Views: 205.5ms | ActiveRecord: 0.0ms | Allocations: 59474)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-03-23 09:23:37 -0600
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.7ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.6ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:8
+  Rendered userinputs/_userinput.html.erb (Duration: 1.4ms | Allocations: 311)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 13.0ms | Allocations: 2319)
+  Rendered layout layouts/application.html.erb (Duration: 32.0ms | Allocations: 9209)
+Completed 200 OK in 1603ms (Views: 35.4ms | ActiveRecord: 2.5ms | Allocations: 29088)
+
+
+Started GET "/userinputs/new" for 127.0.0.1 at 2023-03-23 09:23:48 -0600
+Processing by UserinputsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/new.html.erb within layouts/application
+  Rendered userinputs/_form.html.erb (Duration: 20.9ms | Allocations: 4057)
+  Rendered userinputs/new.html.erb within layouts/application (Duration: 24.2ms | Allocations: 4397)
+  Rendered layout layouts/application.html.erb (Duration: 37.7ms | Allocations: 11098)
+Completed 200 OK in 41ms (Views: 39.0ms | ActiveRecord: 0.0ms | Allocations: 11580)
+
+
+Started GET "/userinputs/new" for 127.0.0.1 at 2023-03-23 09:24:38 -0600
+Processing by UserinputsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/new.html.erb within layouts/application
+  Rendered userinputs/_form.html.erb (Duration: 47.7ms | Allocations: 1267)
+  Rendered userinputs/new.html.erb within layouts/application (Duration: 48.3ms | Allocations: 1358)
+  Rendered layout layouts/application.html.erb (Duration: 140.1ms | Allocations: 7953)
+Completed 200 OK in 143ms (Views: 141.5ms | ActiveRecord: 0.0ms | Allocations: 8339)
+
+
+Started POST "/userinputs" for 127.0.0.1 at 2023-03-23 09:28:25 -0600
+Processing by UserinputsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "userinput"=>{"title"=>"Gun laws", "subject"=>"in america", "subtopics"=>"gun saftey, why the gun laws should change"}, "commit"=>"Create Userinput"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/userinputs_controller.rb:33:in `block in create'
+  [1m[36mUserinput Create (3.7ms)[0m  [1m[32mINSERT INTO "userinputs" ("title", "subject", "subtopics", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Gun laws"], ["subject", "in america"], ["subtopics", "gun saftey, why the gun laws should change"], ["created_at", "2023-03-23 15:28:25.631987"], ["updated_at", "2023-03-23 15:28:25.631987"]]
+  ↳ app/controllers/userinputs_controller.rb:33:in `block in create'
+  [1m[36mTRANSACTION (19.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/userinputs_controller.rb:33:in `block in create'
+Redirected to http://127.0.0.1:3000/userinputs/11
+Completed 302 Found in 31ms (ActiveRecord: 23.2ms | Allocations: 3694)
+
+
+Started GET "/userinputs/11" for 127.0.0.1 at 2023-03-23 09:28:25 -0600
+Processing by UserinputsController#show as TURBO_STREAM
+  Parameters: {"id"=>"11"}
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" WHERE "userinputs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:69:in `set_userinput'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/show.html.erb within layouts/application
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered userinputs/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1058)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 7827)
+Completed 200 OK in 18ms (Views: 12.1ms | ActiveRecord: 0.2ms | Allocations: 10558)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-03-23 09:28:30 -0600
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.4ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.1ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:8
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.3ms | Allocations: 21)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1100)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 7688)
+Completed 200 OK in 9345ms (Views: 14.9ms | ActiveRecord: 0.5ms | Allocations: 8788)
+
+
+Started GET "/download_pdf" for 127.0.0.1 at 2023-03-23 09:28:40 -0600
+Processing by UserinputsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/example.pdf (0.5ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 286)
+
+
+Started GET "/download_pdf" for 127.0.0.1 at 2023-03-23 09:28:40 -0600
+Processing by UserinputsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/example.pdf (0.4ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/userinputs/1" for 127.0.0.1 at 2023-03-23 09:29:05 -0600
+Processing by UserinputsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" WHERE "userinputs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:69:in `set_userinput'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/show.html.erb within layouts/application
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered userinputs/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 574)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 7156)
+Completed 200 OK in 20ms (Views: 16.8ms | ActiveRecord: 0.2ms | Allocations: 7963)
+
+
+Started DELETE "/userinputs/1" for 127.0.0.1 at 2023-03-23 09:29:08 -0600
+Processing by UserinputsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" WHERE "userinputs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:69:in `set_userinput'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/userinputs_controller.rb:58:in `destroy'
+  [1m[36mUserinput Destroy (0.3ms)[0m  [1m[31mDELETE FROM "userinputs" WHERE "userinputs"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/userinputs_controller.rb:58:in `destroy'
+  [1m[36mTRANSACTION (28.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/userinputs_controller.rb:58:in `destroy'
+Redirected to http://127.0.0.1:3000/userinputs
+Completed 302 Found in 37ms (ActiveRecord: 29.0ms | Allocations: 2540)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-03-23 09:29:08 -0600
+Processing by UserinputsController#index as TURBO_STREAM
+  [1m[36mUserinput Load (0.4ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.1ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:8
+  Rendered userinputs/_userinput.html.erb (Duration: 0.2ms | Allocations: 22)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 968)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 7559)
+Completed 200 OK in 6659ms (Views: 17.6ms | ActiveRecord: 0.6ms | Allocations: 8620)
+
+
+Started GET "/download_pdf" for 127.0.0.1 at 2023-03-23 09:29:17 -0600
+Processing by UserinputsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/example.pdf (0.3ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/download_pdf" for 127.0.0.1 at 2023-03-23 09:29:17 -0600
+Processing by UserinputsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/example.pdf (0.2ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-23 09:30:36 -0600
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 60)
+  Rendered layout layouts/application.html.erb (Duration: 36.7ms | Allocations: 6812)
+Completed 200 OK in 40ms (Views: 38.6ms | ActiveRecord: 0.0ms | Allocations: 7127)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-03-23 09:30:41 -0600
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.4ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.4ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:8
+  Rendered userinputs/_userinput.html.erb (Duration: 0.4ms | Allocations: 22)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 952)
+  Rendered layout layouts/application.html.erb (Duration: 63.7ms | Allocations: 7539)
+Completed 200 OK in 7884ms (Views: 65.4ms | ActiveRecord: 0.8ms | Allocations: 8598)
+
+
+Started GET "/download_pdf" for 127.0.0.1 at 2023-03-23 09:30:59 -0600
+Processing by UserinputsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/example.pdf (0.3ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/download_pdf" for 127.0.0.1 at 2023-03-23 09:30:59 -0600
+Processing by UserinputsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/example.pdf (0.3ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/userinputs/new" for 127.0.0.1 at 2023-03-23 09:31:43 -0600
+Processing by UserinputsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/new.html.erb within layouts/application
+  Rendered userinputs/_form.html.erb (Duration: 4.7ms | Allocations: 1302)
+  Rendered userinputs/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1390)
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | Allocations: 7964)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.0ms | Allocations: 8300)
+
+
+Started POST "/userinputs" for 127.0.0.1 at 2023-03-23 09:32:14 -0600
+Processing by UserinputsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "userinput"=>{"title"=>"curruption", "subject"=>"in mexico", "subtopics"=>"how it affects the people that live there"}, "commit"=>"Create Userinput"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/userinputs_controller.rb:33:in `block in create'
+  [1m[36mUserinput Create (0.4ms)[0m  [1m[32mINSERT INTO "userinputs" ("title", "subject", "subtopics", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "curruption"], ["subject", "in mexico"], ["subtopics", "how it affects the people that live there"], ["created_at", "2023-03-23 15:32:14.309569"], ["updated_at", "2023-03-23 15:32:14.309569"]]
+  ↳ app/controllers/userinputs_controller.rb:33:in `block in create'
+  [1m[36mTRANSACTION (28.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/userinputs_controller.rb:33:in `block in create'
+Redirected to http://127.0.0.1:3000/userinputs/12
+Completed 302 Found in 38ms (ActiveRecord: 28.6ms | Allocations: 2385)
+
+
+Started GET "/userinputs/12" for 127.0.0.1 at 2023-03-23 09:32:14 -0600
+Processing by UserinputsController#show as TURBO_STREAM
+  Parameters: {"id"=>"12"}
+  [1m[36mUserinput Load (0.1ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" WHERE "userinputs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:69:in `set_userinput'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/show.html.erb within layouts/application
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered userinputs/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 600)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 7167)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.1ms | Allocations: 7962)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-03-23 09:32:15 -0600
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.3ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:8
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1097)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 7684)
+Completed 200 OK in 14344ms (Views: 20.9ms | ActiveRecord: 0.5ms | Allocations: 8736)
+
+
+Started GET "/download_pdf" for 127.0.0.1 at 2023-03-23 09:32:30 -0600
+Processing by UserinputsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/example.pdf (0.2ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/download_pdf" for 127.0.0.1 at 2023-03-23 09:32:31 -0600
+Processing by UserinputsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/example.pdf (0.3ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-23 09:32:52 -0600
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 60)
+  Rendered layout layouts/application.html.erb (Duration: 27.4ms | Allocations: 6803)
+Completed 200 OK in 31ms (Views: 29.4ms | ActiveRecord: 0.0ms | Allocations: 7117)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-03-23 09:32:53 -0600
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.3ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:8
+  Rendered userinputs/_userinput.html.erb (Duration: 0.2ms | Allocations: 22)
+  Rendered userinputs/_userinput.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1109)
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 7696)
+Completed 200 OK in 7590ms (Views: 25.1ms | ActiveRecord: 0.4ms | Allocations: 8826)
+
+
+Started GET "/download_pdf" for 127.0.0.1 at 2023-03-23 09:33:08 -0600
+Processing by UserinputsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/example.pdf (0.3ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/download_pdf" for 127.0.0.1 at 2023-03-23 09:33:08 -0600
+Processing by UserinputsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/example.pdf (0.4ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "userinputs"[0m
+  [1m[35m (12.2ms)[0m  [1m[35mCREATE TABLE "userinputs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "subject" varchar, "subtopics" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (12.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (9.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230210010540)[0m
+  [1m[35m (11.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-03-23 15:34:17.746396"], ["updated_at", "2023-03-23 15:34:17.746396"]]
+  [1m[36mTRANSACTION (9.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "a0eabb033ac6554340ede7a9548f814549b977fd"], ["created_at", "2023-03-23 15:34:17.768276"], ["updated_at", "2023-03-23 15:34:17.768276"]]
+  [1m[36mTRANSACTION (9.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "userinputs"[0m
+  [1m[35m (12.0ms)[0m  [1m[35mCREATE TABLE "userinputs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "subject" varchar, "subtopics" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (12.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (9.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230210010540)[0m
+  [1m[35m (11.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-03-23 15:34:17.839044"], ["updated_at", "2023-03-23 15:34:17.839044"]]
+  [1m[36mTRANSACTION (9.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2023-03-23 15:34:17.853780"], ["key", "environment"]]
+  [1m[36mTRANSACTION (8.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "a0eabb033ac6554340ede7a9548f814549b977fd"], ["created_at", "2023-03-23 15:34:17.867988"], ["updated_at", "2023-03-23 15:34:17.867988"]]
+  [1m[36mTRANSACTION (8.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2023-03-23 09:34:36 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 2.6ms | Allocations: 835)
+  Rendered layout layouts/application.html.erb (Duration: 192.0ms | Allocations: 53553)
+Completed 200 OK in 213ms (Views: 198.6ms | ActiveRecord: 0.0ms | Allocations: 59614)
+
+

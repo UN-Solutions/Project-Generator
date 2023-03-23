@@ -3,7 +3,7 @@ import openai
 from fpdf import FPDF
 import re
 
-openai.api_key = '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'
+openai.api_key = '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'
 input_string = ''
 for i in range(1, len(sys.argv)):
     arg = sys.argv[i]
@@ -12,7 +12,6 @@ for i in range(1, len(sys.argv)):
 # Split the string into a list of key-value pairs
 kv_pairs = input_string.split(',')
 
-title = 'Main title'
 class TriFoldPDF(FPDF):
     pass
 
@@ -104,8 +103,6 @@ def chatgpt(kv_pairs):
 
 text, title, subject, subtopics = chatgpt(kv_pairs)
 
-# Sample text
-# text = "Abstract: This report seeks to analyze the harm of car emissions, particularly focusing on carbon dioxide (CO2) and greenhouse gases (GHGs). It provides an overview of the current research on the topic as well as the potential consequences of excessive emissions. Lastly, it also gives recommendations for how to reduce emissions in order to avoid further damage.\n\nBackground Research: Cars have been a source of pollution for decades. The primary pollutants from automobiles are carbon dioxide (CO2) and greenhouse gases (GHGs) which are a major contributor to climate change. Additionally, vehicle exhaust is also harmful to the health of people living in areas with high levels of traffic. It can be inhaled and cause respiratory problems such as asthma or bronchitis.\n\nResults: Studies have shown that cars account for about 30% of all CO2 and GHG emissions worldwide. This means that any measures taken to reduce emissions from cars can have a significant impact on overall global emissions. One example of this is electric cars which produce significantly less emissions than gasoline-powered vehicles.\n\nConclusion: In conclusion, cars are one of the biggest sources of CO2 and GHG emissions and can cause serious health problems in areas with high levels of traffic. It is therefore important to take measures to reduce emissions from cars. This can be achieved through the adoption of electric vehicles, stricter emissions standards, more efficient driving techniques, and other measures designed to limit emissions.\n\nFuture Directions: Going forward, it will be important to continue researching ways to reduce emissions from cars. Governments and industries should work together to develop new technologies and regulations that can help to reduce the environmental impact of cars. Additionally, public education efforts should be undertaken in order to spread awareness of the issue and encourage people to take steps to reduce their own emissions."
 
 # Define regular expression patterns to match the section titles
 abstract_pattern = re.compile(r"Abstract:\s*(.*)\n\n")
