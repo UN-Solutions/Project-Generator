@@ -3,7 +3,7 @@ import openai
 from fpdf import FPDF
 import re
 
-openai.api_key = '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'
+openai.api_key = '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'
 input_string = ''
 for i in range(1, len(sys.argv)):
     arg = sys.argv[i]
@@ -136,4 +136,4 @@ pdf.add_content(title, '',100,15)
 pdf.add_content('Results', results,100,25)
 pdf.add_content('Conclusion', conclusion,200,15)
 pdf.add_content('Future Directions', future,200,90)
-pdf.output('example.pdf', 'F')
+pdf.output('awareness.pdf', 'F')

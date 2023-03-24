@@ -1,0 +1,2 @@
+class Awareness < ApplicationRecord
+end
