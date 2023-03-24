@@ -6602,3 +6602,116 @@ Sent file /home/wavy/Projecttest/Project-Generator/blueprint/awareness.pdf (0.3m
 Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
 
 
+Started GET "/" for 127.0.0.1 at 2023-03-24 14:12:09 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 5.6ms | Allocations: 960)
+  Rendered layout layouts/application.html.erb (Duration: 355.3ms | Allocations: 53140)
+Completed 200 OK in 381ms (Views: 363.8ms | ActiveRecord: 0.0ms | Allocations: 59217)
+
+
+Started GET "/awarenesses" for 127.0.0.1 at 2023-03-24 14:12:16 -0600
+Processing by AwarenessesController#index as HTML
+  [1m[36mAwareness Load (0.4ms)[0m  [1m[34mSELECT "awarenesses".* FROM "awarenesses" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/awarenesses_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering awarenesses/index.html.erb within layouts/application
+  [1m[36mAwareness Load (0.3ms)[0m  [1m[34mSELECT "awarenesses".* FROM "awarenesses"[0m
+  ↳ app/views/awarenesses/index.html.erb:13
+  Rendered collection of awarenesses/_awareness.html.erb [1 times] (Duration: 1.4ms | Allocations: 532)
+  Rendered awarenesses/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 2168)
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 9054)
+Completed 200 OK in 825ms (Views: 25.6ms | ActiveRecord: 2.0ms | Allocations: 28928)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-03-24 14:12:24 -0600
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.5ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:17
+  Rendered collection of userinputs/_userinput.html.erb [3 times] (Duration: 0.9ms | Allocations: 309)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1937)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 8807)
+Completed 200 OK in 754ms (Views: 16.0ms | ActiveRecord: 1.5ms | Allocations: 13079)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProfessionals (20230324204358)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "professionals" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "company" varchar, "slogan" varchar, "about" text, "looking" text, "benefits" text, "address" varchar, "phone" varchar, "email" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230324204358"]]
+  [1m[36mTRANSACTION (19.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2023-03-24 14:46:14 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 2.0ms | Allocations: 963)
+  Rendered layout layouts/application.html.erb (Duration: 161.0ms | Allocations: 53329)
+Completed 200 OK in 175ms (Views: 165.8ms | ActiveRecord: 0.0ms | Allocations: 59418)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-03-24 14:46:24 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.6ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:12
+  Rendered collection of templates [0 times] (Duration: 0.1ms | Allocations: 31)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1481)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 8359)
+Completed 200 OK in 86ms (Views: 19.7ms | ActiveRecord: 0.7ms | Allocations: 11622)
+
+
+Started GET "/professionals/new" for 127.0.0.1 at 2023-03-24 14:46:26 -0600
+Processing by ProfessionalsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/new.html.erb within layouts/application
+  Rendered professionals/_form.html.erb (Duration: 8.7ms | Allocations: 5745)
+  Rendered professionals/new.html.erb within layouts/application (Duration: 9.8ms | Allocations: 6126)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 12922)
+Completed 200 OK in 48ms (Views: 18.4ms | ActiveRecord: 1.5ms | Allocations: 32381)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-03-24 14:46:54 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.3ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:12
+  Rendered collection of templates [0 times] (Duration: 0.1ms | Allocations: 17)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 862)
+  Rendered layout layouts/application.html.erb (Duration: 121.1ms | Allocations: 7451)
+Completed 200 OK in 178ms (Views: 121.9ms | ActiveRecord: 0.5ms | Allocations: 8533)
+
+
+Started GET "/professionals/new" for 127.0.0.1 at 2023-03-24 14:46:55 -0600
+Processing by ProfessionalsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/new.html.erb within layouts/application
+  Rendered professionals/_form.html.erb (Duration: 7.3ms | Allocations: 2435)
+  Rendered professionals/new.html.erb within layouts/application (Duration: 8.0ms | Allocations: 2535)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 9124)
+Completed 200 OK in 28ms (Views: 25.7ms | ActiveRecord: 0.0ms | Allocations: 9465)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-24 14:47:17 -0600
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 136)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 6897)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms | Allocations: 7212)
+
+
