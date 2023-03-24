@@ -1,17 +1,19 @@
-<p class="text-green-600"><%= notice %></p>
+<p class="text-green-500 font-bold"><%= notice %></p>
 
-<h1 class="text-3xl font-bold mb-4">Userinputs</h1>
-
-<%= link_to "Download", download_pdf_path, class: "px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg shadow-md mb-4 inline-block" %>
-
-<div id="userinputs">
-  <% @userinputs.each do |userinput| %>
-    <%= render userinput %>
-    <p>
-      <%= link_to "Show this userinput", userinput, class: "text-blue-500 hover:text-blue-600" %>
-    </p>
-  <% end %>
+<div class="flex justify-between items-center mb-4">
+  <h1 class="text-3xl font-bold">User Inputs</h1>
+  <div>
+    <a href="<%= download_pdf_path %>" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4">Download</a>
+    <%= link_to "New User Input", new_userinput_path, class: "bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" %>
+  </div>
 </div>
 
-<%= link_to "New userinput", new_userinput_path, class: "px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg shadow-md inline-block" %>
+<div class="flex justify-between items-center">
+<h1 class="font-bold text-4xl"> userinputs</h1>
+<%= link_to 'New User Input', new_userinput_path, class: "bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-md border-2 border-green-500 transition duration-200 ease-in-out" %>
+</div>
 
+<div id="mluserinputs" class="min-w-full">
+<%= render @userinputs %>
+</div>
+</div>
