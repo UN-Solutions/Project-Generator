@@ -64,6 +64,20 @@ class pfnlTriFoldPDF(FPDF):
         cell_width = self.column_width - 9
         cell_height = self.get_multiline_cell_height(cell_width, body)
         self.multi_cell(self.column_width - 9, 8, body)
+        
+    # Define a method for adding a block of content with bullet points
+    def add_bullet_block(self, bullet_list, x, y):
+        # Set font and font size
+        self.set_font('Arial', '', 11)
+
+        # Add bullet points
+        for bullet in bullet_list:
+            self.set_xy(x, y)
+            self.cell(5, 7, '-', 0, 0, 'L')
+            self.cell(0, 7, bullet, 0, 1, 'L')
+            y += 7 # increment y position for the next line
+        self.ln()
+
 
 
 title = "Car Emissions"        
@@ -123,17 +137,21 @@ conclusion = conclusion_pattern.search(text).group(1)
 future = future_pattern.search(text).group(1)
 
 # Print the results
-print("Abstract:", abstract)
-print("Background Research:", background)
-print("Results:", results)
-print("Conclusion:", conclusion)
-print("Future Directions:", future)
+#print("Abstract:", abstract)
+#print("Background Research:", background)
+#print("Results:", results)
+#print("Conclusion:", conclusion)
+#print("Future Directions:", future)
 
 
 pdf = pfnlTriFoldPDF()
 pdf.add_page()
 # Add the title to the top of the PDF
 pdf.draw_columns()
+
+bullet_list = ['Bullet point 1', 'Bullet point 2', 'Bullet point 3']
+pdf.add_bullet_block(bullet_list, 100, 95)
+
 pdf.add_content('Abstract', abstract,5,15)
 pdf.add_content('Background Research:', background,5, 80)
 pdf.add_content(title, '',100,15)
