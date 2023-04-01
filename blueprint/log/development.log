@@ -6715,3 +6715,421 @@ Processing by HomeController#home as HTML
 Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms | Allocations: 7212)
 
 
+Started GET "/" for 127.0.0.1 at 2023-03-29 16:42:13 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 3.4ms | Allocations: 963)
+  Rendered layout layouts/application.html.erb (Duration: 222.9ms | Allocations: 53482)
+Completed 200 OK in 252ms (Views: 233.5ms | ActiveRecord: 0.0ms | Allocations: 59571)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-03-29 16:43:00 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:17
+  Rendered collection of userinputs/_userinput.html.erb [3 times] (Duration: 0.7ms | Allocations: 342)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 2591)
+  Rendered layout layouts/application.html.erb (Duration: 106.1ms | Allocations: 54619)
+Completed 200 OK in 154ms (Views: 109.4ms | ActiveRecord: 0.8ms | Allocations: 79500)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-03-29 16:43:04 -0600
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.6ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:17
+  Rendered collection of userinputs/_userinput.html.erb [3 times] (Duration: 0.7ms | Allocations: 72)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1130)
+  Rendered layout layouts/application.html.erb (Duration: 28.8ms | Allocations: 7844)
+Completed 200 OK in 92ms (Views: 30.2ms | ActiveRecord: 0.8ms | Allocations: 9064)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-03-29 16:43:08 -0600
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.3ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.1ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:17
+  Rendered collection of userinputs/_userinput.html.erb [3 times] (Duration: 0.2ms | Allocations: 66)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1048)
+  Rendered layout layouts/application.html.erb (Duration: 24.5ms | Allocations: 7645)
+Completed 200 OK in 82ms (Views: 25.0ms | ActiveRecord: 0.4ms | Allocations: 8676)
+
+
+Started GET "/userinputs/new" for 127.0.0.1 at 2023-03-29 16:43:10 -0600
+Processing by UserinputsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/new.html.erb within layouts/application
+  Rendered userinputs/_form.html.erb (Duration: 26.2ms | Allocations: 4083)
+  Rendered userinputs/new.html.erb within layouts/application (Duration: 29.1ms | Allocations: 4456)
+  Rendered layout layouts/application.html.erb (Duration: 128.4ms | Allocations: 11171)
+Completed 200 OK in 132ms (Views: 129.5ms | ActiveRecord: 0.0ms | Allocations: 11648)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-03-29 16:43:18 -0600
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.4ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.3ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:17
+  Rendered collection of userinputs/_userinput.html.erb [3 times] (Duration: 0.3ms | Allocations: 71)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1031)
+  Rendered layout layouts/application.html.erb (Duration: 32.7ms | Allocations: 7621)
+Completed 200 OK in 96ms (Views: 33.5ms | ActiveRecord: 0.7ms | Allocations: 8821)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-29 16:43:31 -0600
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 569)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 7602)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.0ms | Allocations: 8640)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-03-29 16:43:46 -0600
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.4ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.1ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:17
+  Rendered collection of userinputs/_userinput.html.erb [3 times] (Duration: 0.1ms | Allocations: 71)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1052)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 7648)
+Completed 200 OK in 52ms (Views: 13.9ms | ActiveRecord: 0.5ms | Allocations: 8809)
+
+
+Started GET "/awarenesses" for 127.0.0.1 at 2023-03-29 16:43:50 -0600
+Processing by AwarenessesController#index as HTML
+  [1m[36mAwareness Load (0.2ms)[0m  [1m[34mSELECT "awarenesses".* FROM "awarenesses" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/awarenesses_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering awarenesses/index.html.erb within layouts/application
+  [1m[36mAwareness Load (0.3ms)[0m  [1m[34mSELECT "awarenesses".* FROM "awarenesses"[0m
+  ↳ app/views/awarenesses/index.html.erb:13
+  Rendered collection of awarenesses/_awareness.html.erb [1 times] (Duration: 1.9ms | Allocations: 497)
+  Rendered awarenesses/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 2065)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 8865)
+Completed 200 OK in 778ms (Views: 22.3ms | ActiveRecord: 1.1ms | Allocations: 13229)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-03-29 16:44:01 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:12
+  Rendered collection of templates [0 times] (Duration: 0.1ms | Allocations: 27)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1385)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 8193)
+Completed 200 OK in 271ms (Views: 12.5ms | ActiveRecord: 0.4ms | Allocations: 10535)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-03-29 16:44:03 -0600
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:17
+  Rendered collection of userinputs/_userinput.html.erb [3 times] (Duration: 0.2ms | Allocations: 69)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1040)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 7627)
+Completed 200 OK in 52ms (Views: 12.2ms | ActiveRecord: 0.4ms | Allocations: 8731)
+
+
+Started GET "/howto" for 127.0.0.1 at 2023-03-29 16:44:15 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/howto"):
+  
+Started GET "/" for 127.0.0.1 at 2023-03-29 16:44:16 -0600
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 163)
+  Rendered layout layouts/application.html.erb (Duration: 23.6ms | Allocations: 7089)
+Completed 200 OK in 25ms (Views: 24.6ms | ActiveRecord: 0.0ms | Allocations: 7441)
+
+
+Started GET "/aboutus" for 127.0.0.1 at 2023-03-29 16:44:18 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/aboutus"):
+  
+Started GET "/" for 127.0.0.1 at 2023-03-29 16:44:19 -0600
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 136)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 6885)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 7199)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-01 11:17:53 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 3.0ms | Allocations: 963)
+  Rendered layout layouts/application.html.erb (Duration: 206.3ms | Allocations: 53463)
+Completed 200 OK in 225ms (Views: 211.9ms | ActiveRecord: 0.0ms | Allocations: 59552)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-04-01 11:18:06 -0600
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.9ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.6ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:17
+  Rendered collection of userinputs/_userinput.html.erb [3 times] (Duration: 2.0ms | Allocations: 338)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 12.1ms | Allocations: 2046)
+  Rendered layout layouts/application.html.erb (Duration: 33.1ms | Allocations: 8932)
+Completed 200 OK in 238ms (Views: 36.3ms | ActiveRecord: 3.4ms | Allocations: 28807)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-01 11:20:21 -0600
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 3.5ms | Allocations: 136)
+  Rendered layout layouts/application.html.erb (Duration: 32.5ms | Allocations: 6959)
+Completed 200 OK in 35ms (Views: 33.5ms | ActiveRecord: 0.0ms | Allocations: 7296)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-04-01 11:20:27 -0600
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.5ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.1ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:17
+  Rendered collection of userinputs/_userinput.html.erb [3 times] (Duration: 0.2ms | Allocations: 66)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1027)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 7619)
+Completed 200 OK in 62ms (Views: 17.2ms | ActiveRecord: 0.6ms | Allocations: 8716)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-04-01 11:21:05 -0600
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.7ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.3ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:17
+  Rendered collection of userinputs/_userinput.html.erb [3 times] (Duration: 0.3ms | Allocations: 66)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 17.5ms | Allocations: 1030)
+  Rendered layout layouts/application.html.erb (Duration: 180.0ms | Allocations: 7636)
+Completed 200 OK in 7348ms (Views: 180.9ms | ActiveRecord: 0.9ms | Allocations: 8769)
+
+
+Started GET "/userinputs/new" for 127.0.0.1 at 2023-04-01 11:21:21 -0600
+Processing by UserinputsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/new.html.erb within layouts/application
+  Rendered userinputs/_form.html.erb (Duration: 59.6ms | Allocations: 6247)
+  Rendered userinputs/new.html.erb within layouts/application (Duration: 61.8ms | Allocations: 6598)
+  Rendered layout layouts/application.html.erb (Duration: 73.1ms | Allocations: 13312)
+Completed 200 OK in 76ms (Views: 74.0ms | ActiveRecord: 0.0ms | Allocations: 13764)
+
+
+Started POST "/userinputs" for 127.0.0.1 at 2023-04-01 11:21:52 -0600
+Processing by UserinputsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "userinput"=>{"title"=>"golden retriever", "subject"=>"dogs", "subtopics"=>"why theyre good fit for kids"}, "commit"=>"Create Userinput"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/userinputs_controller.rb:33:in `block in create'
+  [1m[36mUserinput Create (1.3ms)[0m  [1m[32mINSERT INTO "userinputs" ("title", "subject", "subtopics", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "golden retriever"], ["subject", "dogs"], ["subtopics", "why theyre good fit for kids"], ["created_at", "2023-04-01 17:21:52.371889"], ["updated_at", "2023-04-01 17:21:52.371889"]]
+  ↳ app/controllers/userinputs_controller.rb:33:in `block in create'
+  [1m[36mTRANSACTION (10.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/userinputs_controller.rb:33:in `block in create'
+Redirected to http://127.0.0.1:3000/userinputs/6
+Completed 302 Found in 39ms (ActiveRecord: 12.2ms | Allocations: 3736)
+
+
+Started GET "/userinputs/6" for 127.0.0.1 at 2023-04-01 11:21:52 -0600
+Processing by UserinputsController#show as TURBO_STREAM
+  Parameters: {"id"=>"6"}
+  [1m[36mUserinput Load (0.3ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" WHERE "userinputs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:69:in `set_userinput'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/show.html.erb within layouts/application
+  Rendered userinputs/_userinput.html.erb (Duration: 1.0ms | Allocations: 280)
+  Rendered userinputs/show.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1595)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 8365)
+Completed 200 OK in 22ms (Views: 14.4ms | ActiveRecord: 0.3ms | Allocations: 11107)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-04-01 11:21:53 -0600
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.4ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:17
+  Rendered collection of userinputs/_userinput.html.erb [4 times] (Duration: 0.2ms | Allocations: 87)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1126)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 7717)
+Completed 200 OK in 8498ms (Views: 17.8ms | ActiveRecord: 0.6ms | Allocations: 8946)
+
+
+Started GET "/download_pdf" for 127.0.0.1 at 2023-04-01 11:22:04 -0600
+Processing by UserinputsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/future.pdf (1.3ms)
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 283)
+
+
+Started GET "/download_pdf" for 127.0.0.1 at 2023-04-01 11:22:04 -0600
+Processing by UserinputsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/future.pdf (0.3ms)
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-01 11:22:23 -0600
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 136)
+  Rendered layout layouts/application.html.erb (Duration: 29.6ms | Allocations: 6901)
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.0ms | Allocations: 7215)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-04-01 11:22:36 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.3ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.3ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:12
+  Rendered collection of templates [0 times] (Duration: 0.1ms | Allocations: 27)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1380)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 8179)
+Completed 200 OK in 292ms (Views: 16.4ms | ActiveRecord: 0.5ms | Allocations: 10520)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-01 11:22:49 -0600
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 136)
+  Rendered layout layouts/application.html.erb (Duration: 21.6ms | Allocations: 6898)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.0ms | Allocations: 7235)
+
+
+Started GET "/awarenesses" for 127.0.0.1 at 2023-04-01 11:22:50 -0600
+Processing by AwarenessesController#index as HTML
+  [1m[36mAwareness Load (0.5ms)[0m  [1m[34mSELECT "awarenesses".* FROM "awarenesses" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/awarenesses_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering awarenesses/index.html.erb within layouts/application
+  [1m[36mAwareness Load (0.3ms)[0m  [1m[34mSELECT "awarenesses".* FROM "awarenesses"[0m
+  ↳ app/views/awarenesses/index.html.erb:13
+  Rendered collection of awarenesses/_awareness.html.erb [1 times] (Duration: 3.9ms | Allocations: 484)
+  Rendered awarenesses/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 2038)
+  Rendered layout layouts/application.html.erb (Duration: 25.1ms | Allocations: 8834)
+Completed 200 OK in 9400ms (Views: 26.7ms | ActiveRecord: 2.1ms | Allocations: 13262)
+
+
+Started GET "/awarenesses/new" for 127.0.0.1 at 2023-04-01 11:23:03 -0600
+Processing by AwarenessesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering awarenesses/new.html.erb within layouts/application
+  Rendered awarenesses/_form.html.erb (Duration: 5.2ms | Allocations: 1927)
+  Rendered awarenesses/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 2249)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 8823)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.0ms | Allocations: 9242)
+
+
+Started POST "/awarenesses" for 127.0.0.1 at 2023-04-01 11:23:28 -0600
+Processing by AwarenessesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "awareness"=>{"title"=>"chat gpt", "subject"=>"ai", "subtopics"=>"why ai can be bad to implement with no regulations"}, "commit"=>"Create Awareness"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/awarenesses_controller.rb:33:in `block in create'
+  [1m[36mAwareness Create (0.8ms)[0m  [1m[32mINSERT INTO "awarenesses" ("title", "subject", "subtopics", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "chat gpt"], ["subject", "ai"], ["subtopics", "why ai can be bad to implement with no regulations"], ["created_at", "2023-04-01 17:23:28.708592"], ["updated_at", "2023-04-01 17:23:28.708592"]]
+  ↳ app/controllers/awarenesses_controller.rb:33:in `block in create'
+  [1m[36mTRANSACTION (10.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/awarenesses_controller.rb:33:in `block in create'
+Redirected to http://127.0.0.1:3000/awarenesses/2
+Completed 302 Found in 24ms (ActiveRecord: 11.2ms | Allocations: 2533)
+
+
+Started GET "/awarenesses/2" for 127.0.0.1 at 2023-04-01 11:23:28 -0600
+Processing by AwarenessesController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mAwareness Load (0.5ms)[0m  [1m[34mSELECT "awarenesses".* FROM "awarenesses" WHERE "awarenesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/awarenesses_controller.rb:69:in `set_awareness'
+  Rendering layout layouts/application.html.erb
+  Rendering awarenesses/show.html.erb within layouts/application
+  Rendered awarenesses/_awareness.html.erb (Duration: 1.3ms | Allocations: 322)
+  Rendered awarenesses/show.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1262)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 7828)
+Completed 200 OK in 21ms (Views: 15.3ms | ActiveRecord: 0.5ms | Allocations: 9338)
+
+
+Started GET "/awarenesses" for 127.0.0.1 at 2023-04-01 11:23:29 -0600
+Processing by AwarenessesController#index as HTML
+  [1m[36mAwareness Load (0.5ms)[0m  [1m[34mSELECT "awarenesses".* FROM "awarenesses" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/awarenesses_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering awarenesses/index.html.erb within layouts/application
+  [1m[36mAwareness Load (0.1ms)[0m  [1m[34mSELECT "awarenesses".* FROM "awarenesses"[0m
+  ↳ app/views/awarenesses/index.html.erb:13
+  Rendered collection of awarenesses/_awareness.html.erb [2 times] (Duration: 0.5ms | Allocations: 230)
+  Rendered awarenesses/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1138)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 7725)
+Completed 200 OK in 6399ms (Views: 15.1ms | ActiveRecord: 0.6ms | Allocations: 8780)
+
+
+Started GET "/download_apdf" for 127.0.0.1 at 2023-04-01 11:23:37 -0600
+Processing by AwarenessesController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/awareness.pdf (0.5ms)
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 198)
+
+
+Started GET "/download_apdf" for 127.0.0.1 at 2023-04-01 11:23:37 -0600
+Processing by AwarenessesController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/awareness.pdf (0.3ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/awarenesses/new" for 127.0.0.1 at 2023-04-01 11:23:50 -0600
+Processing by AwarenessesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering awarenesses/new.html.erb within layouts/application
+  Rendered awarenesses/_form.html.erb (Duration: 3.2ms | Allocations: 1278)
+  Rendered awarenesses/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1376)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 7950)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.0ms | Allocations: 8282)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-01 11:23:55 -0600
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 136)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 6906)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.0ms | Allocations: 7221)
+
+
