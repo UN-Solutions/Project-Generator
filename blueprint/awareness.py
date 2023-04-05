@@ -3,7 +3,7 @@ import openai
 from fpdf import FPDF
 import re
 
-openai.api_key = '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'
+openai.api_key = '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'
 input_string = ''
 for i in range(1, len(sys.argv)):
     arg = sys.argv[i]
@@ -57,7 +57,7 @@ class TriFoldPDF(FPDF):
         self.set_xy(x, y)
         self.set_font('Arial', 'B', 14)
         self.cell(self.column_width - 10, 10, title, 0, 1)
-        self.set_xy(x, y + 12)
+        self.set_xy(x, y + 8)
         self.set_font('Arial', '', 8)
         cell_width = self.column_width - 9
         cell_height = self.get_multiline_cell_height(cell_width, body)
@@ -67,9 +67,9 @@ class TriFoldPDF(FPDF):
 title = "Car Emissions"
 def chatgpt(kv_pairs):
     # Loop through each key-value pair and extract the value for the desired keys
-    title = 'Car Emissions'
-    subject = 'Harm of car emissions'
-    subtopics = 'CO2 GHG'
+    title = 'Cigarette'
+    subject = 'Harm of Cigarettes'
+    subtopics = 'Human body'
 
     for kv in kv_pairs:
         if 'title:' in kv:
@@ -84,7 +84,7 @@ def chatgpt(kv_pairs):
     print('Subject:', subject)
     print('Subtopics:', subtopics)
 
-    ask = ('Can you write a report with the main title going to be '+ title + ', and the main subject matter is about the ' + subject + ' with subtopics of ' + subtopics + '. could you give me an Problems & Affects, Background Research, Prevention Steps, and a Conclusion section. If you could give both the  Problema & Affects and prevention steps as a list with each point starting with "-". add a double enter at the end of each section. use a ":" behind the title of sections. I do not need a main title given. Start with Problems & Affects, have the background research be one paragarph around 100 words, and the Conclusion be under 60 words.')
+    ask = ('Can you write a report with the main title going to be '+ title + ', and the main subject matter is about the ' + subject + ' with subtopics of ' + subtopics + '. could you give me an Problems & Affects, Background Research, Prevention Steps, and a Conclusion section. If you could give both the  Problema & Affects and prevention steps as a list with each point starting with "-". add a double enter at the end of each section. use a ":" behind the title of sections. I do not need a main title given. Start with Problems & Affects, have the background research be one paragarph around 100 words, and the Conclusion be under 200 characters.')
     response = openai.Completion.create(
         model="text-davinci-003",
         prompt=ask,
@@ -105,13 +105,13 @@ text, title, subject, subtopics = chatgpt(kv_pairs)
 
 sections = text.split('\n\n')
 problems_and_affects = sections[1]
-problems_and_affects = re.sub(r"Problems & Affects: \n", "", problems_and_affects)
+problems_and_affects = re.sub(r"Problems & Affects:", "", problems_and_affects)
 background_research = sections[2]
-background_research = re.sub(r"Background Research: \n", "", background_research)
+background_research = re.sub(r"Background Research:", "", background_research)
 prevention_steps = sections[3]
-prevention_steps = re.sub(r"Preventions Steps: \n", "", prevention_steps)
+prevention_steps = re.sub(r"Prevention Steps:", "", prevention_steps)
 conclusion = sections[4]
-conclusion = re.sub(r"Conclusion: \n", "", conclusion)
+conclusion = re.sub(r"Conclusion:", "", conclusion)
 
 
 
@@ -126,7 +126,7 @@ pdf.add_page()
 # Add the title to the top of the PDF
 pdf.draw_columns()
 pdf.add_content('Problems & Affects', problems_and_affects,5,30)
-pdf.add_content('Background Research:', background_research,100, 40)
+pdf.add_content('Background Research', background_research,100, 40)
 pdf.add_content(title, '',100,15)
 pdf.add_content('Prevention Steps', prevention_steps,200,15)
 pdf.add_content('Conclusion', conclusion,200,125)
