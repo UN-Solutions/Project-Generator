@@ -5,7 +5,7 @@ from fpdf import FPDF
 import re
 
 # openai key
-openai.api_key = ''
+openai.api_key = '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'
 input_string = ''
 for i in range(1, len(sys.argv)):
     arg = sys.argv[i]
