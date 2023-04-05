@@ -1,10 +1,10 @@
-<%= form_with(model: userinput) do |form| %>
-  <% if userinput.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(userinput.errors.count, "error") %> prohibited this userinput from being saved:</h2>
+<%= form_with(model: presentation, class: "contents") do |form| %>
+  <% if presentation.errors.any? %>
+    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+      <h2><%= pluralize(presentation.errors.count, "error") %> prohibited this presentation from being saved:</h2>
 
       <ul>
-        <% userinput.errors.each do |error| %>
+        <% presentation.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>

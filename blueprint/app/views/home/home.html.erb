@@ -59,8 +59,7 @@
           </ul>
           <button
             id="navAction"
-            class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
-          >
+            class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out" href="/howto">
             Sign Up
           </button>
         </div>
@@ -79,9 +78,9 @@
           <p class="leading-normal text-2xl mb-8">
             Our powerful platform leverages the Open AI API so you can simply input your data, and our system will generate a beautiful visual presentation for you.
           </p>
-          <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+          <a href="/menu" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
             Start Now
-          </button>
+          </a>
         </div>
         <!--Right Col-->
         <div class="w-full md:w-3/5 py-6 text-center">
@@ -363,9 +362,9 @@
           </div>
           <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
             <div class="flex items-center justify-start">
-              <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+            <%= link_to userinputs_path, class: "mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out" do %>
                 Select
-              </button>
+              <% end %>
             </div>
           </div>
         </div>
@@ -381,10 +380,10 @@
             </a>
           </div>
           <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-            <div class="flex items-center justify-center">
-              <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+            <div class="flex items-center justify-start">
+            <%= link_to awarenesses_path, class: "mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out" do %>
                 Select
-              </button>
+              <% end %>
             </div>
           </div>
         </div>
@@ -400,10 +399,11 @@
             </a>
           </div>
           <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-            <div class="flex items-center justify-end">
-              <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+            <div class="flex items-center justify-start">
+            <%= link_to professionals_path, class: "mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out" do %>
                 Select
-              </button>
+              <% end %>
+            </div>
             </div>
           </div>
         </div>
