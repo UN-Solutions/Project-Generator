@@ -1,9 +1,13 @@
 import sys
+# importing module from diff. directory
+sys.path.insert(1, 'blueprint/app/features/')
 import openai
 from fpdf import FPDF
 import re
+from textProcessing import TextProcessing
 
-openai.api_key = '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'
+# openai key
+openai.api_key = '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'
 input_string = ''
 for i in range(1, len(sys.argv)):
     arg = sys.argv[i]
@@ -11,7 +15,6 @@ for i in range(1, len(sys.argv)):
 
 # Split the string into a list of key-value pairs
 kv_pairs = input_string.split(',')
-print('this is kvpairs\n',kv_pairs)
 
 class TriFoldPDF(FPDF):
     pass
@@ -64,8 +67,6 @@ class TriFoldPDF(FPDF):
         cell_height = self.get_multiline_cell_height(cell_width, body)
         self.multi_cell(self.column_width - 9, 8, body)
 
-
-title = "Music"
 def chatgpt(kv_pairs):
     # Loop through each key-value pair and extract the value for the desired keys
     title = ''
@@ -81,9 +82,9 @@ def chatgpt(kv_pairs):
             subtopics = ':'.join(kv.split(':')[1:])
 
     # Print the extracted values
-    print('Title:', title)
-    print('Subject:', subject)
-    print('Subtopics:', subtopics)
+    ###print('Title:', title)
+    ###print('Subject:', subject)
+    ###print('Subtopics:', subtopics)
 
     ask = ('Can you write a report with the main title going to be '+ title + ', and the main subject matter is about the ' + subject + ' with subtopics of ' + subtopics + '. could you give me an abstract, background research, results, a conclusion, and a future directions section. add a double enter at the end of each section. use a ":" behind the title of sections. I do not need a main title given.')
     response = openai.Completion.create(
@@ -96,15 +97,11 @@ def chatgpt(kv_pairs):
         presence_penalty=0.6,
         stop=[" Human:", " AI:"]
     )
-    print('Title:', title)
-    text = response['choices'][0]['text']
-    print('Reply:' + text)
 
+    text = response['choices'][0]['text']
     return text, title, subject, subtopics
 
 text, title, subject, subtopics = chatgpt(kv_pairs)
-print(text, title, subject, subtopics,"\n\n THE ABOVE IS THE TEXT TITLE SUBJECT AND SUBTOPICS")
-
 
 # Define regular expression patterns to match the section titles
 abstract_pattern = re.compile(r"Abstract:\s*(.*)\n\n")
@@ -119,6 +116,15 @@ background = background_pattern.search(text).group(1)
 results = results_pattern.search(text).group(1)
 conclusion = conclusion_pattern.search(text).group(1)
 future = future_pattern.search(text).group(1)
+
+#parse text w/ textProcessing module
+txtProcessor = TextProcessing()     # object to summarize text
+
+abstract = txtProcessor(abstract)
+background = txtProcessor(background)
+results = txtProcessor(results)
+conclusion = txtProcessor(results)
+future = txtProcessor(future)
 
 # Print the results
 print("Abstract:", abstract)

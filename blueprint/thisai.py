@@ -1,10 +1,11 @@
 import sys
-#import openai
-#from fpdf import FPDF
-#import re
+import openai
+from fpdf import FPDF
+import re
 
-#openai.api_key = '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'
-
+# openai key
+openai.api_key = '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'
+#for
 input_string = ''
 for i in range(1, len(sys.argv)):
     arg = sys.argv[i]
