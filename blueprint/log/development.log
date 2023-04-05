@@ -8918,3 +8918,505 @@ Processing by ProfessionalsController#index as HTML
 Completed 200 OK in 114ms (Views: 10.9ms | ActiveRecord: 0.4ms | Allocations: 8722)
 
 
+Started GET "/" for 127.0.0.1 at 2023-04-04 20:12:53 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 2.0ms | Allocations: 963)
+  Rendered layout layouts/application.html.erb (Duration: 89.8ms | Allocations: 54281)
+Completed 200 OK in 100ms (Views: 92.9ms | ActiveRecord: 0.0ms | Allocations: 60398)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-04-04 20:12:55 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.3ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.1ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [1 times] (Duration: 0.9ms | Allocations: 708)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2378)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 9297)
+Completed 200 OK in 146ms (Views: 11.4ms | ActiveRecord: 1.3ms | Allocations: 31833)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-04 20:12:56 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/prof.pdf (1.0ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 574)
+
+
+  
+ActionController::MissingFile (Cannot read file /home/wavy/Projecttest/Project-Generator/blueprint/prof.pdf):
+  
+app/controllers/professionals_controller.rb:4:in `download_pdf'
+Started GET "/professionals" for 127.0.0.1 at 2023-04-04 20:13:02 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.1ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [1 times] (Duration: 0.8ms | Allocations: 149)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1144)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 7979)
+Completed 200 OK in 110ms (Views: 12.2ms | ActiveRecord: 0.3ms | Allocations: 9236)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-04 20:13:44 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/prof.pdf (0.7ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 540)
+
+
+  
+ActionController::MissingFile (Cannot read file /home/wavy/Projecttest/Project-Generator/blueprint/prof.pdf):
+  
+app/controllers/professionals_controller.rb:4:in `download_pdf'
+Started GET "/professionals" for 127.0.0.1 at 2023-04-04 20:13:47 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.3ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.1ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [1 times] (Duration: 0.3ms | Allocations: 133)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1022)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 7735)
+Completed 200 OK in 151ms (Views: 13.1ms | ActiveRecord: 0.4ms | Allocations: 8808)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-04-04 20:13:49 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.3ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.1ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [1 times] (Duration: 1.9ms | Allocations: 133)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1034)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 7652)
+Completed 200 OK in 158ms (Views: 19.1ms | ActiveRecord: 0.4ms | Allocations: 8723)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-04 20:13:50 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/prof.pdf (5.3ms)
+Completed 200 OK in 7ms (ActiveRecord: 0.0ms | Allocations: 1032)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-04 20:13:50 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/prof.pdf (0.4ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-04-04 20:14:49 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.3ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.1ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [1 times] (Duration: 0.5ms | Allocations: 133)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1025)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 7643)
+Completed 200 OK in 134ms (Views: 12.5ms | ActiveRecord: 0.4ms | Allocations: 8724)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-04 20:14:51 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/prof.pdf (0.4ms)
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-04 20:14:51 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/prof.pdf (0.2ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-04-04 20:14:57 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.3ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.1ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [1 times] (Duration: 0.5ms | Allocations: 133)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1037)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 7656)
+Completed 200 OK in 122ms (Views: 13.9ms | ActiveRecord: 0.4ms | Allocations: 8740)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-04 20:14:59 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/prof.pdf (0.4ms)
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-04 20:14:59 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/prof.pdf (0.3ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-04 20:15:07 -0600
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 136)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 6922)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.0ms | Allocations: 7239)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-04-04 20:15:08 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (1.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.1ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [1 times] (Duration: 0.4ms | Allocations: 133)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1037)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 7655)
+Completed 200 OK in 124ms (Views: 11.2ms | ActiveRecord: 1.3ms | Allocations: 8730)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-04 20:15:09 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/prof.pdf (0.2ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-04 20:15:09 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/prof.pdf (0.2ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-04-04 20:16:30 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.4ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.1ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [1 times] (Duration: 0.3ms | Allocations: 133)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1046)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 7664)
+Completed 200 OK in 193ms (Views: 12.9ms | ActiveRecord: 0.5ms | Allocations: 8737)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-04-04 20:16:37 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.6ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.1ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [1 times] (Duration: 0.2ms | Allocations: 133)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1037)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 7655)
+Completed 200 OK in 153ms (Views: 10.8ms | ActiveRecord: 0.7ms | Allocations: 8725)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-04 20:16:38 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/prof.pdf (0.6ms)
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-04 20:16:38 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/prof.pdf (0.2ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-04 20:16:47 -0600
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 136)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 6914)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms | Allocations: 7228)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-04-04 20:16:49 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.5ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.1ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [1 times] (Duration: 0.3ms | Allocations: 133)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1055)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 7767)
+Completed 200 OK in 153ms (Views: 9.5ms | ActiveRecord: 0.6ms | Allocations: 8841)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-04 20:16:50 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/prof.pdf (0.8ms)
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 187)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-04 20:16:50 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/prof.pdf (0.2ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-04-04 20:17:37 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.5ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [1 times] (Duration: 0.8ms | Allocations: 133)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1031)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 7649)
+Completed 200 OK in 170ms (Views: 19.4ms | ActiveRecord: 0.7ms | Allocations: 8719)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-04 20:17:39 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/prof.pdf (1.0ms)
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-04 20:17:39 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/prof.pdf (0.2ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-04-04 20:17:52 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.8ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.1ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [1 times] (Duration: 0.3ms | Allocations: 133)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1034)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 7652)
+Completed 200 OK in 79ms (Views: 12.0ms | ActiveRecord: 0.9ms | Allocations: 8722)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-04 20:17:56 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/prof.pdf (0.4ms)
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-04 20:17:56 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/prof.pdf (0.2ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-04-04 20:18:30 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.4ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [1 times] (Duration: 0.3ms | Allocations: 133)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1022)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 7640)
+Completed 200 OK in 159ms (Views: 12.1ms | ActiveRecord: 0.6ms | Allocations: 8710)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-04-04 20:18:49 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.5ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.1ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [1 times] (Duration: 0.4ms | Allocations: 133)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1040)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 7658)
+Completed 200 OK in 154ms (Views: 12.6ms | ActiveRecord: 0.6ms | Allocations: 8728)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-04 20:18:50 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/prof.pdf (0.6ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 529)
+
+
+  
+ActionController::MissingFile (Cannot read file /home/wavy/Projecttest/Project-Generator/blueprint/prof.pdf):
+  
+app/controllers/professionals_controller.rb:4:in `download_pdf'
+Started GET "/professionals" for 127.0.0.1 at 2023-04-04 20:18:53 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.1ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [1 times] (Duration: 0.3ms | Allocations: 133)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1040)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 7753)
+Completed 200 OK in 146ms (Views: 13.0ms | ActiveRecord: 0.4ms | Allocations: 8826)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-04 20:18:55 -0600
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 136)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 6937)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.0ms | Allocations: 7251)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-04-04 20:18:57 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.7ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.1ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [1 times] (Duration: 0.2ms | Allocations: 133)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1046)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 7664)
+Completed 200 OK in 156ms (Views: 10.1ms | ActiveRecord: 0.8ms | Allocations: 8736)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-04-04 20:19:29 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.3ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.1ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [1 times] (Duration: 0.3ms | Allocations: 133)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1034)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 7652)
+Completed 200 OK in 117ms (Views: 11.8ms | ActiveRecord: 0.4ms | Allocations: 8722)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-04 20:19:34 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/prof.pdf (0.5ms)
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-04 20:19:34 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/prof.pdf (0.2ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-04-04 20:20:57 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.4ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.1ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [1 times] (Duration: 0.4ms | Allocations: 133)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1034)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 7652)
+Completed 200 OK in 111ms (Views: 11.4ms | ActiveRecord: 0.5ms | Allocations: 8722)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-04 20:20:59 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/prof.pdf (0.1ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-04 20:20:59 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/prof.pdf (0.2ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-04-04 20:21:59 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.3ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.1ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [1 times] (Duration: 0.4ms | Allocations: 133)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1022)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 7640)
+Completed 200 OK in 121ms (Views: 10.8ms | ActiveRecord: 0.5ms | Allocations: 8710)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-04 20:22:00 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/prof.pdf (0.4ms)
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-04 20:22:00 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/wavy/Projecttest/Project-Generator/blueprint/prof.pdf (0.3ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-04 20:34:27 -0600
+Processing by HomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/home.html.erb within layouts/application
+  Rendered home/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 136)
+  Rendered layout layouts/application.html.erb (Duration: 27.7ms | Allocations: 6910)
+Completed 200 OK in 32ms (Views: 30.8ms | Allocations: 7221)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-04-04 20:35:07 -0600
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.3ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.3ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:17
+  Rendered collection of userinputs/_userinput.html.erb [6 times] (Duration: 3.0ms | Allocations: 362)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 17.3ms | Allocations: 2022)
+  Rendered layout layouts/application.html.erb (Duration: 30.3ms | Allocations: 8944)
+Completed 200 OK in 681ms (Views: 31.8ms | ActiveRecord: 1.5ms | Allocations: 26106)
+
+
+Started GET "/awarenesses" for 127.0.0.1 at 2023-04-04 20:35:48 -0600
+Processing by AwarenessesController#index as HTML
+  [1m[36mAwareness Load (0.2ms)[0m  [1m[34mSELECT "awarenesses".* FROM "awarenesses" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/awarenesses_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering awarenesses/index.html.erb within layouts/application
+  [1m[36mAwareness Load (0.2ms)[0m  [1m[34mSELECT "awarenesses".* FROM "awarenesses"[0m
+  ↳ app/views/awarenesses/index.html.erb:13
+  Rendered collection of awarenesses/_awareness.html.erb [2 times] (Duration: 1.4ms | Allocations: 586)
+  Rendered awarenesses/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 2149)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 8976)
+Completed 200 OK in 637ms (Views: 18.9ms | ActiveRecord: 1.0ms | Allocations: 13229)
+
+
