@@ -1,10 +1,8 @@
+from app.features.textProcessing import TextProcessing
 import sys
-# importing module from diff. directory
-sys.path.insert(1, 'blueprint/app/features/')
 import openai
 from fpdf import FPDF
 import re
-from textProcessing import TextProcessing
 
 # openai key
 openai.api_key = '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'
@@ -16,6 +14,7 @@ for i in range(1, len(sys.argv)):
 # Split the string into a list of key-value pairs
 kv_pairs = input_string.split(',')
 
+# Class to create TriFold
 class TriFoldPDF(FPDF):
     pass
 
@@ -67,6 +66,7 @@ class TriFoldPDF(FPDF):
         cell_height = self.get_multiline_cell_height(cell_width, body)
         self.multi_cell(self.column_width - 9, 8, body)
 
+# generate text with chatgpt api
 def chatgpt(kv_pairs):
     # Loop through each key-value pair and extract the value for the desired keys
     title = ''
@@ -120,11 +120,11 @@ future = future_pattern.search(text).group(1)
 #parse text w/ textProcessing module
 txtProcessor = TextProcessing()     # object to summarize text
 
-abstract = txtProcessor(abstract)
-background = txtProcessor(background)
-results = txtProcessor(results)
-conclusion = txtProcessor(results)
-future = txtProcessor(future)
+abstract = txtProcessor.summarizeText(abstract)
+background = txtProcessor.summarizeText(background)
+results = txtProcessor.summarizeText(results)
+conclusion = txtProcessor.summarizeText(results)
+future = txtProcessor.summarizeText(future)
 
 # Print the results
 print("Abstract:", abstract)
