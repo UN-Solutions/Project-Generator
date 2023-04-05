@@ -3,7 +3,7 @@ import openai
 from fpdf import FPDF
 import re
 
-openai.api_key = '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'
+openai.api_key = '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'
 input_string = ''
 for i in range(1, len(sys.argv)):
     arg = sys.argv[i]
@@ -11,6 +11,7 @@ for i in range(1, len(sys.argv)):
 
 # Split the string into a list of key-value pairs
 kv_pairs = input_string.split(',')
+print('this is kvpairs\n',kv_pairs)
 
 class TriFoldPDF(FPDF):
     pass
@@ -64,7 +65,7 @@ class TriFoldPDF(FPDF):
         self.multi_cell(self.column_width - 9, 8, body)
 
 
-title = "Car Emissions"
+title = "Music"
 def chatgpt(kv_pairs):
     # Loop through each key-value pair and extract the value for the desired keys
     title = ''
@@ -102,6 +103,7 @@ def chatgpt(kv_pairs):
     return text, title, subject, subtopics
 
 text, title, subject, subtopics = chatgpt(kv_pairs)
+print(text, title, subject, subtopics,"\n\n THE ABOVE IS THE TEXT TITLE SUBJECT AND SUBTOPICS")
 
 
 # Define regular expression patterns to match the section titles
