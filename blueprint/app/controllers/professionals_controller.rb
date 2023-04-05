@@ -1,6 +1,8 @@
 class ProfessionalsController < ApplicationController
   before_action :set_professional, only: %i[ show edit update destroy ]
-
+  def download_pdf
+    send_file "#{Rails.root}/prof.pdf", type: "application/pdf", x_sendfile: true
+  end
   # GET /professionals or /professionals.json
   def index
     @professionals = Professional.all

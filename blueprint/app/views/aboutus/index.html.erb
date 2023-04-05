@@ -1,0 +1,21 @@
+<div class="flex flex-wrap justify-center">
+  <% team_members = [
+        { name: "Rigoberto Hinojos", image_url: asset_path('rh'), github_url: "https://github.com/wavypng", linkedin_url: "https://www.linkedin.com/in/rigoberto-hinojos-700a21176/" },
+        { name: "Pham Tuan Hung",  image_url: asset_path('ph.png'), github_url: "https://github.com/janedoe", linkedin_url: "https://www.linkedin.com/in/tuan-hung-pham-5bb4b9191/" },
+        { name: "Miguel Salvador", image_url: asset_path('ms.png'), github_url: "https://github.com/msalvador45", linkedin_url: "https://linkedin.com/in/bobjohnson" },
+        { name: "Quin Mullen --  ", image_url: asset_path('quin.JPG'), github_url: "https://github.com/alicelee", linkedin_url: "https://linkedin.com/in/alicelee" }
+      ]
+  %>
+  <% team_members.each do |member| %>
+    <div class="max-w-sm rounded overflow-hidden shadow-lg m-4">
+      <img class="w-full" src="<%= member[:image_url] %>" alt="<%= member[:name] %>">
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2"><%= member[:name] %></div>
+        <div class="flex justify-between mb-2">
+          <a href="<%= member[:github_url] %>" class="text-blue-500 hover:text-blue-700">GitHub</a>
+          <a href="<%= member[:linkedin_url] %>" class="text-blue-500 hover:text-blue-700">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

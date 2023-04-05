@@ -67,9 +67,9 @@ class TriFoldPDF(FPDF):
 title = "Car Emissions"
 def chatgpt(kv_pairs):
     # Loop through each key-value pair and extract the value for the desired keys
-    title = ''
-    subject = ''
-    subtopics = ''
+    title = 'Car Emissions'
+    subject = 'Harm of car emissions'
+    subtopics = 'CO2 GHG'
 
     for kv in kv_pairs:
         if 'title:' in kv:
@@ -84,12 +84,12 @@ def chatgpt(kv_pairs):
     print('Subject:', subject)
     print('Subtopics:', subtopics)
 
-    ask = ('Can you write a report with the main title going to be '+ title + ', and the main subject matter is about the ' + subject + ' with subtopics of ' + subtopics + '. could you give me an abstract, background research, results, a conclusion, and a future directions section. add a double enter at the end of each section. use a ":" behind the title of sections. I do not need a main title given.')
+    ask = ('Can you write a report with the main title going to be '+ title + ', and the main subject matter is about the ' + subject + ' with subtopics of ' + subtopics + '. could you give me an Problems & Affects, Background Research, Prevention Steps, and a Conclusion section. If you could give both the  Problema & Affects and prevention steps as a list with each point starting with "-". add a double enter at the end of each section. use a ":" behind the title of sections. I do not need a main title given. Start with Problems & Affects, have the background research be one paragarph around 100 words, and the Conclusion be under 60 words.')
     response = openai.Completion.create(
         model="text-davinci-003",
         prompt=ask,
         temperature=0.9,
-        max_tokens=1000,
+        max_tokens=700,
         top_p=1,
         frequency_penalty=0,
         presence_penalty=0.6,
@@ -103,37 +103,31 @@ def chatgpt(kv_pairs):
 
 text, title, subject, subtopics = chatgpt(kv_pairs)
 
+sections = text.split('\n\n')
+problems_and_affects = sections[1]
+problems_and_affects = re.sub(r"Problems & Affects: \n", "", problems_and_affects)
+background_research = sections[2]
+background_research = re.sub(r"Background Research: \n", "", background_research)
+prevention_steps = sections[3]
+prevention_steps = re.sub(r"Preventions Steps: \n", "", prevention_steps)
+conclusion = sections[4]
+conclusion = re.sub(r"Conclusion: \n", "", conclusion)
 
-# Define regular expression patterns to match the section titles
-abstract_pattern = re.compile(r"Abstract:\s*(.*)\n\n")
-background_pattern = re.compile(r"Background Research:\s*(.*)\n\n")
-results_pattern = re.compile(r"Results:\s*(.*)\n\n")
-conclusion_pattern = re.compile(r"Conclusion:\s*(.*)\n\n")
-future_pattern = re.compile(r"Future Directions:\s*(.*)")
 
-# Extract the text for each section
-abstract = abstract_pattern.search(text).group(1)
-background = background_pattern.search(text).group(1)
-results = results_pattern.search(text).group(1)
-conclusion = conclusion_pattern.search(text).group(1)
-future = future_pattern.search(text).group(1)
 
-# Print the results
-print("Abstract:", abstract)
-print("Background Research:", background)
-print("Results:", results)
-print("Conclusion:", conclusion)
-print("Future Directions:", future)
+print(problems_and_affects)
+print(background_research)
+print(prevention_steps)
+print(conclusion)
 
 
 pdf = TriFoldPDF()
 pdf.add_page()
 # Add the title to the top of the PDF
 pdf.draw_columns()
-pdf.add_content('Abstract', abstract,5,15)
-pdf.add_content('Background Research:', background,5, 80)
+pdf.add_content('Problems & Affects', problems_and_affects,5,30)
+pdf.add_content('Background Research:', background_research,100, 40)
 pdf.add_content(title, '',100,15)
-pdf.add_content('Results', results,100,25)
-pdf.add_content('Conclusion', conclusion,200,15)
-pdf.add_content('Future Directions', future,200,90)
+pdf.add_content('Prevention Steps', prevention_steps,200,15)
+pdf.add_content('Conclusion', conclusion,200,125)
 pdf.output('awareness.pdf', 'F')

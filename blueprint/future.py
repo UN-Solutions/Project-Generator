@@ -8,9 +8,9 @@ input_string = ''
 for i in range(1, len(sys.argv)):
     arg = sys.argv[i]
     input_string += arg
-
 # Split the string into a list of key-value pairs
 kv_pairs = input_string.split(',')
+
 
 class TriFoldPDF(FPDF):
     pass
@@ -64,7 +64,6 @@ class TriFoldPDF(FPDF):
         self.multi_cell(self.column_width - 9, 8, body)
 
 
-title = "Car Emissions"
 def chatgpt(kv_pairs):
     # Loop through each key-value pair and extract the value for the desired keys
     title = ''

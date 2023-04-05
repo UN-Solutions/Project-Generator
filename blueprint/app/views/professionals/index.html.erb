@@ -6,6 +6,8 @@
   <div class="flex justify-between items-center">
     <h1 class="font-bold text-4xl">Professionals</h1>
     <%= link_to 'New professional', new_professional_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+    <a href="<%= download_ppdf_path %>" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4">Download</a>
+    <p> <%= @output %> </p>
   </div>
 
   <div id="professionals" class="min-w-full">
