@@ -1,0 +1,47 @@
+<div id="<%= dom_id professional %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Company:</strong>
+    <%= professional.company %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Slogan:</strong>
+    <%= professional.slogan %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">About:</strong>
+    <%= professional.about %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Looking:</strong>
+    <%= professional.looking %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Benefits:</strong>
+    <%= professional.benefits %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Address:</strong>
+    <%= professional.address %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Phone:</strong>
+    <%= professional.phone %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Email:</strong>
+    <%= professional.email %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this professional", professional, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this professional', edit_professional_path(professional), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
