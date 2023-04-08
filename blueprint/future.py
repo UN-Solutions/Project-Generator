@@ -4,8 +4,8 @@ import openai
 from fpdf import FPDF
 import re
 
-# openai key from document
-file = open("blueprint/keys_for_car.txt")
+# openai key from document when running web app, scope is within blueprint directory
+file = open("keys_for_car.txt")
 openai.api_key = file.read()
 
 # loop to get parameters from sys
