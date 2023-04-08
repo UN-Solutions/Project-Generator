@@ -4,8 +4,11 @@ import openai
 from fpdf import FPDF
 import re
 
-# openai key
-openai.api_key = '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'
+# openai key from document
+file = open("blueprint/keys_for_car.txt")
+openai.api_key = file.read()
+
+# loop to get parameters from sys
 input_string = ''
 for i in range(1, len(sys.argv)):
     arg = sys.argv[i]
