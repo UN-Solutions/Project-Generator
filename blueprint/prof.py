@@ -13,6 +13,11 @@ for i in range(1, len(sys.argv)):
 # Split the string into a list of key-value pairs
 kv_pairs = input_string.split(',')
 print('test')
+# print out kv paris i/p
+file = open('kvpairs.txt','w')
+for i in kv_pairs:
+	file.write(i+"\n")
+file.close()
 
 # Create an empty dictionary to store the key-value pairs
 input_dict = {}
@@ -22,6 +27,10 @@ for item in kv_pairs:
     key, value = item.split(': ')
     input_dict[key.strip()] = value.strip()
 
+# output file of input text in a dictionary
+with open("demofile2.txt", 'w') as f: 
+    for key, value in input_dict.items(): 
+        f.write('%s:%s\n' % (key, value))
 
 # Extract the values from the input_dict based on the keys
 company = input_dict.get('company')
@@ -31,6 +40,10 @@ benefits = input_dict.get('benefits')
 address = input_dict.get('address')
 phone = input_dict.get('phone')
 email = input_dict.get('email')
+
+file = open('inputTxtResult.txt', 'w')
+file.write(company)
+file.close()
 
 class PDF(FPDF):
     def __init__(self, *args, **kwargs):
