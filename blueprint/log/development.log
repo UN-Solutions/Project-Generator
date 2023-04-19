@@ -25384,3 +25384,34 @@ Processing by AboutusController#index as HTML
 Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms | Allocations: 10439)
 
 
+Started GET "/" for 127.0.0.1 at 2023-04-19 09:41:37 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb
+  Rendered home/home.html.erb (Duration: 101.2ms | Allocations: 36315)
+Completed 200 OK in 119ms (Views: 111.9ms | ActiveRecord: 0.0ms | Allocations: 42279)
+
+
+Started GET "/menu" for 127.0.0.1 at 2023-04-19 09:41:43 -0600
+Processing by MenuController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering menu/index.html.erb within layouts/application
+  Rendered menu/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 902)
+  Rendered layout layouts/application.html.erb (Duration: 33.6ms | Allocations: 22352)
+Completed 200 OK in 37ms (Views: 35.6ms | ActiveRecord: 0.0ms | Allocations: 23454)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-04-19 09:41:45 -0600
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.3ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:13
+  Rendered collection of userinputs/_userinput.html.erb [1 times] (Duration: 1.0ms | Allocations: 532)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2172)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 9099)
+Completed 200 OK in 650ms (Views: 13.9ms | ActiveRecord: 1.1ms | Allocations: 28980)
+
+
