@@ -1,5 +1,13 @@
+import wordninja
 import sys
 from fpdf import FPDF
+
+# a function to unconcatenate the string and return w/ spaces
+def stringSplit(conString):
+    print('test')
+    result = wordninja.split(conString)
+    result = " ".join(result)
+    return result
 
 WIDTH = 210
 HEIGHT = 297
@@ -12,7 +20,7 @@ for i in range(1, len(sys.argv)):
 
 # Split the string into a list of key-value pairs
 kv_pairs = input_string.split(',')
-print('test')
+
 # print out kv paris i/p
 file = open('kvpairs.txt','w')
 for i in kv_pairs:
@@ -40,6 +48,12 @@ benefits = input_dict.get('benefits')
 address = input_dict.get('address')
 phone = input_dict.get('phone')
 email = input_dict.get('email')
+
+# Split the string for the necessary topics
+company = stringSplit(company)
+about = stringSplit(about)
+looking = stringSplit(looking)
+benefits = stringSplit(benefits)
 
 file = open('inputTxtResult.txt', 'w')
 file.write(company)

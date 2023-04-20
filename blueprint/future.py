@@ -15,7 +15,11 @@ for i in range(1, len(sys.argv)):
     input_string += arg
 # Split the string into a list of key-value pairs
 kv_pairs = input_string.split(',')
-
+#print out kv_pairs result
+file = open('kvpairs.txt','w')
+for i in kv_pairs:
+	file.write(i+"\n")
+file.close()
 
 # Class to create TriFold
 class TriFoldPDF(FPDF):
