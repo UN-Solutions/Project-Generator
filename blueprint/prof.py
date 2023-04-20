@@ -35,10 +35,21 @@ for item in kv_pairs:
     key, value = item.split(': ')
     input_dict[key.strip()] = value.strip()
 
-# output file of input text in a dictionary
-with open("demofile2.txt", 'w') as f: 
-    for key, value in input_dict.items(): 
-        f.write('%s:%s\n' % (key, value))
+# unconcatenate the dictionary
+for key, value in input_dict.items(): 
+    #if key == 'company':
+        #pass
+    if key == 'phone' or key=='email':
+        pass 
+    else:
+        str_split = stringSplit(value)
+        strc_split_dict = {key: str_split}
+        input_dict.update(strc_split_dict)
+
+# print results to txt file
+with open ('inputTxtResult.txt', 'w') as f:
+    for key, value in input_dict.items():
+        f.write('%s:%s\n' % (key,value))
 
 # Extract the values from the input_dict based on the keys
 company = input_dict.get('company')
@@ -50,14 +61,20 @@ phone = input_dict.get('phone')
 email = input_dict.get('email')
 
 # Split the string for the necessary topics
-company = stringSplit(company)
-about = stringSplit(about)
-looking = stringSplit(looking)
-benefits = stringSplit(benefits)
+###company = stringSplit(company)
+###about = stringSplit(about)
+###looking = stringSplit(looking)
+###benefits = stringSplit(benefits)
 
-file = open('inputTxtResult.txt', 'w')
-file.write(company)
-file.close()
+###file = open('inputTxtResult.txt', 'w')
+###file.write(company)
+###file.write(about)
+###file.write(looking)
+###file.write(benefits)
+###file.write(address)
+###file.write(phone)
+###file.write(email)
+###file.close()
 
 class PDF(FPDF):
     def __init__(self, *args, **kwargs):
