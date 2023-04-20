@@ -4,7 +4,7 @@ from fpdf import FPDF
 import re
 
 # openai key
-openai.api_key = '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'
+openai.api_key = ''
 #for
 input_string = ''
 for i in range(1, len(sys.argv)):
