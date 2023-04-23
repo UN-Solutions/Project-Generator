@@ -7,7 +7,7 @@ class ProfessionalsController < ApplicationController
   def index
     @professionals = Professional.all
     @our_input = Professional.order("id DESC").first
-    @output = `python3 prof.py "#{@our_input.inspect}"`
+    @output = `/home/msalvador45/anaconda3/envs/projectGenerator/bin/python prof.py "#{@our_input.inspect}"`
   end
 
   # GET /professionals/1 or /professionals/1.json
