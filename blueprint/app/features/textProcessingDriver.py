@@ -3,7 +3,7 @@ from textProcessing import TextProcessing
 import re
 
 # read in file 
-pathCorrect = '/home/msalvador45/school/spring23/seniorXP/project/Project-Generator/data/sampleTexts/MSalvador_FinalPromptAssesment.txt'
+pathCorrect = 'data/sampleTexts/MSalvador_FinalPromptAssesment.txt'
 ##pathMore = '/home/msalvador45/school/spring23/seniorXP/project/Project-Generator/data/sampleTexts/longSumm.txt'
 ##pathLess = '/home/msalvador45/school/spring23/seniorXP/project/Project-Generator/data/sampleTexts/shortSumm.txt'
 path = pathCorrect

@@ -11,23 +11,22 @@
     </div>
   <% end %>
 
-  <div>
-
-    <%= form.label  :title, style: "display: block" %>
-    <%= form.text_field :title %>
+  <div class="my-5">
+    <%= form.label :title %>
+    <%= form.text_field :title, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
-  <div>
-    <%= form.label :subject, style: "display: block" %>
-    <%= form.text_field :subject %>
+  <div class="my-5">
+    <%= form.label :subject %>
+    <%= form.text_field :subject, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
-  <div>
-    <%= form.label :subtopics, style: "display: block" %>
-    <%= form.text_area :subtopics %>
+  <div class="my-5">
+    <%= form.label :subtopics %>
+    <%= form.text_area :subtopics, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="inline">
+    <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
   </div>
 <% end %>

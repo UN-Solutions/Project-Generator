@@ -1,17 +1,22 @@
 <div id="<%= dom_id userinput %>">
-  <p>
-    <strong>Title:</strong>
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Title:</strong>
     <%= userinput.title %>
   </p>
 
-  <p>
-    <strong>Subject:</strong>
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Subject:</strong>
     <%= userinput.subject %>
   </p>
 
-  <p>
-    <strong>Subtopics:</strong>
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Subtopics:</strong>
     <%= userinput.subtopics %>
   </p>
 
+  <% if action_name != "show" %>
+    <%= link_to "Show this userinput", userinput, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this userinput', edit_userinput_path(userinput), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
 </div>
