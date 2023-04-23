@@ -25701,3 +25701,349 @@ Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/b
 Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
 
 
+Started GET "/" for 127.0.0.1 at 2023-04-23 01:24:45 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb
+  Rendered home/home.html.erb (Duration: 87.3ms | Allocations: 36151)
+Completed 200 OK in 97ms (Views: 92.0ms | ActiveRecord: 0.0ms | Allocations: 42116)
+
+
+Started GET "/menu" for 127.0.0.1 at 2023-04-23 01:24:46 -0600
+Processing by MenuController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering menu/index.html.erb within layouts/application
+  Rendered menu/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 899)
+  Rendered layout layouts/application.html.erb (Duration: 28.8ms | Allocations: 22723)
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.0ms | Allocations: 23824)
+
+
+Started GET "/awarenesses" for 127.0.0.1 at 2023-04-23 01:24:49 -0600
+Processing by AwarenessesController#index as HTML
+  [1m[36mAwareness Load (0.2ms)[0m  [1m[34mSELECT "awarenesses".* FROM "awarenesses" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/awarenesses_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering awarenesses/index.html.erb within layouts/application
+  [1m[36mAwareness Load (0.2ms)[0m  [1m[34mSELECT "awarenesses".* FROM "awarenesses"[0m
+  ↳ app/views/awarenesses/index.html.erb:13
+  Rendered collection of awarenesses/_awareness.html.erb [1 times] (Duration: 1.0ms | Allocations: 533)
+  Rendered awarenesses/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2161)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 8992)
+Completed 200 OK in 36ms (Views: 14.0ms | ActiveRecord: 0.9ms | Allocations: 28874)
+
+
+Started GET "/awarenesses/new" for 127.0.0.1 at 2023-04-23 01:24:51 -0600
+Processing by AwarenessesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering awarenesses/new.html.erb within layouts/application
+  Rendered awarenesses/_form.html.erb (Duration: 8.1ms | Allocations: 4057)
+  Rendered awarenesses/new.html.erb within layouts/application (Duration: 9.8ms | Allocations: 4416)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 11345)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.0ms | Allocations: 11821)
+
+
+Started GET "/awarenesses" for 127.0.0.1 at 2023-04-23 01:24:56 -0600
+Processing by AwarenessesController#index as HTML
+  [1m[36mAwareness Load (0.2ms)[0m  [1m[34mSELECT "awarenesses".* FROM "awarenesses" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/awarenesses_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering awarenesses/index.html.erb within layouts/application
+  [1m[36mAwareness Load (0.2ms)[0m  [1m[34mSELECT "awarenesses".* FROM "awarenesses"[0m
+  ↳ app/views/awarenesses/index.html.erb:13
+  Rendered collection of awarenesses/_awareness.html.erb [1 times] (Duration: 0.6ms | Allocations: 139)
+  Rendered awarenesses/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1069)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 7710)
+Completed 200 OK in 25ms (Views: 20.3ms | ActiveRecord: 0.4ms | Allocations: 8912)
+
+
+Started GET "/awarenesses/new" for 127.0.0.1 at 2023-04-23 01:24:59 -0600
+Processing by AwarenessesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering awarenesses/new.html.erb within layouts/application
+  Rendered awarenesses/_form.html.erb (Duration: 2.4ms | Allocations: 1311)
+  Rendered awarenesses/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1411)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 8098)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 8434)
+
+
+Started POST "/awarenesses" for 127.0.0.1 at 2023-04-23 01:25:41 -0600
+Processing by AwarenessesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "awareness"=>{"title"=>"Xbox Controllers", "subject"=>"What are xbox controllers and what is there history", "subtopics"=>"xbox  controllers and the effect it had on video games"}, "commit"=>"Create Awareness"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/awarenesses_controller.rb:33:in `block in create'
+  [1m[36mAwareness Create (0.3ms)[0m  [1m[32mINSERT INTO "awarenesses" ("title", "subject", "subtopics", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Xbox Controllers"], ["subject", "What are xbox controllers and what is there history"], ["subtopics", "xbox  controllers and the effect it had on video games"], ["created_at", "2023-04-23 07:25:41.033763"], ["updated_at", "2023-04-23 07:25:41.033763"]]
+  ↳ app/controllers/awarenesses_controller.rb:33:in `block in create'
+  [1m[36mTRANSACTION (8.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/awarenesses_controller.rb:33:in `block in create'
+Redirected to http://127.0.0.1:3000/awarenesses/2
+Completed 302 Found in 14ms (ActiveRecord: 8.7ms | Allocations: 3695)
+
+
+Started GET "/awarenesses/2" for 127.0.0.1 at 2023-04-23 01:25:41 -0600
+Processing by AwarenessesController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mAwareness Load (0.2ms)[0m  [1m[34mSELECT "awarenesses".* FROM "awarenesses" WHERE "awarenesses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/awarenesses_controller.rb:69:in `set_awareness'
+  Rendering layout layouts/application.html.erb
+  Rendering awarenesses/show.html.erb within layouts/application
+  Rendered awarenesses/_awareness.html.erb (Duration: 0.6ms | Allocations: 373)
+  Rendered awarenesses/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1751)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 8569)
+Completed 200 OK in 14ms (Views: 10.6ms | ActiveRecord: 0.2ms | Allocations: 11310)
+
+
+Started GET "/awarenesses" for 127.0.0.1 at 2023-04-23 01:25:43 -0600
+Processing by AwarenessesController#index as HTML
+  [1m[36mAwareness Load (0.2ms)[0m  [1m[34mSELECT "awarenesses".* FROM "awarenesses" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/awarenesses_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering awarenesses/index.html.erb within layouts/application
+  [1m[36mAwareness Load (0.1ms)[0m  [1m[34mSELECT "awarenesses".* FROM "awarenesses"[0m
+  ↳ app/views/awarenesses/index.html.erb:13
+  Rendered collection of awarenesses/_awareness.html.erb [2 times] (Duration: 0.4ms | Allocations: 242)
+  Rendered awarenesses/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1206)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 7829)
+Completed 200 OK in 15ms (Views: 11.7ms | ActiveRecord: 0.3ms | Allocations: 9001)
+
+
+Started GET "/download_apdf" for 127.0.0.1 at 2023-04-23 01:25:45 -0600
+Processing by AwarenessesController#download_pdf as HTML
+Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/awareness.pdf (0.3ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 283)
+
+
+Started GET "/download_apdf" for 127.0.0.1 at 2023-04-23 01:25:45 -0600
+Processing by AwarenessesController#download_pdf as HTML
+Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/awareness.pdf (0.2ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/awarenesses/new" for 127.0.0.1 at 2023-04-23 01:27:14 -0600
+Processing by AwarenessesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering awarenesses/new.html.erb within layouts/application
+  Rendered awarenesses/_form.html.erb (Duration: 3.0ms | Allocations: 1326)
+  Rendered awarenesses/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1425)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 8033)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms | Allocations: 8369)
+
+
+Started GET "/menu" for 127.0.0.1 at 2023-04-23 01:27:16 -0600
+Processing by MenuController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering menu/index.html.erb within layouts/application
+  Rendered menu/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 196)
+  Rendered layout layouts/application.html.erb (Duration: 70.5ms | Allocations: 6994)
+Completed 200 OK in 73ms (Views: 71.7ms | ActiveRecord: 0.0ms | Allocations: 7311)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-04-23 01:27:18 -0600
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.6ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:13
+  Rendered collection of userinputs/_userinput.html.erb [1 times] (Duration: 1.4ms | Allocations: 475)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 2046)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 9073)
+Completed 200 OK in 58981ms (Views: 15.8ms | ActiveRecord: 1.3ms | Allocations: 13557)
+
+
+Started GET "/download_pdf" for 127.0.0.1 at 2023-04-23 01:28:21 -0600
+Processing by UserinputsController#download_pdf as HTML
+Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/future.pdf (0.2ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 201)
+
+
+Started GET "/download_pdf" for 127.0.0.1 at 2023-04-23 01:28:21 -0600
+Processing by UserinputsController#download_pdf as HTML
+Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/future.pdf (0.2ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-04-23 01:29:09 -0600
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.8ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (2.5ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:13
+  Rendered collection of userinputs/_userinput.html.erb [1 times] (Duration: 0.6ms | Allocations: 122)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 12.3ms | Allocations: 1026)
+  Rendered layout layouts/application.html.erb (Duration: 39.6ms | Allocations: 7661)
+Completed 200 OK in 20297ms (Views: 40.5ms | ActiveRecord: 3.3ms | Allocations: 8817)
+
+
+Started GET "/download_pdf" for 127.0.0.1 at 2023-04-23 01:30:41 -0600
+Processing by UserinputsController#download_pdf as HTML
+Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/future.pdf (0.5ms)
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/download_pdf" for 127.0.0.1 at 2023-04-23 01:30:41 -0600
+Processing by UserinputsController#download_pdf as HTML
+Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/future.pdf (0.1ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-04-23 01:32:21 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.5ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.1ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [2 times] (Duration: 2.0ms | Allocations: 785)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 2384)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 9219)
+Completed 200 OK in 334ms (Views: 18.2ms | ActiveRecord: 1.1ms | Allocations: 28817)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-04-23 01:32:23 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.1ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.1ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [2 times] (Duration: 0.8ms | Allocations: 264)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1193)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 7814)
+Completed 200 OK in 184ms (Views: 10.6ms | ActiveRecord: 0.3ms | Allocations: 8970)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-23 01:36:51 -0600
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb
+  Rendered home/home.html.erb (Duration: 30.9ms | Allocations: 948)
+Completed 200 OK in 49ms (Views: 40.4ms | ActiveRecord: 0.0ms | Allocations: 1199)
+
+
+Started GET "/menu" for 127.0.0.1 at 2023-04-23 01:37:00 -0600
+Processing by MenuController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering menu/index.html.erb within layouts/application
+  Rendered menu/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 43.9ms | Allocations: 6984)
+Completed 200 OK in 47ms (Views: 45.7ms | ActiveRecord: 0.0ms | Allocations: 7299)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-04-23 01:37:03 -0600
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (5.5ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.5ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:13
+  Rendered collection of userinputs/_userinput.html.erb [1 times] (Duration: 3.1ms | Allocations: 122)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 16.6ms | Allocations: 1035)
+  Rendered layout layouts/application.html.erb (Duration: 31.5ms | Allocations: 7656)
+Completed 200 OK in 51887ms (Views: 34.4ms | ActiveRecord: 6.0ms | Allocations: 8820)
+
+
+Started GET "/download_pdf" for 127.0.0.1 at 2023-04-23 01:38:03 -0600
+Processing by UserinputsController#download_pdf as HTML
+Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/future.pdf (2.4ms)
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms | Allocations: 199)
+
+
+Started GET "/download_pdf" for 127.0.0.1 at 2023-04-23 01:38:03 -0600
+Processing by UserinputsController#download_pdf as HTML
+Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/future.pdf (0.2ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/userinputs/new" for 127.0.0.1 at 2023-04-23 01:38:15 -0600
+Processing by UserinputsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/new.html.erb within layouts/application
+  Rendered userinputs/_form.html.erb (Duration: 29.7ms | Allocations: 1909)
+  Rendered userinputs/new.html.erb within layouts/application (Duration: 41.0ms | Allocations: 2223)
+  Rendered layout layouts/application.html.erb (Duration: 49.5ms | Allocations: 8831)
+Completed 200 OK in 57ms (Views: 50.3ms | ActiveRecord: 0.0ms | Allocations: 9232)
+
+
+Started POST "/userinputs" for 127.0.0.1 at 2023-04-23 01:38:47 -0600
+Processing by UserinputsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "userinput"=>{"title"=>"U2", "subject"=>"who is u2 and the way they impacted mainstream media", "subtopics"=>"is ther emusic great or was it just a fad"}, "commit"=>"Create Userinput"}
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/userinputs_controller.rb:33:in `block in create'
+  [1m[36mUserinput Create (2.5ms)[0m  [1m[32mINSERT INTO "userinputs" ("title", "subject", "subtopics", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "U2"], ["subject", "who is u2 and the way they impacted mainstream media"], ["subtopics", "is ther emusic great or was it just a fad"], ["created_at", "2023-04-23 07:38:47.499760"], ["updated_at", "2023-04-23 07:38:47.499760"]]
+  ↳ app/controllers/userinputs_controller.rb:33:in `block in create'
+  [1m[36mTRANSACTION (9.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/userinputs_controller.rb:33:in `block in create'
+Redirected to http://127.0.0.1:3000/userinputs/2
+Completed 302 Found in 33ms (ActiveRecord: 12.4ms | Allocations: 2478)
+
+
+Started GET "/userinputs/2" for 127.0.0.1 at 2023-04-23 01:38:47 -0600
+Processing by UserinputsController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mUserinput Load (0.3ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" WHERE "userinputs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:69:in `set_userinput'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/show.html.erb within layouts/application
+  Rendered userinputs/_userinput.html.erb (Duration: 1.5ms | Allocations: 323)
+  Rendered userinputs/show.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1258)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 7858)
+Completed 200 OK in 24ms (Views: 15.8ms | ActiveRecord: 0.3ms | Allocations: 9363)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-04-23 01:38:50 -0600
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.3ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.5ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:13
+  Rendered collection of userinputs/_userinput.html.erb [2 times] (Duration: 1.1ms | Allocations: 231)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 1142)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 7763)
+Completed 200 OK in 51181ms (Views: 26.1ms | ActiveRecord: 0.8ms | Allocations: 8909)
+
+
+Started GET "/download_pdf" for 127.0.0.1 at 2023-04-23 01:39:45 -0600
+Processing by UserinputsController#download_pdf as HTML
+Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/future.pdf (0.5ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/download_pdf" for 127.0.0.1 at 2023-04-23 01:39:45 -0600
+Processing by UserinputsController#download_pdf as HTML
+Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/future.pdf (0.2ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-04-23 01:41:37 -0600
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.7ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.6ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:13
+  Rendered collection of userinputs/_userinput.html.erb [2 times] (Duration: 0.9ms | Allocations: 231)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 1139)
+  Rendered layout layouts/application.html.erb (Duration: 21.2ms | Allocations: 7760)
+Completed 200 OK in 60068ms (Views: 22.2ms | ActiveRecord: 1.3ms | Allocations: 8941)
+
+
+Started GET "/download_pdf" for 127.0.0.1 at 2023-04-23 01:42:52 -0600
+Processing by UserinputsController#download_pdf as HTML
+Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/future.pdf (0.3ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/download_pdf" for 127.0.0.1 at 2023-04-23 01:42:52 -0600
+Processing by UserinputsController#download_pdf as HTML
+Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/future.pdf (0.2ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
