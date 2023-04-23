@@ -25415,3 +25415,289 @@ Processing by UserinputsController#index as HTML
 Completed 200 OK in 650ms (Views: 13.9ms | ActiveRecord: 1.1ms | Allocations: 28980)
 
 
+Started GET "/" for 127.0.0.1 at 2023-04-23 01:16:28 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb
+  Rendered home/home.html.erb (Duration: 215.9ms | Allocations: 57221)
+Completed 200 OK in 226ms (Views: 221.5ms | ActiveRecord: 0.0ms | Allocations: 63185)
+
+
+Started GET "/menu" for 127.0.0.1 at 2023-04-23 01:16:35 -0600
+Processing by MenuController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering menu/index.html.erb within layouts/application
+  Rendered menu/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 904)
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 26233)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.0ms | Allocations: 27334)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-04-23 01:16:40 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.4ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.1ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [1 times] (Duration: 0.8ms | Allocations: 714)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2393)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 9295)
+Completed 200 OK in 52ms (Views: 12.3ms | ActiveRecord: 0.9ms | Allocations: 31842)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-23 01:16:48 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/prof.pdf (0.3ms)
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 573)
+
+
+  
+ActionController::MissingFile (Cannot read file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/prof.pdf):
+  
+app/controllers/professionals_controller.rb:4:in `download_pdf'
+Started GET "/professionals" for 127.0.0.1 at 2023-04-23 01:16:54 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.3ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.1ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [1 times] (Duration: 0.3ms | Allocations: 155)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1156)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 7899)
+Completed 200 OK in 41ms (Views: 12.6ms | ActiveRecord: 0.4ms | Allocations: 9158)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-23 01:16:55 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/prof.pdf (0.3ms)
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 540)
+
+
+  
+ActionController::MissingFile (Cannot read file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/prof.pdf):
+  
+app/controllers/professionals_controller.rb:4:in `download_pdf'
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-23 01:17:33 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/prof.pdf (0.5ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 529)
+
+
+  
+ActionController::MissingFile (Cannot read file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/prof.pdf):
+  
+app/controllers/professionals_controller.rb:4:in `download_pdf'
+Started GET "/menu" for 127.0.0.1 at 2023-04-23 01:17:39 -0600
+Processing by MenuController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering menu/index.html.erb within layouts/application
+  Rendered menu/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 7179)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 7495)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-04-23 01:17:41 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.6ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.3ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [1 times] (Duration: 0.5ms | Allocations: 139)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1034)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 7655)
+Completed 200 OK in 34ms (Views: 10.5ms | ActiveRecord: 0.9ms | Allocations: 8734)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-04-23 01:17:46 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (1.3ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.1ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [1 times] (Duration: 0.3ms | Allocations: 139)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1046)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 7667)
+Completed 200 OK in 33ms (Views: 8.8ms | ActiveRecord: 1.4ms | Allocations: 8742)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-23 01:17:48 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/prof.pdf (0.3ms)
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 529)
+
+
+  
+ActionController::MissingFile (Cannot read file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/prof.pdf):
+  
+app/controllers/professionals_controller.rb:4:in `download_pdf'
+Started GET "/professionals" for 127.0.0.1 at 2023-04-23 01:17:49 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.3ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.1ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [1 times] (Duration: 0.3ms | Allocations: 139)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1040)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 7852)
+Completed 200 OK in 39ms (Views: 12.0ms | ActiveRecord: 0.4ms | Allocations: 8930)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-04-23 01:17:57 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.3ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.3ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [1 times] (Duration: 0.6ms | Allocations: 139)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1040)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 7661)
+Completed 200 OK in 46ms (Views: 19.4ms | ActiveRecord: 0.6ms | Allocations: 8748)
+
+
+Started GET "/professionals/new" for 127.0.0.1 at 2023-04-23 01:17:58 -0600
+Processing by ProfessionalsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/new.html.erb within layouts/application
+  Rendered professionals/_form.html.erb (Duration: 15.8ms | Allocations: 7832)
+  Rendered professionals/new.html.erb within layouts/application (Duration: 17.8ms | Allocations: 8174)
+  Rendered layout layouts/application.html.erb (Duration: 25.3ms | Allocations: 14904)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.0ms | Allocations: 15357)
+
+
+Started POST "/professionals" for 127.0.0.1 at 2023-04-23 01:18:38 -0600
+Processing by ProfessionalsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "professional"=>{"company"=>"MSU Denver", "slogan"=>"", "about"=>"The institution is located in one of the oldest areas of Denver. The campus is located at the former townsite of Auraria, which was founded in November 1858. Denver was founded three weeks later on the opposing side (east side) of Cherry Creek. Denver would soon overtake Auraria after thriving for a mere two years. For a century following, an Auraria neighborhood would remain.\n\n", "looking"=>"Metropolitan State University of Denver is a public university in Denver, Colorado. MSU Denver is located on the Auraria Campus, along with the University of Colorado Denver and the Community College of Denver, in downtown Denver, adjacent to Speer Boulevard and Colfax Avenue. MSU Denver had an enrollment of 20,192 students in the Fall of 201\n\n", "benefits"=>"Auraria had a mix of residential areas and industrial areas through the early to mid-20th century. When the campus was built, many Aurarians, a majority of them Hispanic, were displaced and the school promised to serve the community. The historic Tivoli Brewery was a popular beer brewery on this site that was preserved and the building now serves as the Tivoli Student Union to all three schools on the campus; among other things it is noted for being the site of a stage of the now-defunct Coors Classic world-class bicycle race.\n\n", "address"=>"123 Auraria st Denver Co", "phone"=>"720-123-123", "email"=>"roadrunner@msudenver.edu"}, "commit"=>"Create Professional"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/professionals_controller.rb:31:in `block in create'
+  [1m[36mProfessional Create (0.7ms)[0m  [1m[32mINSERT INTO "professionals" ("company", "slogan", "about", "looking", "benefits", "address", "phone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company", "MSU Denver"], ["slogan", ""], ["about", "The institution is located in one of the oldest areas of Denver. The campus is located at the former townsite of Auraria, which was founded in November 1858. Denver was founded three weeks later on the opposing side (east side) of Cherry Creek. Denver would soon overtake Auraria after thriving for a mere two years. For a century following, an Auraria neighborhood would remain.\n\n"], ["looking", "Metropolitan State University of Denver is a public university in Denver, Colorado. MSU Denver is located on the Auraria Campus, along with the University of Colorado Denver and the Community College of Denver, in downtown Denver, adjacent to Speer Boulevard and Colfax Avenue. MSU Denver had an enrollment of 20,192 students in the Fall of 201\n\n"], ["benefits", "Auraria had a mix of residential areas and industrial areas through the early to mid-20th century. When the campus was built, many Aurarians, a majority of them Hispanic, were displaced and the school promised to serve the community. The historic Tivoli Brewery was a popular beer brewery on this site that was preserved and the building now serves as the Tivoli Student Union to all three schools on the campus; among other things it is noted for being the site of a stage of the now-defunct Coors Classic world-class bicycle race.\n\n"], ["address", "123 Auraria st Denver Co"], ["phone", "720-123-123"], ["email", "roadrunner@msudenver.edu"], ["created_at", "2023-04-23 07:18:38.256398"], ["updated_at", "2023-04-23 07:18:38.256398"]]
+  ↳ app/controllers/professionals_controller.rb:31:in `block in create'
+  [1m[36mTRANSACTION (12.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/professionals_controller.rb:31:in `block in create'
+Redirected to http://127.0.0.1:3000/professionals/2
+Completed 302 Found in 19ms (ActiveRecord: 13.2ms | Allocations: 3809)
+
+
+Started GET "/professionals/2" for 127.0.0.1 at 2023-04-23 01:18:38 -0600
+Processing by ProfessionalsController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" WHERE "professionals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:67:in `set_professional'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/show.html.erb within layouts/application
+  Rendered professionals/_professional.html.erb (Duration: 0.8ms | Allocations: 539)
+  Rendered professionals/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1899)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 8618)
+Completed 200 OK in 15ms (Views: 11.9ms | ActiveRecord: 0.2ms | Allocations: 11382)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-04-23 01:18:42 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.1ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [2 times] (Duration: 0.5ms | Allocations: 274)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1252)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 7875)
+Completed 200 OK in 30ms (Views: 8.5ms | ActiveRecord: 0.3ms | Allocations: 9113)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-23 01:18:43 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/prof.pdf (0.2ms)
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 540)
+
+
+  
+ActionController::MissingFile (Cannot read file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/prof.pdf):
+  
+app/controllers/professionals_controller.rb:4:in `download_pdf'
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-23 01:20:12 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/prof.pdf (0.3ms)
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 529)
+
+
+  
+ActionController::MissingFile (Cannot read file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/prof.pdf):
+  
+app/controllers/professionals_controller.rb:4:in `download_pdf'
+Started GET "/professionals" for 127.0.0.1 at 2023-04-23 01:20:19 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.1ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.1ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [2 times] (Duration: 0.5ms | Allocations: 264)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1190)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 8002)
+Completed 200 OK in 212ms (Views: 9.9ms | ActiveRecord: 0.3ms | Allocations: 9080)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-23 01:20:21 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/prof.pdf (0.4ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-23 01:20:21 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/prof.pdf (0.1ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-23 01:20:51 -0600
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb
+  Rendered home/home.html.erb (Duration: 1.5ms | Allocations: 947)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 1198)
+
+
+Started GET "/menu" for 127.0.0.1 at 2023-04-23 01:20:56 -0600
+Processing by MenuController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering menu/index.html.erb within layouts/application
+  Rendered menu/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 6969)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 7283)
+
+
+Started GET "/presentations" for 127.0.0.1 at 2023-04-23 01:20:59 -0600
+Processing by PresentationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presentations/index.html.erb within layouts/application
+  [1m[36mPresentation Load (0.2ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations"[0m
+  ↳ app/views/presentations/index.html.erb:13
+  Rendered collection of presentations/_presentation.html.erb [1 times] (Duration: 1.1ms | Allocations: 482)
+  Rendered presentations/index.html.erb within layouts/application (Duration: 19.4ms | Allocations: 16615)
+  Rendered layout layouts/application.html.erb (Duration: 28.4ms | Allocations: 23632)
+Completed 200 OK in 32ms (Views: 29.0ms | ActiveRecord: 0.6ms | Allocations: 25175)
+
+
+Started GET "/download_prepdf" for 127.0.0.1 at 2023-04-23 01:21:02 -0600
+Processing by PresentationsController#download_pdf as HTML
+Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/presentation.pdf (0.2ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 201)
+
+
+Started GET "/download_prepdf" for 127.0.0.1 at 2023-04-23 01:21:02 -0600
+Processing by PresentationsController#download_pdf as HTML
+Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/presentation.pdf (0.2ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
