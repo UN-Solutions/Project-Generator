@@ -3,7 +3,7 @@ import openai
 from fpdf import FPDF
 import re
 
-openai.api_key = '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'
+openai.api_key = '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'
 input_string = ''
 for i in range(1, len(sys.argv)):
     arg = sys.argv[i]
@@ -62,6 +62,16 @@ class TriFoldPDF(FPDF):
         cell_width = self.column_width - 9
         cell_height = self.get_multiline_cell_height(cell_width, body)
         self.multi_cell(self.column_width - 9, 8, body)
+        
+    def add_bullet_content(self, title, body, x, y):
+        self.set_xy(x, y)
+        self.set_font('Arial', 'B', 14)
+        self.cell(self.column_width - 10, 10, title, 0, 1)
+        self.set_xy(x, y + 4)
+        self.set_font('Arial', '', 8)
+        cell_width = self.column_width - 9
+        cell_height = self.get_multiline_cell_height(cell_width, body)
+        self.multi_cell(self.column_width - 9, 8, body)
 
 
 title = "Car Emissions"
@@ -84,7 +94,7 @@ def chatgpt(kv_pairs):
     print('Subject:', subject)
     print('Subtopics:', subtopics)
 
-    ask = ('Can you write a report with the main title going to be '+ title + ', and the main subject matter is about the ' + subject + ' with subtopics of ' + subtopics + '. could you give me an Problems & Affects, Background Research, Prevention Steps, and a Conclusion section. If you could give both the  Problema & Affects and prevention steps as a list with each point starting with "-". add a double enter at the end of each section. use a ":" behind the title of sections. I do not need a main title given. Start with Problems & Affects, have the background research be one paragarph around 100 words, and the Conclusion be under 200 characters.')
+    ask = ('Can you write a report with the main title going to be '+ title + ', and the main subject matter is about the ' + subject + ' with subtopics of ' + subtopics + '. could you give me an Problems & Affects, Background Research, Prevention Steps, and a Conclusion section. If you could give both the  Problema & Affects and prevention steps as a list with each point starting with "-". add a double enter at the end of each section. use a ":" behind the title of sections. I do not need a main title given. Start with Problems & Affects, have the background research be one paragarph around 100 words, and the Conclusion be under 250 characters.')
     response = openai.Completion.create(
         model="text-davinci-003",
         prompt=ask,
@@ -125,9 +135,9 @@ pdf = TriFoldPDF()
 pdf.add_page()
 # Add the title to the top of the PDF
 pdf.draw_columns()
-pdf.add_content('Problems & Affects', problems_and_affects,5,30)
+pdf.add_bullet_content('Problems & Affects', problems_and_affects,5,30)
 pdf.add_content('Background Research', background_research,100, 40)
 pdf.add_content(title, '',100,15)
-pdf.add_content('Prevention Steps', prevention_steps,200,15)
+pdf.add_bullet_content('Prevention Steps', prevention_steps,200,15)
 pdf.add_content('Conclusion', conclusion,200,125)
 pdf.output('awareness.pdf', 'F')
