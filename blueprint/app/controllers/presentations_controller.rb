@@ -1,5 +1,8 @@
 class PresentationsController < ApplicationController
   before_action :set_presentation, only: %i[ show edit update destroy ]
+  def download_pdf
+    send_file "#{Rails.root}/presentation.pdf", type: "application/pdf", x_sendfile: true
+  end
 
   # GET /presentations or /presentations.json
   def index

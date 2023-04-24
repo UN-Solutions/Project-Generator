@@ -51,15 +51,6 @@ with open ('inputTxtResult.txt', 'w') as f:
     for key, value in input_dict.items():
         f.write('%s:%s\n' % (key,value))
 
-# Extract the values from the input_dict based on the keys
-company = input_dict.get('company')
-about = input_dict.get('about')
-looking = input_dict.get('looking')
-benefits = input_dict.get('benefits')
-address = input_dict.get('address')
-phone = input_dict.get('phone')
-email = input_dict.get('email')
-
 # Split the string for the necessary topics
 ###company = stringSplit(company)
 ###about = stringSplit(about)
@@ -75,6 +66,27 @@ email = input_dict.get('email')
 ###file.write(phone)
 ###file.write(email)
 ###file.close()
+
+class PDF(FPDF):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.WIDTH = WIDTH
+        self.HEIGHT = HEIGHT
+
+    def lines(self):
+        self.set_line_width(0.0)
+        self.line(0, HEIGHT / 3, WIDTH, HEIGHT / 3)
+        self.line(0, 2 * HEIGHT / 3, WIDTH, 2 * HEIGHT / 3)
+
+
+# Extract the values from the input_dict based on the keys
+company = input_dict.get('company')
+about = input_dict.get('about')
+looking = input_dict.get('looking')
+benefits = input_dict.get('benefits')
+address = input_dict.get('address')
+phone = input_dict.get('phone')
+email = input_dict.get('email')
 
 class PDF(FPDF):
     def __init__(self, *args, **kwargs):
