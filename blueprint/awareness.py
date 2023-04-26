@@ -3,7 +3,7 @@ import openai
 from fpdf import FPDF
 import re
 
-openai.api_key = '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'
+openai.api_key = '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'
 input_string = ''
 for i in range(1, len(sys.argv)):
     arg = sys.argv[i]
@@ -67,7 +67,7 @@ class TriFoldPDF(FPDF):
         self.set_xy(x, y)
         self.set_font('Arial', 'B', 14)
         self.cell(self.column_width - 10, 10, title, 0, 1)
-        self.set_xy(x, y + 4)
+        self.set_xy(x, y)
         self.set_font('Arial', '', 8)
         cell_width = self.column_width - 9
         cell_height = self.get_multiline_cell_height(cell_width, body)
@@ -123,7 +123,15 @@ prevention_steps = re.sub(r"Prevention Steps:", "", prevention_steps)
 conclusion = sections[4]
 conclusion = re.sub(r"Conclusion:", "", conclusion)
 
+# Check if the first line starts with a newline character
+if background_research.startswith('\n'):
+    # If the first line starts with a newline character, remove it
+    background_research = background_research[1:]
 
+# Check if the first line starts with a newline character
+if conclusion.startswith('\n'):
+    # If the first line starts with a newline character, remove it
+    conclusion = conclusion[1:]
 
 print(problems_and_affects)
 print(background_research)
@@ -139,5 +147,5 @@ pdf.add_bullet_content('Problems & Affects', problems_and_affects,5,30)
 pdf.add_content('Background Research', background_research,100, 40)
 pdf.add_content(title, '',100,15)
 pdf.add_bullet_content('Prevention Steps', prevention_steps,200,15)
-pdf.add_content('Conclusion', conclusion,200,125)
+pdf.add_content('Conclusion', conclusion,200,120)
 pdf.output('awareness.pdf', 'F')
