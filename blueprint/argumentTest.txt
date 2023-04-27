@@ -1,21 +1,34 @@
-#<Userinput id: 3, title: Horses, subject: What
-are
-horses
-and
-what
+#<Professional id: 2, company: MSU
+Denver, slogan: , about: The
+institution
 is
-their
-history,
-where
-d..., subtopics: Exactly
-like
-last
-prompt
-add
-more
-information
-abou..., created_at: 2023-04-27
-19:16:09.412739000
-+0000, updated_at: 2023-04-27
-19:16:09.412739000
+located
+in
+one
+of
+the
+oldest
+ar..., looking: Metropolitan
+State
+University
+of
+Denver
+is
+a
+publi..., benefits: Auraria
+had
+a
+mix
+of
+residential
+areas
+and
+industr..., address: 123
+Auraria
+st
+Denver
+Co, phone: 720-123-123, email: roadrunner@msudenver.edu, created_at: 2023-04-23
+07:18:38.256398000
++0000, updated_at: 2023-04-23
+07:18:38.256398000
 +0000>

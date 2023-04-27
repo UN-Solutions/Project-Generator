@@ -109,11 +109,16 @@ pdf = TriFoldPDF()
 pdf.add_page()
 # add content to pdf
 pdf.draw_columns()
+# First Section
 pdf.add_content('About Us', about,5,15)
-pdf.add_content('Contact:', address,5, 80)
+pdf.add_content('Contact:', address,5, 155)
+pdf.add_content('',email,5, 160)
+pdf.add_content('',phone,5, 165)
+# Second Section
 pdf.add_content(company, '',100,15)
 pdf.add_content(slogan, '',100,25)
+# Third Section
 pdf.add_content('Benefits', benefits,200,15)
-pdf.add_content('', email,200,90)
+pdf.add_content('Looking For', looking,200,110)
 pdf.output('prof.pdf', 'F')
 
