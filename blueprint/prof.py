@@ -1,6 +1,7 @@
 import wordninja
 import sys
 from fpdf import FPDF
+from future import TriFoldPDF
 
 # a function to unconcatenate the string and return w/ spaces
 def stringSplit(conString):
@@ -14,9 +15,12 @@ HEIGHT = 297
 MARGIN = 10
 
 input_string = ''
+file = open('argumentTest.txt', 'w')
 for i in range(1, len(sys.argv)):
+    file.write(sys.argv[i]+"\n")
     arg = sys.argv[i]
     input_string += arg
+file.close()
 
 # Split the string into a list of key-value pairs
 kv_pairs = input_string.split(',')
@@ -87,40 +91,29 @@ benefits = input_dict.get('benefits')
 address = input_dict.get('address')
 phone = input_dict.get('phone')
 email = input_dict.get('email')
+slogan = input_dict.get('slogan')
 
-class PDF(FPDF):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.WIDTH = WIDTH
-        self.HEIGHT = HEIGHT
+###class PDF(FPDF):
+    ###def __init__(self, *args, **kwargs):
+        ###super().__init__(*args, **kwargs)
+        ###self.WIDTH = WIDTH
+        ###self.HEIGHT = HEIGHT
 
-    def lines(self):
-        self.set_line_width(0.0)
-        self.line(0, HEIGHT / 3, WIDTH, HEIGHT / 3)
-        self.line(0, 2 * HEIGHT / 3, WIDTH, 2 * HEIGHT / 3)
+    ###def lines(self):
+        ###self.set_line_width(0.0)
+        ###self.line(0, HEIGHT / 3, WIDTH, HEIGHT / 3)
+        ###self.line(0, 2 * HEIGHT / 3, WIDTH, 2 * HEIGHT / 3)
 
-
-# Create the PDF object
-pdf = PDF(orientation='L')
+# Create pdf output document
+pdf = TriFoldPDF()
 pdf.add_page()
-
-# Add the content to the PDF object
-pdf.set_font('Arial', 'B', 16)
-pdf.cell(0, 10, company, 0, 1, 'C')
-# pdf.cell(0, 10, slogan, 0, 1, 'C')
-pdf.set_font('Arial', '', 12)
-pdf.cell(0, 10, about, 0, 1, 'L')
-pdf.cell(0, 10, looking, 0, 1, 'L')
-pdf.cell(0, 10, benefits, 0, 1, 'L')
-pdf.cell(0, 10, address, 0, 1, 'L')
-pdf.cell(0, 10, phone, 0, 1, 'L')
-pdf.cell(0, 10, email, 0, 1, 'L')
-
-# Add the lines to the PDF object
-pdf.lines()
-
-# Save the PDF file
+# add content to pdf
+pdf.draw_columns()
+pdf.add_content('About Us', about,5,15)
+pdf.add_content('Contact:', address,5, 80)
+pdf.add_content(company, '',100,15)
+pdf.add_content(slogan, '',100,25)
+pdf.add_content('Benefits', benefits,200,15)
+pdf.add_content('', email,200,90)
 pdf.output('prof.pdf', 'F')
-
-
 

@@ -1,0 +1,21 @@
+#<Userinput id: 3, title: Horses, subject: What
+are
+horses
+and
+what
+is
+their
+history,
+where
+d..., subtopics: Exactly
+like
+last
+prompt
+add
+more
+information
+abou..., created_at: 2023-04-27
+19:16:09.412739000
++0000, updated_at: 2023-04-27
+19:16:09.412739000
++0000>
