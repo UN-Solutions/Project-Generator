@@ -10,12 +10,9 @@ openai.api_key = file.read()
 
 # loop to get parameters from sys
 input_string = ''
-file = open('argumentTest.txt', 'w')
 for i in range(1, len(sys.argv)):
-    file.write(sys.argv[i]+"\n")
     arg = sys.argv[i]
     input_string += arg
-file.close()
 # Split the string into a list of key-value pairs
 kv_pairs = input_string.split(',')
 #print out kv_pairs result

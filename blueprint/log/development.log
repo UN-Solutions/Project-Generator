@@ -26371,3 +26371,60 @@ Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/b
 Completed 200 OK in 4ms (ActiveRecord: 0.0ms | Allocations: 184)
 
 
+Started GET "/userinputs" for 127.0.0.1 at 2023-04-27 13:36:38 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+Started GET "/" for 127.0.0.1 at 2023-04-27 13:36:40 -0600
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb
+  Rendered home/home.html.erb (Duration: 185.0ms | Allocations: 57119)
+Completed 200 OK in 209ms (Views: 206.8ms | ActiveRecord: 0.0ms | Allocations: 60313)
+
+
+Started GET "/menu" for 127.0.0.1 at 2023-04-27 13:36:46 -0600
+Processing by MenuController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering menu/index.html.erb within layouts/application
+  Rendered menu/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 899)
+  Rendered layout layouts/application.html.erb (Duration: 105.9ms | Allocations: 26145)
+Completed 200 OK in 115ms (Views: 109.8ms | ActiveRecord: 0.0ms | Allocations: 27245)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-04-27 13:36:48 -0600
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.1ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (26.5ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:13
+  Rendered collection of userinputs/_userinput.html.erb [3 times] (Duration: 30.8ms | Allocations: 750)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 564.4ms | Allocations: 2423)
+  Rendered layout layouts/application.html.erb (Duration: 776.0ms | Allocations: 9253)
+Completed 200 OK in 9980ms (Views: 1033.4ms | ActiveRecord: 26.9ms | Allocations: 11241)
+
+
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (4.1ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:13
+  Rendered collection of userinputs/_userinput.html.erb [3 times] (Duration: 1.1ms | Allocations: 340)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 105.2ms | Allocations: 4746)
+  Rendered layout layouts/application.html.erb (Duration: 142.0ms | Allocations: 11385)
+Completed 200 OK in 49834ms (Views: 148.4ms | ActiveRecord: 5.0ms | Allocations: 141756)
+
+
+Started GET "/download_pdf" for 127.0.0.1 at 2023-04-27 13:37:33 -0600
+Processing by UserinputsController#download_pdf as HTML
+Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/future.pdf (66.0ms)
+Completed 200 OK in 79ms (ActiveRecord: 0.0ms | Allocations: 1044)
+
+
+Started GET "/download_pdf" for 127.0.0.1 at 2023-04-27 13:37:33 -0600
+Processing by UserinputsController#download_pdf as HTML
+Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/future.pdf (0.2ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
