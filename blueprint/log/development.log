@@ -26887,3 +26887,140 @@ ActionController::MissingFile (Cannot read file /home/msalvador45/school/spring2
   
 app/controllers/professionals_controller.rb:4:in `download_pdf'
 >>>>>>> RigoBranchBugV2
+Started GET "/" for 127.0.0.1 at 2023-04-28 16:33:39 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb
+  Rendered home/home.html.erb (Duration: 89.3ms | Allocations: 43805)
+Completed 200 OK in 98ms (Views: 93.9ms | ActiveRecord: 0.0ms | Allocations: 49770)
+
+
+Started GET "/menu" for 127.0.0.1 at 2023-04-28 16:33:41 -0600
+Processing by MenuController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering menu/index.html.erb within layouts/application
+  Rendered menu/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 899)
+  Rendered layout layouts/application.html.erb (Duration: 20.0ms | Allocations: 26150)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms | Allocations: 27251)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-04-28 16:33:43 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (1.0ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [2 times] (Duration: 1.1ms | Allocations: 829)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 2523)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 9551)
+Completed 200 OK in 43657ms (Views: 23.1ms | ActiveRecord: 1.6ms | Allocations: 32309)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-28 16:34:31 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/prof.pdf (0.3ms)
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 573)
+
+
+  
+ActionController::MissingFile (Cannot read file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/prof.pdf):
+  
+app/controllers/professionals_controller.rb:4:in `download_pdf'
+Started GET "/professionals" for 127.0.0.1 at 2023-04-28 16:34:35 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.3ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.9ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [2 times] (Duration: 0.6ms | Allocations: 280)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1289)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 8227)
+Completed 200 OK in 37273ms (Views: 12.0ms | ActiveRecord: 1.2ms | Allocations: 9689)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-28 16:42:59 -0600
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb
+  Rendered home/home.html.erb (Duration: 4.8ms | Allocations: 947)
+Completed 200 OK in 6ms (Views: 5.6ms | Allocations: 1195)
+
+
+Started GET "/menu" for 127.0.0.1 at 2023-04-28 16:43:01 -0600
+Processing by MenuController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering menu/index.html.erb within layouts/application
+  Rendered menu/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 6979)
+Completed 200 OK in 14ms (Views: 13.1ms | Allocations: 7291)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-04-28 16:43:03 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.1ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (1.1ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [2 times] (Duration: 4.2ms | Allocations: 264)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 20.8ms | Allocations: 1242)
+  Rendered layout layouts/application.html.erb (Duration: 49.7ms | Allocations: 7867)
+Completed 200 OK in 18492ms (Views: 52.0ms | ActiveRecord: 1.6ms | Allocations: 9212)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-28 16:43:26 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/prof.pdf (5.2ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 540)
+
+
+  
+ActionController::MissingFile (Cannot read file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/prof.pdf):
+  
+app/controllers/professionals_controller.rb:4:in `download_pdf'
+Started GET "/" for 127.0.0.1 at 2023-04-28 16:44:32 -0600
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb
+  Rendered home/home.html.erb (Duration: 1.7ms | Allocations: 937)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 1186)
+
+
+Started GET "/menu" for 127.0.0.1 at 2023-04-28 16:44:34 -0600
+Processing by MenuController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering menu/index.html.erb within layouts/application
+  Rendered menu/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 42.5ms | Allocations: 6992)
+Completed 200 OK in 45ms (Views: 43.8ms | ActiveRecord: 0.0ms | Allocations: 7306)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-04-28 16:44:35 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.6ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [2 times] (Duration: 2.0ms | Allocations: 264)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 1206)
+  Rendered layout layouts/application.html.erb (Duration: 22.7ms | Allocations: 7831)
+Completed 200 OK in 36925ms (Views: 26.1ms | ActiveRecord: 0.7ms | Allocations: 9086)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-28 16:45:16 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/prof.pdf (25.8ms)
+Completed 200 OK in 26ms (ActiveRecord: 0.0ms | Allocations: 1028)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-28 16:45:16 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/prof.pdf (0.1ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
