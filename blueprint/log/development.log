@@ -27024,3 +27024,65 @@ Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/b
 Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
 
 
+Started GET "/professionals/new" for 127.0.0.1 at 2023-04-28 16:47:21 -0600
+Processing by ProfessionalsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/new.html.erb within layouts/application
+  Rendered professionals/_form.html.erb (Duration: 69.7ms | Allocations: 7064)
+  Rendered professionals/new.html.erb within layouts/application (Duration: 72.6ms | Allocations: 7403)
+  Rendered layout layouts/application.html.erb (Duration: 81.8ms | Allocations: 14137)
+Completed 200 OK in 96ms (Views: 82.5ms | ActiveRecord: 0.0ms | Allocations: 14592)
+
+
+Started POST "/professionals" for 127.0.0.1 at 2023-04-28 16:48:23 -0600
+Processing by ProfessionalsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "professional"=>{"company"=>"ORANGES", "slogan"=>"Orange you glad oranges exist", "about"=>"Oranges being the best thing in  the world for simply just existing\n", "looking"=>"looking for more oranges", "benefits"=>"they make you smile", "address"=>"854 orange gr.", "phone"=>"85739573957", "email"=>"orange@orangesST.com"}, "commit"=>"Create Professional"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/professionals_controller.rb:36:in `block in create'
+  [1m[36mProfessional Create (1.5ms)[0m  [1m[32mINSERT INTO "professionals" ("company", "slogan", "about", "looking", "benefits", "address", "phone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company", "ORANGES"], ["slogan", "Orange you glad oranges exist"], ["about", "Oranges being the best thing in  the world for simply just existing\n"], ["looking", "looking for more oranges"], ["benefits", "they make you smile"], ["address", "854 orange gr."], ["phone", "85739573957"], ["email", "orange@orangesST.com"], ["created_at", "2023-04-28 22:48:23.903221"], ["updated_at", "2023-04-28 22:48:23.903221"]]
+  ↳ app/controllers/professionals_controller.rb:36:in `block in create'
+  [1m[36mTRANSACTION (7.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/professionals_controller.rb:36:in `block in create'
+Redirected to http://127.0.0.1:3000/professionals/3
+Completed 302 Found in 50ms (ActiveRecord: 8.9ms | Allocations: 3803)
+
+
+Started GET "/professionals/3" for 127.0.0.1 at 2023-04-28 16:48:23 -0600
+Processing by ProfessionalsController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" WHERE "professionals"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:72:in `set_professional'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/show.html.erb within layouts/application
+  Rendered professionals/_professional.html.erb (Duration: 1.5ms | Allocations: 534)
+  Rendered professionals/show.html.erb within layouts/application (Duration: 109.5ms | Allocations: 1928)
+  Rendered layout layouts/application.html.erb (Duration: 148.4ms | Allocations: 8842)
+Completed 200 OK in 163ms (Views: 149.3ms | ActiveRecord: 0.2ms | Allocations: 11608)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-04-28 16:48:25 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (1.0ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.7ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [3 times] (Duration: 0.9ms | Allocations: 394)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1385)
+  Rendered layout layouts/application.html.erb (Duration: 47.0ms | Allocations: 8012)
+Completed 200 OK in 26501ms (Views: 58.6ms | ActiveRecord: 1.7ms | Allocations: 9386)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-28 16:48:55 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/prof.pdf (0.2ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 199)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-28 16:48:55 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/prof.pdf (0.1ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
