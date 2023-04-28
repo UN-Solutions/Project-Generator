@@ -26428,3 +26428,58 @@ Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/b
 Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 184)
 
 
+Started GET "/" for 127.0.0.1 at 2023-04-28 13:35:47 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb
+  Rendered home/home.html.erb (Duration: 100.0ms | Allocations: 36260)
+Completed 200 OK in 120ms (Views: 111.5ms | ActiveRecord: 0.0ms | Allocations: 42225)
+
+
+Started GET "/menu" for 127.0.0.1 at 2023-04-28 13:35:49 -0600
+Processing by MenuController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering menu/index.html.erb within layouts/application
+  Rendered menu/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 899)
+  Rendered layout layouts/application.html.erb (Duration: 29.8ms | Allocations: 22723)
+Completed 200 OK in 32ms (Views: 31.7ms | ActiveRecord: 0.0ms | Allocations: 23824)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-04-28 13:35:59 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [2 times] (Duration: 2.0ms | Allocations: 839)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 10.5ms | Allocations: 2516)
+  Rendered layout layouts/application.html.erb (Duration: 30.7ms | Allocations: 9347)
+Completed 200 OK in 30760ms (Views: 32.4ms | ActiveRecord: 0.8ms | Allocations: 31966)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-28 13:36:34 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/prof.pdf (4.1ms)
+Completed 200 OK in 5ms (ActiveRecord: 0.0ms | Allocations: 1047)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-28 13:36:34 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/prof.pdf (0.4ms)
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-28 13:41:50 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/prof.pdf (0.3ms)
+Completed 200 OK in 1ms (Allocations: 184)
+
+
+Started GET "/download_ppdf" for 127.0.0.1 at 2023-04-28 13:41:50 -0600
+Processing by ProfessionalsController#download_pdf as HTML
+Sent file /home/msalvador45/school/spring23/seniorXP/project/Project-Generator/blueprint/prof.pdf (0.4ms)
+Completed 200 OK in 2ms (Allocations: 183)
+
+
