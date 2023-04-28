@@ -1,7 +1,15 @@
 from transformers import pipeline
 
 # initialize transformers that will be utilized
+'''
+summarizer transformer trained by lidiya on huggingface:
+https://huggingface.co/lidiya/bart-large-xsum-samsum
+'''
 summarizer = pipeline('summarization', model = 'lidiya/bart-large-xsum-samsum')     # model to summarize text
+'''
+topicizer transformer trained by tennessejoyce on huggingface:
+https://huggingface.co/tennessejoyce/titlewave-t5-base
+'''
 topicizer = pipeline('summarization', model='tennessejoyce/titlewave-t5-base')      # model to make topic out of text
 
 # TODO: create classes to process text by summarizing and listing
