@@ -25415,3 +25415,265 @@ Processing by UserinputsController#index as HTML
 Completed 200 OK in 650ms (Views: 13.9ms | ActiveRecord: 1.1ms | Allocations: 28980)
 
 
+Started GET "/" for 127.0.0.1 at 2023-04-21 14:04:41 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb
+  Rendered home/home.html.erb (Duration: 92.9ms | Allocations: 36471)
+Completed 200 OK in 110ms (Views: 103.9ms | ActiveRecord: 0.0ms | Allocations: 42435)
+
+
+Started GET "/menu" for 127.0.0.1 at 2023-04-21 14:05:15 -0600
+Processing by MenuController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering menu/index.html.erb within layouts/application
+  Rendered menu/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 902)
+  Rendered layout layouts/application.html.erb (Duration: 33.2ms | Allocations: 22346)
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.0ms | Allocations: 23448)
+
+
+Started GET "/presentations" for 127.0.0.1 at 2023-04-21 14:05:18 -0600
+Processing by PresentationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering presentations/index.html.erb within layouts/application
+  [1m[36mPresentation Load (0.4ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations"[0m
+  ↳ app/views/presentations/index.html.erb:13
+  Rendered collection of presentations/_presentation.html.erb [1 times] (Duration: 1.6ms | Allocations: 598)
+  Rendered presentations/index.html.erb within layouts/application (Duration: 25.8ms | Allocations: 18736)
+  Rendered layout layouts/application.html.erb (Duration: 34.5ms | Allocations: 25664)
+Completed 200 OK in 44ms (Views: 35.4ms | ActiveRecord: 1.7ms | Allocations: 27517)
+
+
+Started GET "/download_prepdf" for 127.0.0.1 at 2023-04-21 14:05:26 -0600
+Processing by PresentationsController#download_pdf as HTML
+Sent file /home/wavy/Project-Generator/blueprint/presentation.pdf (48.4ms)
+Completed 200 OK in 49ms (ActiveRecord: 0.0ms | Allocations: 1043)
+
+
+Started GET "/download_prepdf" for 127.0.0.1 at 2023-04-21 14:05:26 -0600
+Processing by PresentationsController#download_pdf as HTML
+Sent file /home/wavy/Project-Generator/blueprint/presentation.pdf (7.4ms)
+Completed 200 OK in 8ms (ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-21 14:05:51 -0600
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb
+  Rendered home/home.html.erb (Duration: 34.1ms | Allocations: 949)
+Completed 200 OK in 35ms (Views: 34.7ms | ActiveRecord: 0.0ms | Allocations: 1224)
+
+
+Started GET "/aboutus" for 127.0.0.1 at 2023-04-21 14:06:20 -0600
+Processing by AboutusController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering aboutus/index.html.erb within layouts/application
+  Rendered aboutus/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 2545)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 9462)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.0ms | Allocations: 10455)
+
+
+Started GET "/aboutus" for 127.0.0.1 at 2023-04-21 14:06:25 -0600
+Processing by AboutusController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering aboutus/index.html.erb within layouts/application
+  Rendered aboutus/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1971)
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 8638)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.0ms | Allocations: 8975)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-28 13:00:22 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#home as HTML
+  Rendering home/home.html.erb
+  Rendered home/home.html.erb (Duration: 145.1ms | Allocations: 36263)
+Completed 200 OK in 167ms (Views: 156.9ms | ActiveRecord: 0.0ms | Allocations: 42233)
+
+
+Started GET "/menu" for 127.0.0.1 at 2023-04-28 13:00:26 -0600
+Processing by MenuController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering menu/index.html.erb within layouts/application
+  Rendered menu/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 902)
+  Rendered layout layouts/application.html.erb (Duration: 34.6ms | Allocations: 22365)
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.0ms | Allocations: 23467)
+
+
+Started GET "/userinputs" for 127.0.0.1 at 2023-04-28 13:00:29 -0600
+Processing by UserinputsController#index as HTML
+  [1m[36mUserinput Load (0.5ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/userinputs_controller.rb:10:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering userinputs/index.html.erb within layouts/application
+  [1m[36mUserinput Load (0.2ms)[0m  [1m[34mSELECT "userinputs".* FROM "userinputs"[0m
+  ↳ app/views/userinputs/index.html.erb:13
+  Rendered collection of userinputs/_userinput.html.erb [1 times] (Duration: 1.0ms | Allocations: 532)
+  Rendered userinputs/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2163)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 9096)
+Completed 200 OK in 751ms (Views: 15.2ms | ActiveRecord: 1.4ms | Allocations: 28978)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-04-28 13:00:34 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.5ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [1 times] (Duration: 1.3ms | Allocations: 660)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2260)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 9198)
+Completed 200 OK in 160ms (Views: 16.4ms | ActiveRecord: 1.3ms | Allocations: 28841)
+
+
+Started GET "/professionals/new" for 127.0.0.1 at 2023-04-28 13:00:57 -0600
+Processing by ProfessionalsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/new.html.erb within layouts/application
+  Rendered professionals/_form.html.erb (Duration: 25.2ms | Allocations: 7789)
+  Rendered professionals/new.html.erb within layouts/application (Duration: 26.7ms | Allocations: 8142)
+  Rendered layout layouts/application.html.erb (Duration: 36.5ms | Allocations: 14893)
+Completed 200 OK in 38ms (Views: 37.2ms | ActiveRecord: 0.0ms | Allocations: 15363)
+
+
+Started POST "/professionals" for 127.0.0.1 at 2023-04-28 13:01:16 -0600
+Processing by ProfessionalsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "professional"=>{"company"=>"this", "slogan"=>"is ", "about"=>"a t", "looking"=>"test", "benefits"=>"asaa", "address"=>"1234", "phone"=>"234", "email"=>"roadrunner@msudenver.edu"}, "commit"=>"Create Professional"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/professionals_controller.rb:38:in `block in create'
+  [1m[36mProfessional Create (0.4ms)[0m  [1m[32mINSERT INTO "professionals" ("company", "slogan", "about", "looking", "benefits", "address", "phone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company", "this"], ["slogan", "is "], ["about", "a t"], ["looking", "test"], ["benefits", "asaa"], ["address", "1234"], ["phone", "234"], ["email", "roadrunner@msudenver.edu"], ["created_at", "2023-04-28 19:01:16.598200"], ["updated_at", "2023-04-28 19:01:16.598200"]]
+  ↳ app/controllers/professionals_controller.rb:38:in `block in create'
+  [1m[36mTRANSACTION (9.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/professionals_controller.rb:38:in `block in create'
+Redirected to http://127.0.0.1:3000/professionals/2
+Completed 302 Found in 18ms (ActiveRecord: 10.0ms | Allocations: 3856)
+
+
+Started GET "/professionals/2" for 127.0.0.1 at 2023-04-28 13:01:16 -0600
+Processing by ProfessionalsController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" WHERE "professionals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:74:in `set_professional'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/show.html.erb within layouts/application
+  Rendered professionals/_professional.html.erb (Duration: 0.9ms | Allocations: 532)
+  Rendered professionals/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1902)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 8723)
+Completed 200 OK in 16ms (Views: 11.8ms | ActiveRecord: 0.2ms | Allocations: 11490)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-04-28 13:01:18 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.5ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.1ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [2 times] (Duration: 0.5ms | Allocations: 267)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1245)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 7880)
+Completed 200 OK in 69ms (Views: 10.2ms | ActiveRecord: 0.7ms | Allocations: 9109)
+
+
+Started GET "/professionals/new" for 127.0.0.1 at 2023-04-28 13:02:32 -0600
+Processing by ProfessionalsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/new.html.erb within layouts/application
+  Rendered professionals/_form.html.erb (Duration: 11.7ms | Allocations: 2489)
+  Rendered professionals/new.html.erb within layouts/application (Duration: 12.6ms | Allocations: 2588)
+  Rendered layout layouts/application.html.erb (Duration: 28.9ms | Allocations: 9209)
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 0.0ms | Allocations: 9560)
+
+
+Started POST "/professionals" for 127.0.0.1 at 2023-04-28 13:03:11 -0600
+Processing by ProfessionalsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "professional"=>{"company"=>"MSU Denver", "slogan"=>"we are road runners", "about"=>"Metropolitan State University of Denver was founded in 1965 as an opportunity school. The concept was that people from all walks of life could have a chance at a college education. By design, MSU Denver is required to be accessible to all, which is why it consistently has some of the lowest tuitions of four-year Colorado colleges and universities. Nearly 54% of the student body are students of color.[8]\n\nThe Auraria Campus is between Empower Field at Mile High and Ball Arena. During the 2008 Democratic National Convention, MSU Denver started the semester a week early, closed for the convention, and then restarted on schedule. The campus was within the security perimeter designated by the United States Secret Service, leading to the decision to close the campus to all except essential personnel.[9]\n\nMSU Denver was the first university to advocate for DREAMers to have a chance at higher education by providing in-state tuition rates under the ASSET bill, signed by then Gov. John Hickenlooper in the Jordan Student Success Building lobby.[10][11] It made national headlines.[12][13][14][15]", "looking"=>"The Auraria Campus is the main campus of MSU Denver and is located to the southwest of downtown Denver in the Auraria Neighborhood, enclosed by Auraria Pkwy to the west and north, Speer Blvd to east, and Colfax Ave to the south. MSU Denver shares the campus with two other higher education institutions, the University of Colorado Denver and Community College of Denver. The traditional main entrance to campus is Speer & Lawrence between the North and Science buildings. However, in recent years due to the addition of the RTD Light Rail, many students regard the Colfax At Auraria station at 10th St & Colfax to be the main entrance.\n\nThe campus is located in the heart of the central business district and is in close proximity to Ball Arena, Elitch Gardens, the Colorado Convention Center, the Denver Performing Arts Complex, Larimer Square, and the 16th Street Mall. The reclaimed Callie Maher brewery, which closed in 1969, now operates as the Tivoli Student Union, housing the Tivoli Brewing Company and serving all 3 schools on campus.[16]\n\nThere are ongoing building renovations on campus, including the library, as well as a new aerospace building next to the Student Success building.\n\nLight Rail\n\nAuraria West Campus (RTD) – Light rail station for the C, E, & W lines\nColfax at Auraria (RTD) – Light rail station for the D, F & H lines", "benefits"=>"The Auraria Campus is the main campus of MSU Denver and is located to the southwest of downtown Denver in the Auraria Neighborhood, enclosed by Auraria Pkwy to the west and north, Speer Blvd to east, and Colfax Ave to the south. MSU Denver shares the campus with two other higher education institutions, the University of Colorado Denver and Community College of Denver. The traditional main entrance to campus is Speer & Lawrence between the North and Science buildings. However, in recent years due to the addition of the RTD Light Rail, many students regard the Colfax At Auraria station at 10th St & Colfax to be the main entrance.\n\nThe campus is located in the heart of the central business district and is in close proximity to Ball Arena, Elitch Gardens, the Colorado Convention Center, the Denver Performing Arts Complex, Larimer Square, and the 16th Street Mall. The reclaimed Callie Maher brewery, which closed in 1969, now operates as the Tivoli Student Union, housing the Tivoli Brewing Company and serving all 3 schools on campus.[16]\n\nThere are ongoing building renovations on campus, including the library, as well as a new aerospace building next to the Student Success building.\n\nLight Rail\n\nAuraria West Campus (RTD) – Light rail station for the C, E, & W lines\nColfax at Auraria (RTD) – Light rail station for the D, F & H lines", "address"=>"2342 thisb st", "phone"=>"720444343", "email"=>"roadrunner@msudenver.edu"}, "commit"=>"Create Professional"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/professionals_controller.rb:38:in `block in create'
+  [1m[36mProfessional Create (0.4ms)[0m  [1m[32mINSERT INTO "professionals" ("company", "slogan", "about", "looking", "benefits", "address", "phone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company", "MSU Denver"], ["slogan", "we are road runners"], ["about", "Metropolitan State University of Denver was founded in 1965 as an opportunity school. The concept was that people from all walks of life could have a chance at a college education. By design, MSU Denver is required to be accessible to all, which is why it consistently has some of the lowest tuitions of four-year Colorado colleges and universities. Nearly 54% of the student body are students of color.[8]\n\nThe Auraria Campus is between Empower Field at Mile High and Ball Arena. During the 2008 Democratic National Convention, MSU Denver started the semester a week early, closed for the convention, and then restarted on schedule. The campus was within the security perimeter designated by the United States Secret Service, leading to the decision to close the campus to all except essential personnel.[9]\n\nMSU Denver was the first university to advocate for DREAMers to have a chance at higher education by providing in-state tuition rates under the ASSET bill, signed by then Gov. John Hickenlooper in the Jordan Student Success Building lobby.[10][11] It made national headlines.[12][13][14][15]"], ["looking", "The Auraria Campus is the main campus of MSU Denver and is located to the southwest of downtown Denver in the Auraria Neighborhood, enclosed by Auraria Pkwy to the west and north, Speer Blvd to east, and Colfax Ave to the south. MSU Denver shares the campus with two other higher education institutions, the University of Colorado Denver and Community College of Denver. The traditional main entrance to campus is Speer & Lawrence between the North and Science buildings. However, in recent years due to the addition of the RTD Light Rail, many students regard the Colfax At Auraria station at 10th St & Colfax to be the main entrance.\n\nThe campus is located in the heart of the central business district and is in close proximity to Ball Arena, Elitch Gardens, the Colorado Convention Center, the Denver Performing Arts Complex, Larimer Square, and the 16th Street Mall. The reclaimed Callie Maher brewery, which closed in 1969, now operates as the Tivoli Student Union, housing the Tivoli Brewing Company and serving all 3 schools on campus.[16]\n\nThere are ongoing building renovations on campus, including the library, as well as a new aerospace building next to the Student Success building.\n\nLight Rail\n\nAuraria West Campus (RTD) – Light rail station for the C, E, & W lines\nColfax at Auraria (RTD) – Light rail station for the D, F & H lines"], ["benefits", "The Auraria Campus is the main campus of MSU Denver and is located to the southwest of downtown Denver in the Auraria Neighborhood, enclosed by Auraria Pkwy to the west and north, Speer Blvd to east, and Colfax Ave to the south. MSU Denver shares the campus with two other higher education institutions, the University of Colorado Denver and Community College of Denver. The traditional main entrance to campus is Speer & Lawrence between the North and Science buildings. However, in recent years due to the addition of the RTD Light Rail, many students regard the Colfax At Auraria station at 10th St & Colfax to be the main entrance.\n\nThe campus is located in the heart of the central business district and is in close proximity to Ball Arena, Elitch Gardens, the Colorado Convention Center, the Denver Performing Arts Complex, Larimer Square, and the 16th Street Mall. The reclaimed Callie Maher brewery, which closed in 1969, now operates as the Tivoli Student Union, housing the Tivoli Brewing Company and serving all 3 schools on campus.[16]\n\nThere are ongoing building renovations on campus, including the library, as well as a new aerospace building next to the Student Success building.\n\nLight Rail\n\nAuraria West Campus (RTD) – Light rail station for the C, E, & W lines\nColfax at Auraria (RTD) – Light rail station for the D, F & H lines"], ["address", "2342 thisb st"], ["phone", "720444343"], ["email", "roadrunner@msudenver.edu"], ["created_at", "2023-04-28 19:03:11.711343"], ["updated_at", "2023-04-28 19:03:11.711343"]]
+  ↳ app/controllers/professionals_controller.rb:38:in `block in create'
+  [1m[36mTRANSACTION (21.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/professionals_controller.rb:38:in `block in create'
+Redirected to http://127.0.0.1:3000/professionals/3
+Completed 302 Found in 31ms (ActiveRecord: 22.0ms | Allocations: 2499)
+
+
+Started GET "/professionals/3" for 127.0.0.1 at 2023-04-28 13:03:11 -0600
+Processing by ProfessionalsController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mProfessional Load (0.3ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" WHERE "professionals"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:74:in `set_professional'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/show.html.erb within layouts/application
+  Rendered professionals/_professional.html.erb (Duration: 0.3ms | Allocations: 41)
+  Rendered professionals/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 687)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 7299)
+Completed 200 OK in 21ms (Views: 16.8ms | ActiveRecord: 0.3ms | Allocations: 8105)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-04-28 13:03:39 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.4ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.1ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [3 times] (Duration: 0.7ms | Allocations: 381)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1323)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 7956)
+Completed 200 OK in 75ms (Views: 15.5ms | ActiveRecord: 0.6ms | Allocations: 9042)
+
+
+Started GET "/professionals/new" for 127.0.0.1 at 2023-04-28 13:07:57 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProfessionalsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/new.html.erb within layouts/application
+  Rendered professionals/_form.html.erb (Duration: 22.3ms | Allocations: 5974)
+  Rendered professionals/new.html.erb within layouts/application (Duration: 26.3ms | Allocations: 6735)
+  Rendered layout layouts/application.html.erb (Duration: 205.0ms | Allocations: 60205)
+Completed 200 OK in 253ms (Views: 211.3ms | ActiveRecord: 1.1ms | Allocations: 86105)
+
+
+Started POST "/professionals" for 127.0.0.1 at 2023-04-28 13:08:26 -0600
+Processing by ProfessionalsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "professional"=>{"company"=>"MSU Denver", "slogan"=>"test", "about"=>"The Auraria Campus is the main campus of MSU Denver and is located to the southwest of downtown Denver in the Auraria Neighborhood, enclosed by Auraria Pkwy to the west and north, Speer Blvd to east, and Colfax Ave to the south. MSU Denver shares the campus with two other higher education institutions, the University of Colorado Denver and Community College of Denver. The traditional main entrance to campus is Speer & Lawrence between the North and Science buildings. However, in recent years due to the addition of the RTD Light Rail, many students regard the Colfax At Auraria station at 10th St & Colfax to be the main entrance. The campus is located in the heart of the central business district and is in close proximity to Ball Arena, Elitch Gardens, the Colorado Convention Center, the Denver Performing Arts Complex, Larimer Square, and the 16th Street Mall. The reclaimed Callie Maher brewery, which closed in 1969, now operates as the Tivoli Student Union, housing the Tivoli Brewing Company and serving all 3 schools on campus.[16] There are ongoing building renovations on campus, including the library, as well as a new aerospace building next to the Student Success building. Light Rail Auraria West Campus (RTD) – Light rail station for the C, E, & W lines Colfax at Auraria (RTD) – Light rail station for the D, F & H lines ", "looking"=>"The Auraria Campus is the main campus of MSU Denver and is located to the southwest of downtown Denver in the Auraria Neighborhood, enclosed by Auraria Pkwy to the west and north, Speer Blvd to east, and Colfax Ave to the south. MSU Denver shares the campus with two other higher education institutions, the University of Colorado Denver and Community College of Denver. The traditional main entrance to campus is Speer & Lawrence between the North and Science buildings. However, in recent years due to the addition of the RTD Light Rail, many students regard the Colfax At Auraria station at 10th St & Colfax to be the main entrance. The campus is located in the heart of the central business district and is in close proximity to Ball Arena, Elitch Gardens, the Colorado Convention Center, the Denver Performing Arts Complex, Larimer Square, and the 16th Street Mall. The reclaimed Callie Maher brewery, which closed in 1969, now operates as the Tivoli Student Union, housing the Tivoli Brewing Company and serving all 3 schools on campus.[16] There are ongoing building renovations on campus, including the library, as well as a new aerospace building next to the Student Success building. Light Rail Auraria West Campus (RTD) – Light rail station for the C, E, & W lines Colfax at Auraria (RTD) – Light rail station for the D, F & H lines ", "benefits"=>"The Auraria Campus is the main campus of MSU Denver and is located to the southwest of downtown Denver in the Auraria Neighborhood, enclosed by Auraria Pkwy to the west and north, Speer Blvd to east, and Colfax Ave to the south. MSU Denver shares the campus with two other higher education institutions, the University of Colorado Denver and Community College of Denver. The traditional main entrance to campus is Speer & Lawrence between the North and Science buildings. However, in recent years due to the addition of the RTD Light Rail, many students regard the Colfax At Auraria station at 10th St & Colfax to be the main entrance. The campus is located in the heart of the central business district and is in close proximity to Ball Arena, Elitch Gardens, the Colorado Convention Center, the Denver Performing Arts Complex, Larimer Square, and the 16th Street Mall. The reclaimed Callie Maher brewery, which closed in 1969, now operates as the Tivoli Student Union, housing the Tivoli Brewing Company and serving all 3 schools on campus.[16] There are ongoing building renovations on campus, including the library, as well as a new aerospace building next to the Student Success building. Light Rail Auraria West Campus (RTD) – Light rail station for the C, E, & W lines Colfax at Auraria (RTD) – Light rail station for the D, F & H lines ", "address"=>"123 Auraria st Denver Co", "phone"=>"720444343", "email"=>"roadrunner@msudenver.edu"}, "commit"=>"Create Professional"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/professionals_controller.rb:36:in `block in create'
+  [1m[36mProfessional Create (0.5ms)[0m  [1m[32mINSERT INTO "professionals" ("company", "slogan", "about", "looking", "benefits", "address", "phone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company", "MSU Denver"], ["slogan", "test"], ["about", "The Auraria Campus is the main campus of MSU Denver and is located to the southwest of downtown Denver in the Auraria Neighborhood, enclosed by Auraria Pkwy to the west and north, Speer Blvd to east, and Colfax Ave to the south. MSU Denver shares the campus with two other higher education institutions, the University of Colorado Denver and Community College of Denver. The traditional main entrance to campus is Speer & Lawrence between the North and Science buildings. However, in recent years due to the addition of the RTD Light Rail, many students regard the Colfax At Auraria station at 10th St & Colfax to be the main entrance. The campus is located in the heart of the central business district and is in close proximity to Ball Arena, Elitch Gardens, the Colorado Convention Center, the Denver Performing Arts Complex, Larimer Square, and the 16th Street Mall. The reclaimed Callie Maher brewery, which closed in 1969, now operates as the Tivoli Student Union, housing the Tivoli Brewing Company and serving all 3 schools on campus.[16] There are ongoing building renovations on campus, including the library, as well as a new aerospace building next to the Student Success building. Light Rail Auraria West Campus (RTD) – Light rail station for the C, E, & W lines Colfax at Auraria (RTD) – Light rail station for the D, F & H lines "], ["looking", "The Auraria Campus is the main campus of MSU Denver and is located to the southwest of downtown Denver in the Auraria Neighborhood, enclosed by Auraria Pkwy to the west and north, Speer Blvd to east, and Colfax Ave to the south. MSU Denver shares the campus with two other higher education institutions, the University of Colorado Denver and Community College of Denver. The traditional main entrance to campus is Speer & Lawrence between the North and Science buildings. However, in recent years due to the addition of the RTD Light Rail, many students regard the Colfax At Auraria station at 10th St & Colfax to be the main entrance. The campus is located in the heart of the central business district and is in close proximity to Ball Arena, Elitch Gardens, the Colorado Convention Center, the Denver Performing Arts Complex, Larimer Square, and the 16th Street Mall. The reclaimed Callie Maher brewery, which closed in 1969, now operates as the Tivoli Student Union, housing the Tivoli Brewing Company and serving all 3 schools on campus.[16] There are ongoing building renovations on campus, including the library, as well as a new aerospace building next to the Student Success building. Light Rail Auraria West Campus (RTD) – Light rail station for the C, E, & W lines Colfax at Auraria (RTD) – Light rail station for the D, F & H lines "], ["benefits", "The Auraria Campus is the main campus of MSU Denver and is located to the southwest of downtown Denver in the Auraria Neighborhood, enclosed by Auraria Pkwy to the west and north, Speer Blvd to east, and Colfax Ave to the south. MSU Denver shares the campus with two other higher education institutions, the University of Colorado Denver and Community College of Denver. The traditional main entrance to campus is Speer & Lawrence between the North and Science buildings. However, in recent years due to the addition of the RTD Light Rail, many students regard the Colfax At Auraria station at 10th St & Colfax to be the main entrance. The campus is located in the heart of the central business district and is in close proximity to Ball Arena, Elitch Gardens, the Colorado Convention Center, the Denver Performing Arts Complex, Larimer Square, and the 16th Street Mall. The reclaimed Callie Maher brewery, which closed in 1969, now operates as the Tivoli Student Union, housing the Tivoli Brewing Company and serving all 3 schools on campus.[16] There are ongoing building renovations on campus, including the library, as well as a new aerospace building next to the Student Success building. Light Rail Auraria West Campus (RTD) – Light rail station for the C, E, & W lines Colfax at Auraria (RTD) – Light rail station for the D, F & H lines "], ["address", "123 Auraria st Denver Co"], ["phone", "720444343"], ["email", "roadrunner@msudenver.edu"], ["created_at", "2023-04-28 19:08:26.060904"], ["updated_at", "2023-04-28 19:08:26.060904"]]
+  ↳ app/controllers/professionals_controller.rb:36:in `block in create'
+  [1m[36mTRANSACTION (19.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/professionals_controller.rb:36:in `block in create'
+Redirected to http://127.0.0.1:3000/professionals/4
+Completed 302 Found in 33ms (ActiveRecord: 20.2ms | Allocations: 3991)
+
+
+Started GET "/professionals/4" for 127.0.0.1 at 2023-04-28 13:08:26 -0600
+Processing by ProfessionalsController#show as TURBO_STREAM
+  Parameters: {"id"=>"4"}
+  [1m[36mProfessional Load (0.3ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" WHERE "professionals"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:72:in `set_professional'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/show.html.erb within layouts/application
+  Rendered professionals/_professional.html.erb (Duration: 1.0ms | Allocations: 574)
+  Rendered professionals/show.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2088)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 8913)
+Completed 200 OK in 107ms (Views: 26.3ms | ActiveRecord: 0.3ms | Allocations: 12174)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-04-28 13:08:28 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.5ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [4 times] (Duration: 2.1ms | Allocations: 997)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2394)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 9096)
+Completed 200 OK in 61ms (Views: 18.8ms | ActiveRecord: 0.7ms | Allocations: 10628)
+
+

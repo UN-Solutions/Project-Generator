@@ -7,7 +7,12 @@ class ProfessionalsController < ApplicationController
   def index
     @professionals = Professional.all
     @our_input = Professional.order("id DESC").first
-    @output = `python3 prof.py "#{@our_input.inspect}"`
+
+    # Convert the data to a JSON string and write it to a file
+    File.write("input.txt", @our_input.to_json)
+
+    # Call the Python script with the input file as an argument
+    @output = `python3 prof.py input.txt`
   end
 
   # GET /professionals/1 or /professionals/1.json
