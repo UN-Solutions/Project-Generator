@@ -3,7 +3,10 @@ import openai
 from fpdf import FPDF
 import re
 
-openai.api_key = ''
+# openai key from document when running web app, scope is within blueprint directory
+file = open("keys_for_car.txt")
+openai.api_key = file.read()
+
 input_string = ''
 for i in range(1, len(sys.argv)):
     arg = sys.argv[i]
@@ -57,7 +60,17 @@ class TriFoldPDF(FPDF):
         self.set_xy(x, y)
         self.set_font('Arial', 'B', 14)
         self.cell(self.column_width - 10, 10, title, 0, 1)
-        self.set_xy(x, y + 12)
+        self.set_xy(x, y + 8)
+        self.set_font('Arial', '', 8)
+        cell_width = self.column_width - 9
+        cell_height = self.get_multiline_cell_height(cell_width, body)
+        self.multi_cell(self.column_width - 9, 8, body)
+        
+    def add_bullet_content(self, title, body, x, y):
+        self.set_xy(x, y)
+        self.set_font('Arial', 'B', 14)
+        self.cell(self.column_width - 10, 10, title, 0, 1)
+        self.set_xy(x, y)
         self.set_font('Arial', '', 8)
         cell_width = self.column_width - 9
         cell_height = self.get_multiline_cell_height(cell_width, body)

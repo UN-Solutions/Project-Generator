@@ -3,8 +3,9 @@ import openai
 from fpdf import FPDF
 import re
 
-# openai key
-openai.api_key = ''
+# openai key from document when running web app, scope is within blueprint directory
+file = open("keys_for_car.txt")
+openai.api_key = file.read()
 #for
 input_string = ''
 for i in range(1, len(sys.argv)):
@@ -65,6 +66,17 @@ class TriFoldPDF(FPDF):
         cell_width = self.column_width - 9
         cell_height = self.get_multiline_cell_height(cell_width, body)
         self.multi_cell(self.column_width - 9, 8, body)
+        
+    # Define a method for adding a block of content with bullet points
+    def add_bullet_block(self, bullet_list):
+
+        # Set font and font size
+        self.set_font('Arial', '', 12)
+        # Add bullet points
+        for bullet in bullet_list:
+            self.cell(5, 7, '•', 0, 0, 'L')
+            self.cell(0, 7, bullet, 0, 1, 'L')
+        self.ln()
 
 
 title = "Car Emissions"        
