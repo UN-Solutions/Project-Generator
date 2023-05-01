@@ -1,19 +1,15 @@
-<p class="text-green-500 font-bold"><%= notice %></p>
+<div class="w-full">
+  <% if notice.present? %>
+    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+  <% end %>
 
-<div class="flex justify-between items-center mb-4">
-  <h1 class="text-3xl font-bold">User Inputs</h1>
-  <div>
-    <a href="<%= download_pdf_path %>" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4">Download</a>
-    <%= link_to "New User Input", new_userinput_path, class: "bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" %>
+  <div class="flex justify-between items-center">
+    <h1 class="font-bold text-4xl">userinputs</h1>
+    <%= link_to 'New userinputs', new_userinput_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+    <a href="<%=  download_pdf_path %>" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4">Download</a>
   </div>
-</div>
 
-<div class="flex justify-between items-center">
-<h1 class="font-bold text-4xl"> userinputs</h1>
-<%= link_to 'New User Input', new_userinput_path, class: "bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-md border-2 border-green-500 transition duration-200 ease-in-out" %>
-</div>
-
-<div id="mluserinputs" class="min-w-full">
-<%= render @userinputs %>
-</div>
+  <div id="userinputs" class="min-w-full">
+    <%= render @userinputs %>
+  </div>
 </div>

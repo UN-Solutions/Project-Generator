@@ -1,0 +1,22 @@
+<div id="<%= dom_id presentation %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Title:</strong>
+    <%= presentation.title %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Subject:</strong>
+    <%= presentation.subject %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Subtopics:</strong>
+    <%= presentation.subtopics %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this presentation", presentation, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this presentation', edit_presentation_path(presentation), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

@@ -1,0 +1,1 @@
+{"id":3,"company":"ORANGES","slogan":"Orange you glad oranges exist","about":"Oranges being the best thing in  the world for simply just existing\n","looking":"looking for more oranges","benefits":"they make you smile","address":"854 orange gr.","phone":"85739573957","email":"orange@orangesST.com","created_at":"2023-04-28T22:48:23.903Z","updated_at":"2023-04-28T22:48:23.903Z"}
