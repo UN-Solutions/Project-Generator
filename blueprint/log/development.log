@@ -25677,3 +25677,68 @@ Processing by ProfessionalsController#index as HTML
 Completed 200 OK in 61ms (Views: 18.8ms | ActiveRecord: 0.7ms | Allocations: 10628)
 
 
+Started GET "/professionals" for 127.0.0.1 at 2023-04-28 13:49:12 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.3ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.6ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [4 times] (Duration: 4.7ms | Allocations: 1075)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 26.3ms | Allocations: 3349)
+  Rendered layout layouts/application.html.erb (Duration: 184.7ms | Allocations: 56528)
+Completed 200 OK in 310ms (Views: 191.3ms | ActiveRecord: 1.8ms | Allocations: 84300)
+
+
+Started GET "/professionals/new" for 127.0.0.1 at 2023-04-28 13:49:28 -0600
+Processing by ProfessionalsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/new.html.erb within layouts/application
+  Rendered professionals/_form.html.erb (Duration: 11.3ms | Allocations: 5668)
+  Rendered professionals/new.html.erb within layouts/application (Duration: 12.8ms | Allocations: 6051)
+  Rendered layout layouts/application.html.erb (Duration: 22.7ms | Allocations: 12797)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.0ms | Allocations: 13334)
+
+
+Started POST "/professionals" for 127.0.0.1 at 2023-04-28 13:49:56 -0600
+Processing by ProfessionalsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "professional"=>{"company"=>"MSU Denver", "slogan"=>"roadrunners", "about"=>"Metropolitan State University of Denver was founded in 1965 as an opportunity school. The concept was that people from all walks of life could have a chance at a college education. By design, MSU Denver is required to be accessible to all, which is why it consistently has some of the lowest tuitions of four-year Colorado colleges and universities. Nearly 54% of the student body are students of color.[8] The Auraria Campus is between Empower Field at Mile High and Ball Arena. During the 2008 Democratic National Convention, MSU Denver started the semester a week early, closed for the convention, and then restarted on schedule. The campus was within the security perimeter designated by the United States Secret Service, leading to the decision to close the campus to all except essential personnel.[9] MSU Denver was the first university to advocate for DREAMers to have a chance at higher education by providing in-state tuition rates under the ASSET bill, signed by then Gov. John Hickenlooper in the Jordan Student Success Building lobby.[10][11] It made national headlines.[12][13][14][15] ", "looking"=>"Metropolitan State University of Denver was founded in 1965 as an opportunity school. The concept was that people from all walks of life could have a chance at a college education. By design, MSU Denver is required to be accessible to all, which is why it consistently has some of the lowest tuitions of four-year Colorado colleges and universities. Nearly 54% of the student body are students of color.[8] The Auraria Campus is between Empower Field at Mile High and Ball Arena. During the 2008 Democratic National Convention, MSU Denver started the semester a week early, closed for the convention, and then restarted on schedule. The campus was within the security perimeter designated by the United States Secret Service, leading to the decision to close the campus to all except essential personnel.[9] MSU Denver was the first university to advocate for DREAMers to have a chance at higher education by providing in-state tuition rates under the ASSET bill, signed by then Gov. John Hickenlooper in the Jordan Student Success Building lobby.[10][11] It made national headlines.[12][13][14][15] ", "benefits"=>"Metropolitan State University of Denver was founded in 1965 as an opportunity school. The concept was that people from all walks of life could have a chance at a college education. By design, MSU Denver is required to be accessible to all, which is why it consistently has some of the lowest tuitions of four-year Colorado colleges and universities. Nearly 54% of the student body are students of color.[8] The Auraria Campus is between Empower Field at Mile High and Ball Arena. During the 2008 Democratic National Convention, MSU Denver started the semester a week early, closed for the convention, and then restarted on schedule. The campus was within the security perimeter designated by the United States Secret Service, leading to the decision to close the campus to all except essential personnel.[9] MSU Denver was the first university to advocate for DREAMers to have a chance at higher education by providing in-state tuition rates under the ASSET bill, signed by then Gov. John Hickenlooper in the Jordan Student Success Building lobby.[10][11] It made national headlines.[12][13][14][15] ", "address"=>"123 Auraria st Denver Co", "phone"=>"720444343", "email"=>"roadrunner@msudenver.edu"}, "commit"=>"Create Professional"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/professionals_controller.rb:36:in `block in create'
+  [1m[36mProfessional Create (0.3ms)[0m  [1m[32mINSERT INTO "professionals" ("company", "slogan", "about", "looking", "benefits", "address", "phone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company", "MSU Denver"], ["slogan", "roadrunners"], ["about", "Metropolitan State University of Denver was founded in 1965 as an opportunity school. The concept was that people from all walks of life could have a chance at a college education. By design, MSU Denver is required to be accessible to all, which is why it consistently has some of the lowest tuitions of four-year Colorado colleges and universities. Nearly 54% of the student body are students of color.[8] The Auraria Campus is between Empower Field at Mile High and Ball Arena. During the 2008 Democratic National Convention, MSU Denver started the semester a week early, closed for the convention, and then restarted on schedule. The campus was within the security perimeter designated by the United States Secret Service, leading to the decision to close the campus to all except essential personnel.[9] MSU Denver was the first university to advocate for DREAMers to have a chance at higher education by providing in-state tuition rates under the ASSET bill, signed by then Gov. John Hickenlooper in the Jordan Student Success Building lobby.[10][11] It made national headlines.[12][13][14][15] "], ["looking", "Metropolitan State University of Denver was founded in 1965 as an opportunity school. The concept was that people from all walks of life could have a chance at a college education. By design, MSU Denver is required to be accessible to all, which is why it consistently has some of the lowest tuitions of four-year Colorado colleges and universities. Nearly 54% of the student body are students of color.[8] The Auraria Campus is between Empower Field at Mile High and Ball Arena. During the 2008 Democratic National Convention, MSU Denver started the semester a week early, closed for the convention, and then restarted on schedule. The campus was within the security perimeter designated by the United States Secret Service, leading to the decision to close the campus to all except essential personnel.[9] MSU Denver was the first university to advocate for DREAMers to have a chance at higher education by providing in-state tuition rates under the ASSET bill, signed by then Gov. John Hickenlooper in the Jordan Student Success Building lobby.[10][11] It made national headlines.[12][13][14][15] "], ["benefits", "Metropolitan State University of Denver was founded in 1965 as an opportunity school. The concept was that people from all walks of life could have a chance at a college education. By design, MSU Denver is required to be accessible to all, which is why it consistently has some of the lowest tuitions of four-year Colorado colleges and universities. Nearly 54% of the student body are students of color.[8] The Auraria Campus is between Empower Field at Mile High and Ball Arena. During the 2008 Democratic National Convention, MSU Denver started the semester a week early, closed for the convention, and then restarted on schedule. The campus was within the security perimeter designated by the United States Secret Service, leading to the decision to close the campus to all except essential personnel.[9] MSU Denver was the first university to advocate for DREAMers to have a chance at higher education by providing in-state tuition rates under the ASSET bill, signed by then Gov. John Hickenlooper in the Jordan Student Success Building lobby.[10][11] It made national headlines.[12][13][14][15] "], ["address", "123 Auraria st Denver Co"], ["phone", "720444343"], ["email", "roadrunner@msudenver.edu"], ["created_at", "2023-04-28 19:49:56.473699"], ["updated_at", "2023-04-28 19:49:56.473699"]]
+  ↳ app/controllers/professionals_controller.rb:36:in `block in create'
+  [1m[36mTRANSACTION (9.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/professionals_controller.rb:36:in `block in create'
+Redirected to http://127.0.0.1:3000/professionals/5
+Completed 302 Found in 18ms (ActiveRecord: 10.0ms | Allocations: 3862)
+
+
+Started GET "/professionals/5" for 127.0.0.1 at 2023-04-28 13:49:56 -0600
+Processing by ProfessionalsController#show as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" WHERE "professionals"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:72:in `set_professional'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/show.html.erb within layouts/application
+  Rendered professionals/_professional.html.erb (Duration: 1.0ms | Allocations: 539)
+  Rendered professionals/show.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1920)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 8747)
+Completed 200 OK in 20ms (Views: 14.9ms | ActiveRecord: 0.2ms | Allocations: 11518)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2023-04-28 13:49:59 -0600
+Processing by ProfessionalsController#index as HTML
+  [1m[36mProfessional Load (0.5ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" ORDER BY id DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered collection of professionals/_professional.html.erb [5 times] (Duration: 1.3ms | Allocations: 641)
+  Rendered professionals/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1674)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 8314)
+Completed 200 OK in 72ms (Views: 13.3ms | ActiveRecord: 0.7ms | Allocations: 9626)
+
+
