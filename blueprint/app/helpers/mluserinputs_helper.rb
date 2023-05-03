@@ -1,0 +1,2 @@
+module MluserinputsHelper
+end

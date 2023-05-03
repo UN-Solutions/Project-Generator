@@ -1,70 +1,45 @@
-# import sys
-# from fpdf import FPDF
+import json
+from readtxt import getText
+from fpdf import FPDF
+from future import TriFoldPDF
 
-# WIDTH = 210
-# HEIGHT = 297
-# MARGIN = 10
+#### Extract the values from the input_dict based on the keys
+###company = input_dict.get('company')
+###about = input_dict.get('about')
+###looking = input_dict.get('looking')
+###benefits = input_dict.get('benefits')
+###address = input_dict.get('address')
+###phone = input_dict.get('phone')
+###email = input_dict.get('email')
+###slogan = input_dict.get('slogan')
 
-# input_string = ''
-# for i in range(1, len(sys.argv)):
-#     arg = sys.argv[i]
-#     input_string += arg
+# Get user input
+profInputs = getText('input.txt')
+#store user input for pdf
+company = profInputs['company']
+about = profInputs['about']
+looking = profInputs['address']
+benefits = profInputs['benefits']
+address = profInputs['address']
+phone = profInputs['phone']
+email = profInputs['email']
+slogan = profInputs['slogan']
 
-# # Split the string into a list of key-value pairs
-# kv_pairs = input_string.split(',')
-
-
-# # Create an empty dictionary to store the key-value pairs
-# input_dict = {}
-
-# # Loop through the input list and split each string by the delimiter ': ' to get the key-value pairs
-# for item in kv_pairs:
-#     key, value = item.split(': ')
-#     input_dict[key.strip()] = value.strip()
-
-
-# # Extract the values from the input_dict based on the keys
-# company = input_dict.get('company')
-# about = input_dict.get('about')
-# looking = input_dict.get('looking')
-# benefits = input_dict.get('benefits')
-# address = input_dict.get('address')
-# phone = input_dict.get('phone')
-# email = input_dict.get('email')
-
-# class PDF(FPDF):
-#     def __init__(self, *args, **kwargs):
-#         super().__init__(*args, **kwargs)
-#         self.WIDTH = WIDTH
-#         self.HEIGHT = HEIGHT
-
-#     def lines(self):
-#         self.set_line_width(0.0)
-#         self.line(0, HEIGHT / 3, WIDTH, HEIGHT / 3)
-#         self.line(0, 2 * HEIGHT / 3, WIDTH, 2 * HEIGHT / 3)
-
-
-# # Create the PDF object
-# pdf = PDF(orientation='L')
-# pdf.add_page()
-
-# # Add the content to the PDF object
-# pdf.set_font('Arial', 'B', 16)
-# pdf.cell(0, 10, company, 0, 1, 'C')
-# # pdf.cell(0, 10, slogan, 0, 1, 'C')
-# pdf.set_font('Arial', '', 12)
-# pdf.cell(0, 10, about, 0, 1, 'L')
-# pdf.cell(0, 10, looking, 0, 1, 'L')
-# pdf.cell(0, 10, benefits, 0, 1, 'L')
-# pdf.cell(0, 10, address, 0, 1, 'L')
-# pdf.cell(0, 10, phone, 0, 1, 'L')
-# pdf.cell(0, 10, email, 0, 1, 'L')
-
-# # Add the lines to the PDF object
-# pdf.lines()
-
-# # Save the PDF file
-# pdf.output('prof.pdf', 'F')
-
-
+# Create pdf output document
+pdf = TriFoldPDF()
+pdf.add_page()
+# add content to pdf
+pdf.draw_columns()
+# First Section
+pdf.add_content('About Us', about,5,15)
+pdf.add_content('Contact:', address,5, 155)
+pdf.add_content('',email,5, 160)
+pdf.add_content('',phone,5, 165)
+# Second Section
+pdf.add_content(company, '',100,15)
+pdf.add_content(slogan, '',100,25)
+# Third Section
+pdf.add_content('Benefits', benefits,200,15)
+pdf.add_content('Looking For', looking,200,110)
+pdf.output('prof.pdf', 'F')
 

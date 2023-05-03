@@ -3,7 +3,10 @@ import openai
 from fpdf import FPDF
 import re
 import unicodedata
-openai.api_key = ''
+# openai key from document when running web app, scope is within blueprint directory
+file = open("keys_for_car.txt")
+openai.api_key = file.read()
+
 input_string = 'title:1800 History in Russia, subject: war, time period, deaths, subtopics: how it shaped where we are now'
 kv_pairs = input_string.split(',')
 
