@@ -9,7 +9,7 @@ class AwarenessesController < ApplicationController
   def index
     @awarenesses = Awareness.all
     @our_input = Awareness.order("id DESC").first
-    @output = `/home/msalvador45/anaconda3/envs/projectGenerator/bin/python awareness.py "#{@our_input.inspect}"` # first argument is python Path, if environment change path to environment
+    @output = `/home/hung/miniconda3/envs/bp/bin/python3 awareness.py "#{@our_input.inspect}"` # first argument is python Path, if environment change path to environment
   end
 
   # GET /awarenesses/1 or /awarenesses/1.json

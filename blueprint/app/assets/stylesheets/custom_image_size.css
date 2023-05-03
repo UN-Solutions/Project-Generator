@@ -1,0 +1,5 @@
+.custom-image-size {
+    width: 100px; /* or any desired width */
+    height: 100px; /* or any desired height */
+    object-fit: cover; /* to maintain aspect ratio */
+}

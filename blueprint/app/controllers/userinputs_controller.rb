@@ -8,7 +8,7 @@ class UserinputsController < ApplicationController
   def index
     @userinputs = Userinput.all
     @our_input = Userinput.order("id DESC").first
-    @output = `/home/msalvador45/anaconda3/envs/projectGenerator/bin/python future.py "#{@our_input.inspect}"`  # first argument is python Path, if environment change path to environment
+    @output = `/home/hung/miniconda3/envs/bp/bin/python3 future.py "#{@our_input.inspect}"`  # first argument is python Path, if environment change path to environment
 
   end
 
