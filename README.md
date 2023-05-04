@@ -1,3 +1,3 @@
 # Project Generator
 
-![plot](slide 1.jpg)
+![Screenshot](Slide1.jpg)
