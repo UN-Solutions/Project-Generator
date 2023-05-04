@@ -1,2 +1,3 @@
-# Project-Generator
-Project generator
+# Project Generator
+
+![plot](slide 1.jpg)
