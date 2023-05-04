@@ -7,6 +7,13 @@ class PresentationsController < ApplicationController
   # GET /presentations or /presentations.json
   def index
     @presentations = Presentation.all
+    @our_input = Presentation.order("id DESC").first
+
+    # Convert the data to a JSON string and write it to a file
+    File.write("inputpres.txt", @our_input.to_json)
+
+    # Call the Python script with the input file as an argument
+    @output = `/home/hung/miniconda3/envs/bp/bin/python3 pres.py inputpres.txt`
   end
 
   # GET /presentations/1 or /presentations/1.json

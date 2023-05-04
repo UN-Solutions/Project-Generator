@@ -1,4 +1,5 @@
 import sys
+from readtxt import getText
 import openai
 from fpdf import FPDF
 import re
@@ -7,8 +8,10 @@ import unicodedata
 file = open("keys_for_car.txt")
 openai.api_key = file.read()
 
-input_string = 'title:1800 History in Russia, subject: war, time period, deaths, subtopics: how it shaped where we are now'
-kv_pairs = input_string.split(',')
+# Get user input
+input_string = getText('inputpres.txt')
+kv_pairs = input_string
+# kv_pairs = input_string.split(',')
 
 class PowerPointPDF(FPDF):
 
@@ -25,11 +28,11 @@ class PowerPointPDF(FPDF):
     def add_slide(self, title, content):
         self.add_page()
         self.draw_border()
-        self.set_font("Arial", 'B', 24)  # Set the font for the title
+        self.set_font("Comic", 'B', 24)  # Set the font for the title
         self.set_xy(1, 1)  # Set the position for the title
         self.cell(8, 1, title, 0, 1, 'C')  # Add the title
 
-        self.set_font("Arial", '', 12)  # Set the font for the content
+        self.set_font("Comic", '', 12)  # Set the font for the content
         self.set_xy(1, 2)  # Set the position for the content
         content = self.fit_text_to_slide(content)
         self.multi_cell(8, 0.5, content, 0, 'C')  # Add the content
@@ -45,17 +48,20 @@ class PowerPointPDF(FPDF):
 
 def chatgpt(kv_pairs):
     # Loop through each key-value pair and extract the value for the desired keys
-    title = ''
-    subject = ''
-    subtopics = ''
-
-    for kv in kv_pairs:
-        if 'title:' in kv:
-            title = kv.split(':')[1]
-        elif 'subject:' in kv:
-            subject = kv.split(': ')[1]
-        elif 'subtopics:' in kv:
-            subtopics = ':'.join(kv.split(':')[1:])
+#     title = ''
+#     subject = ''
+#     subtopics = ''
+#
+#     for kv in kv_pairs:
+#         if 'title:' in kv:
+#             title = kv.split(':')[1]
+#         elif 'subject:' in kv:
+#             subject = kv.split(': ')[1]
+#         elif 'subtopics:' in kv:
+#             subtopics = ':'.join(kv.split(':')[1:])
+    title = input_string['title']
+    subject = input_string['subject']
+    subtopics = input_string['subtopics']
 
     # Print the extracted values
     print('Title:', title)
@@ -110,5 +116,5 @@ pdf.add_slide("", background)
 pdf.add_slide("", results)
 pdf.add_slide("", conclusion)
 
-pdf.output("PowerPointStyle.pdf", "F")
+pdf.output("presentation.pdf", "F")
 

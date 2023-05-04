@@ -29,7 +29,7 @@ class ProfessionalsController < ApplicationController
   end
 
   # POST /professionals or /professionals.json
-  def create
+def create
     @professional = Professional.new(professional_params)
 
     respond_to do |format|
